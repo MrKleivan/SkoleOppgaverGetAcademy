@@ -1,6 +1,6 @@
 body {
     width: 100%;
-    height: 120vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: darkgrey;
@@ -8,8 +8,7 @@ body {
 
 div.page {
     display: grid;
-    width: 100vh;
-    height: 120vh;
+    height: 100vh;
     background-color: rgba(10, 6, 1, 0.7);
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 8fr 1fr;
@@ -21,26 +20,175 @@ div.page {
 div.header {
     grid-area: header;
     margin-bottom: 10px;
+    border-radius: 0px 0px 30px 30px;
+    text-align: center;
     background-color: rgba(22, 27, 49, 0.8);
     border-bottom-color: rgba(22, 27, 49, 0.4);
 }
 
+div.headdel {
+    width: 33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    align-content: center;
+}
+
+div.header::after {
+    float: none;
+}
+
 div.meny {
     grid-area: meny;
+    width: 96%;
+    height: 100%;
+    margin: auto;
     background-color: rgba(22, 27, 49, 0.4);
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+}
+
+#knapp {
+    width: 60%;
+    height: 30px;
+    background-color: darkcyan;
     border-radius: 30px;
-    box-shadow: 0px 1px 100px 10px lightblue;
+    border: 1px solid black;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+#spillknapp:hover {
+    background-color: darkkhaki;
+    border: 1px inset darkcyan;
 }
 
 div.innhold {
     grid-area: innhold;
+    width: 96%;
+    height: 100%;
     margin-left: 10px;
+    margin: auto;
     background-color: rgba(22, 27, 49, 0.6);
+    border-radius: 30px 30px 30px 30px;
+    text-align: center;
+}
+
+#spillh1 {
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#spill1 {
+    width: 336px;
+    height: 336px;
+    display: block;
+    background-color: bisque;
+    margin: auto;
+    margin-top: 6%;
+    padding: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.float1, .float2, .float3 {
+    float: left;
+    width: 108px;
+    height: 108px;
+    margin: 1px;
+    align-content: center;
+    text-align: inherit;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-image: radial-gradient(rgb(57, 147, 153), rgb(39, 126, 141));
+}
+
+.float1:hover, .float2:hover, .float3:hover {
+    background-image: radial-gradient(rgb(78, 123, 126), rgb(101, 189, 204));
+}
+
+.float3::after {
+    float: none;
+}
+
+#spill1::after {
+    float: none;
+}
+
+#oppgave {
+    width: 98%;
+    height: 75%;
+    padding: 5px;
+    margin: auto;
+    background-color: aquamarine;
     border-radius: 30px;
+    text-align: center;
+}
+
+div.opp {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-left: 5px; 
+    background-color: rgb(44, 153, 117);
+    border-radius: inherit;
+    overflow:auto;
+}
+
+#oppgave2 {
+    display: none;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+div.tallgjett {
+    width: 90%;
+    height: auto;
+    background-color: rgba(29, 27, 27, 0.171);
+}
+
+div.tallspi {
+    float: left;
+    width: 100%;
+    height:auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: rgb(34, 73, 47);
+    text-align: center;
+    align-content: center;
+}
+
+div.tallspileft, div.tallspiright {
+    float: left;
+    width: 40%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+}
+
+
+#oppnedknapp {
+    width: 50px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 0;
+    background-color: rgb(34, 73, 47);
+    border: 0.5px solid black;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    align-content: center;
 }
 
 div.footer {
     grid-area: footer;
     margin-top: 10px;
+    border-radius: 30px 30px 0px 0px;
     background-color: rgba(22, 27, 49, 0.5);
 }

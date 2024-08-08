@@ -11,17 +11,105 @@
 
     <div id="page" class="page">
         <div id="header" class="header">
-
+            <div class="headdel"> 
+                <h2 class="headh2" style="font-family: 'Courier New', Courier, monospace;font-weight: bold;color: aliceblue;">KleivanWeb</h2>
+            </div>
+            <div class="headdel">
+                <p class="headp2" style="font-family: 'Courier New', Courier, monospace; font-weight: bold; color: aliceblue;">Per Ivar Kleivan student hos ----------------------------></p>
+            </div>
+            <div class="headdel">
+                <img width="80px" height="auto" src="../webpage-github/bilder/get-academy.png">
+            </div>
         </div>
         <div id="meny" class="meny">
-
+            <button id="knapp" onclick="spillvalg()"> Spill 1 </button>
+            <button id="knapp" onclick="oppgaver()">Oppgaver</button>
+            <button id="knapp" onclick="oppgave2()">Js</button>
         </div>
         <div id="innhold" class="innhold">
+            <p style="color: aquamarine;font-family: 'Courier New', Courier, monospace;font-weight: bold; background-color: rgba(6, 3, 26, 0.616);width: 200px;text-align: center;align-content: center;margin: auto; border-radius: 20px;">Hva skal det bli?</p><br>
+            <h1 id="spillh1"></h1>
+            <div id="spill1" class="spill1">
+                <div id="r1k1" class="float1" onclick="s1funksjon(this, 'r1k2', 'r2k1', 'r1k2', 'r2k1')">3</div>
+                <div id="r1k2" class="float2" onclick="s1funksjon(this, 'r1k1', 'r2k2', 'r1k3', 'r1k3')">7</div>
+                <div id="r1k3" class="float3" onclick="s1funksjon(this, 'r1k2', 'r2k3', 'r1k2', 'r2k3')">5</div>
+                
+                <div id="r2k1" class="float1" onclick="s1funksjon(this, 'r1k1', 'r2k2', 'r3k1', 'r3k1')">6</div>
+                <div id="r2k2" class="float2" onclick="s1funksjon(this, 'r1k2', 'r2k1', 'r2k3', 'r3k2')">2</div>
+                <div id="r2k3" class="float3" onclick="s1funksjon(this, 'r1k3', 'r2k2', 'r3k3', 'r3k3')">4</div>
 
+                <div id="r3k1" class="float1" onclick="s1funksjon(this, 'r2k1', 'r3k2', 'r2k1', 'r3k2')"></div>
+                <div id="r3k2" class="float2" onclick="s1funksjon(this, 'r3k1', 'r2k2', 'r3k3', 'r3k3')">1</div>
+                <div id="r3k3" class="float3" onclick="s1funksjon(this, 'r2k3', 'r3k2', 'r2k3', 'r3k2')">8</div>
+            </div>
+            <div id="oppgave" class="oppgaver">
+                <div class="opp">
+                    <p>Oppgave 113 A) KleivanWeb</p>
+                </div>
+                <div class="opp">
+                    <p>Oppgave 113 B)</p>
+                    <h1>Hei</h1><h2>Hei</h2><h3>Hei</h3> 
+                </div>
+                <div class="opp">
+                    <p>Oppgave 113 C)</p> 
+                    <ol><li>Banan</li><li>Potet</li><li>Smør</li></ol>
+                    <ul><li>Banan</li><li>Potet</li><li>Smør</li></ul>
+                </div>
+                <div class="opp">
+                    <p>Oppgave 113 D)</p>
+                    <a href="index.html">Link(Hjem)</a>
+                </div>
+                <div class="opp">
+                    <p>Oppgave 113 E</p>
+                    <div class="bildopp" style="width:100%;height:90%;background-image:url(../webpage-github/bilder/dv.jpg);background-size: contain;">
+
+                    </div>
+                </div>
+                <div class="opp">
+                    <p>Oppgave 113 F</p>
+                    <form action="/action_page.php">
+                        <input type="radio" id="banan" name="fav_smak" value="Banan">
+                        <label for="banan">Banan</label>
+                        <input type="radio" id="Ost" name="fav_smak" value="Ost">
+                        <label for="ost">Ost</label>
+                        <input type="submit" value="Enter">
+                    </form>
+                </div>
+                <div class="opp">
+                    <p>Oppgave 115 B)</p>
+                    <div class="tallspi">
+                        <div class="tallspileft">5</div>
+                        <div class="tallspiright">
+                            <div id="oppnedknapp" onclick="oppnedknappopp()">&#8593;</div>
+                            <div id="oppnedknapp" onclick="oppnedknappned()">&#8595;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="opp">
+                    <p>Oppgave </p>
+                </div>
+
+            </div>
+            <div id="oppgave2">
+                <div id="oppspill">
+                    <div id="bruker" class="tallgjett">
+                        <p>Ditt Tall<input title="Ditt tall"></p>
+                    </div>
+                    <div id="sjekk" class="tallgjett">
+                        <button onclick="check()"></button>
+                    </div>
+                    <div id="status" class="tallgjett">
+
+                    </div>
+
+                </div>
+            </div>
         </div>
         <div id="footer" class="footer">
 
         </div>
     </div>
+
+    <script src="myScript.js"></script>
 </body>
 </html>
