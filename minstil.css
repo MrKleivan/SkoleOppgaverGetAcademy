@@ -123,22 +123,33 @@ div.innhold {
     height: 75%;
     padding: 5px;
     margin: auto;
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.24);
     border-radius: 30px;
     text-align: center;
 }
 
 div.opp {
     float: left;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin-left: 5px; 
+    margin-top: 5px;
     background-color: rgb(44, 153, 117);
-    border-radius: inherit;
+    border-radius: 30px;
     overflow:auto;
 }
 
-#oppgave2 {
+#oppgaver2 {
+    width: 98%;
+    height: 75%;
+    padding: 5px;
+    margin: auto;
+    border-radius: 30px;
+    background-color: rgba(127, 255, 212, 0.24);
+    text-align: center;
+}
+
+#oppgaver3 {
     display: none;
     width: 50%;
     height: 50%;

@@ -18,26 +18,41 @@ function s1funksjon(tagElement, alt1, alt2, alt3, alt4) {
 }
 
 let spillh1 = document.getElementById('spillh1');
-var spill1 = document.getElementById('spill1');
+let spill1 = document.getElementById('spill1');
 spill1.style.display = 'none';
 
 const tallid = document.getElementById('tallid');
 
-var oppgave = document.getElementById('oppgave');
+let oppgave = document.getElementById('oppgave');
 oppgave.style.display = 'none';
+
+let oppgave2 = document.getElementById('oppgaver2');
+oppgave2.style.display = 'none';
+
+let oppgave3 = document.getElementById('oppgaver3');
+oppgave3.style.display = 'none';
+
 
 function spillvalg() {
     spill1.style.display = 'block';
     spillh1.innerHTML = 'Spill 1';
     oppgave.style.display = 'none';
+    oppgave2.style.display = 'none';
 }
 
-function oppgaver() {
+function oppgaver1() {
     spillh1.innerHTML = 'Oppgave';
     spill1.style.display = 'none';
+    oppgave2.style.display = 'none';
     oppgave.style.display = 'block';
 }
 
+function oppgaver2() {
+    spillh1.innerHTML = 'Oppgave';
+    spill1.style.display = 'none';
+    oppgave.style.display = 'none';
+    oppgave2.style.display = 'block';
+}
 
 function oppnedknappopp(tagElement) {
     tagElement = tallid.innerHTML;
@@ -49,4 +64,14 @@ function oppnedknappned(tagElement) {
     tagElement = tallid.innerHTML;
     tagElement = tagElement -+ 1;
     tallid.innerHTML = tagElement;
+}
+
+const showshow = document.getElementById('showshow');
+
+
+
+function show2(tagElement) {
+    tagElement = showshow.innerHTML;
+    tagElement = tagElement -+ -1;
+    showshow.innerHTML = tagElement;
 }
