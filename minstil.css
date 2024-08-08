@@ -172,6 +172,25 @@ div.tallspileft, div.tallspiright {
     text-align: center;
 }
 
+#app {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'grid1 grid2 grid3';
+    align-items: center;
+    text-align: center;
+}
+
+div.grid1 {
+    grid-area: 'grid2';
+}
+
+div.grid2 {
+    grid-area: 'grid1';
+}
+
+div.grid3 {
+    grid-area: 'grid3';
+}
 
 #oppnedknapp {
     width: 50px;
