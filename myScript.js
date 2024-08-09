@@ -77,3 +77,8 @@ function show2(tagElement) {
     tagElement = tagElement -+ -1;
     showshow.innerHTML = tagElement;
 }
+
+
+function banan() {
+    document.getElementById('innhold') = document.location ='oppgave116A.html';
+}

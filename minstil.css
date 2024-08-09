@@ -48,7 +48,7 @@ div.meny {
     text-align: center;
 }
 
-#knapp {
+.knapp {
     width: 60%;
     height: 30px;
     background-color: darkcyan;
