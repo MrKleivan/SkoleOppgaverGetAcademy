@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 11 B</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            text-align: center;
+        }
+
+        button {
+            width: 180px;
+            height: 40px;
+            margin: auto;
+            text-align: center;
+            font-size: large;
+            justify-content: center;
+            border-radius: 40px;
+            border: thin solid black;
+            background-color: blanchedalmond;
+        }
+
+        button:hover {
+            background-color: rgb(104, 75, 36);
+        }
+
+        #dinId {
+            width: 80vh;
+            height: 50vh;
+            margin: auto;
+            border-radius: 40px;;
+            align-content: center;
+            text-align: center;
+            background-color: aquamarine;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="dinId">
+    </div>
+
+    <script>
+
+        show1();
+
+        function show1() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>1</h1>
+                <button onclick="show2()">Øke med en</button>
+                <button onclick="show2()">Doble</button>
+                `;
+        }
+
+        function show2() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>2</h1>
+                <button onclick="show3()">Øke med en</button>
+                <button onclick="show4()">Doble</button>
+                `;
+        }
+        
+        function show3() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>3</h1>
+                <button onclick="show4()">Øke med en</button>
+                <button onclick="show6()">Doble</button>
+                `;
+        }
+
+        function show4() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>4</h1>
+                <button onclick="show5()">Øke med en</button>
+                <button onclick="show8()">Doble</button>
+                `;
+        }
+        function show5() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>5</h1>
+                <button onclick="show6()">Øke med en</button>
+                <button onclick="show10()">Doble</button>
+                `;
+        }
+        function show6() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>6</h1>
+                <button onclick="show7()">Øke med en</button>
+                <button onclick="show12()">Doble</button>
+                `;
+        }
+        function show7() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>7</h1>
+                <button onclick="show8()">Øke med en</button>
+                <button onclick="show14()">Doble</button>
+                `;
+        }
+        function show8() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>8</h1>
+                <button onclick="show9()">Øke med en</button>
+                <button onclick="show16()">Doble</button>
+                `;
+        }
+        function show9() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>9</h1>
+                <button onclick="show10()">Øke med en</button>
+                <button onclick="show18()">Doble</button>
+                `;
+        }
+        function show10() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>10</h1>
+                <button onclick="show11()">Øke med en</button>
+                <button onclick="show20()">Doble</button>
+                `;
+        }
+        function show11() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>11</h1>
+                <button onclick="show12()">Øke med en</button>
+                <button onclick="show22()">Doble</button>
+                `;
+        }
+        function show12() {
+            document.getElementById('dinId').innerHTML = /*HTML*/`
+                <h1>12</h1>
+                <button onclick="show13()">Øke med en</button>
+                <button onclick="show24()">Doble</button>
+                `;
+        }
+        
+    </script>
+    
+</body>
+</html>

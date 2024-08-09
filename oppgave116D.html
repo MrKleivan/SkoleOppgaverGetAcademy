@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave116D</title>
+
+    <style>
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            align-content: center;
+        }
+
+        #trafikklys {
+            width: 380px;
+            height: 320px;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            border-radius: 60px;
+            background-color: rgb(103, 225, 241);
+        }
+
+
+        div.trafikk {
+            width: 70px;
+            height: 190px;
+            align-content: center;
+            margin: auto;
+            background-color: black;
+        }
+
+        div.lyssig {
+            width: 60px;
+            height: 60px;
+            margin: auto;
+            margin-top: 2px;
+            border-radius: 50%;
+            color: darkgray;
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #red {
+            background-color: crimson;
+            box-shadow: 2px 2px 20px 2px crimson;
+        }
+
+        #yellow {
+            background-color: yellow;
+            box-shadow: 2px 2px 20px 2px yellow;
+        }
+
+        #green {
+            background-color: green;
+            box-shadow: 2px 2px 20px 2px green;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="trafikklys">
+
+    </div>
+
+
+    <script>
+
+        lys1();
+
+        function lys1() {
+            document.getElementById('trafikklys').innerHTML = /*HTML*/ `
+                <div class="trafikk" onclick="lys2()">
+                    <div id="red" class="lyssig"></div>
+                    <div id="grey" class="lyssig"></div>
+                    <div id="grey" class="lyssig"></div>    
+                </div>
+            `
+            setTimeout(lys2, 4000);
+        }
+        function lys2() {
+            document.getElementById('trafikklys').innerHTML = /*HTML*/ `
+                <div class="trafikk" onclick="lys3()">
+                    <div id="red" class="lyssig"></div>
+                    <div id="yellow" class="lyssig"></div>
+                    <div id="grey" class="lyssig"></div>    
+                </div>
+            `
+            setTimeout(lys3, 2000);
+        }
+        function lys3() {
+            document.getElementById('trafikklys').innerHTML = /*HTML*/ `
+                <div class="trafikk" onclick="lys4()">
+                    <div id="grey" class="lyssig"></div>
+                    <div id="grey" class="lyssig"></div>
+                    <div id="green" class="lyssig"></div>    
+                </div>
+            `
+            setTimeout(lys4, 3000);
+        }
+        function lys4() {
+            document.getElementById('trafikklys').innerHTML = /*HTML*/ `
+                <div class="trafikk" onclick="lys1()">
+                    <div id="grey" class="lyssig"></div>
+                    <div id="yellow" class="lyssig"></div>
+                    <div id="grey" class="lyssig"></div>    
+                </div>
+            `
+            setTimeout(lys1, 2000);
+        }
+        
+
+
+    </script>
+
+
+
+</body>
+</html>

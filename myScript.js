@@ -1,3 +1,5 @@
+
+
 function s1funksjon(tagElement, alt1, alt2, alt3, alt4) {
     if (document.getElementById(alt1).innerHTML == '') {
         document.getElementById(alt1).innerHTML = tagElement.innerHTML;
@@ -21,7 +23,7 @@ let spillh1 = document.getElementById('spillh1');
 let spill1 = document.getElementById('spill1');
 spill1.style.display = 'none';
 
-const tallid = document.getElementById('tallid');
+let tallid = document.getElementById('tallid');
 
 let oppgave = document.getElementById('oppgave');
 oppgave.style.display = 'none';
@@ -66,7 +68,7 @@ function oppnedknappned(tagElement) {
     tallid.innerHTML = tagElement;
 }
 
-const showshow = document.getElementById('showshow');
+let showshow = document.getElementById('showshow');
 
 
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 116C</title>
+    <style>
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            align-content: center;
+            background-color: rgba(0, 68, 6, 0.336);
+            background: rgba(2, 1, 68, 0.253);
+        }
+
+        #hus {
+            width: 100vh;
+            height: 60vh;
+            margin: auto;
+            border-radius: 45px;
+            text-align: center;
+            align-content: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: large;
+            background-color: cadetblue;
+            background-size: contain;
+        }
+
+        button {
+            display: inline-block;
+            width: 180px;
+            height: 50px;
+            background-color: rgba(73, 146, 140, 0.404);
+            border: outset grey;
+            border-radius: 50px;
+        }
+
+        button:hover {
+            background-color: rgba(73, 146, 140, 0.61);
+            border: inset gray;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="hus">
+
+    </div>
+
+
+    <script>
+
+        ute();
+         
+        
+        function ute() {
+            document.getElementById('hus').style.background = 'url(bilder/ute.jpg)'; 
+            document.getElementById('hus').innerHTML = /*HTML*/ `
+            <h2>Du står utenfor</h2> 
+            <button onclick="gang()">Gå inn i gangen</button>
+            `;
+        }
+        function gang() { 
+            document.getElementById('hus').style.backgroundImage = 'url(bilder/gang.png)';
+            document.getElementById('hus').innerHTML = /*HTML*/ `
+            <h2>Du står i gangen</h2> 
+            <button onclick="ute()">Gå ut</button>
+            <button onclick="soverom()">Gå inn inn soverommet</button>
+            <button onclick="stue()">Gå inn i stua</button>
+            <button onclick="bad()">Gå inn på badet</button>
+            `;
+        }
+        function soverom() { 
+            document.getElementById('hus').style.background = 'url(bilder/soverom.jpg)';
+            document.getElementById('hus').innerHTML = /*HTML*/ `
+            <h2>Du står i soverommet</h2> 
+            <button onclick="gang()">Gå inn i gangen</button>
+            `;
+        }
+        function stue() { 
+            document.getElementById('hus').style.background = 'url(bilder/stue.png)';
+            document.getElementById('hus').innerHTML = /*HTML*/ `
+            <h2>Du står i stua</h2> 
+            <button onclick="gang()">Gå inn i gangen</button>
+            `;
+        }
+        function bad() { 
+            document.getElementById('hus').style.background = 'url(bilder/bad.png)';
+            document.getElementById('hus').innerHTML = /*HTML*/ `
+            <h2>Du står på badet</h2> 
+            <button onclick="gang()">Gå inn i gangen</button>
+            `;
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>
