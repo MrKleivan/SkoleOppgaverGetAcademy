@@ -1,5 +1,5 @@
 
-
+/* Spill script */
 function s1funksjon(tagElement, alt1, alt2, alt3, alt4) {
     if (document.getElementById(alt1).innerHTML == '') {
         document.getElementById(alt1).innerHTML = tagElement.innerHTML;
@@ -68,17 +68,9 @@ function oppnedknappned(tagElement) {
     tallid.innerHTML = tagElement;
 }
 
-let showshow = document.getElementById('showshow');
+
+let ijsopp = document.getElementById('ijsopp');
+ijsopp.style.display = 'none';
 
 
 
-function show2(tagElement) {
-    tagElement = showshow.innerHTML;
-    tagElement = tagElement -+ -1;
-    showshow.innerHTML = tagElement;
-}
-
-
-function banan() {
-    document.getElementById('innhold') = document.location ='oppgave116A.html';
-}
