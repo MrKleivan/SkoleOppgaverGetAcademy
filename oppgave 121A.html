@@ -37,6 +37,8 @@
 <body>
     <div id="selection">
       <div class="flexy">
+
+        <button onclick="addSquere()">Legg til firkant</button>
         <button onclick="addCircle()">Legg til sirkel</button>
         <button onclick="addCircleFormInput()">Plaser sirkel</button>
         <label for="circleInputX">X akse</label>
@@ -81,6 +83,16 @@
         </form>
         <button onclick="sbflSvg()">Velg bakgrunn fra liste</button>
       </div>
+      <div class="flexy">
+        <form>
+          <select id="selectBackgroundSVGS">
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="brown">brown</option>
+          </select>
+        </form>
+      </div>
     </div>
     <div id="svg">
       <svg 
@@ -91,11 +103,17 @@
       </svg>
     </div>
 <script>
-  
+   
 
   function addCircle(xParameter="100", yParameter="200", svgStroke="red", svgFill="blue") {
       document.getElementById('mySvg').innerHTML += /*HTML*/`
           <circle cx="${xParameter}" cy="${yParameter}" r="40" stroke="${svgStroke}" stroke-width="4" fill="${svgFill}" />            
+      `;
+  }
+
+  function addSquere(xParameter="100", yParameter="200", svgStroke="red", svgFill="blue") {
+      document.getElementById('mySvg').innerHTML += /*HTML*/`
+          <rect x="${xParameter}" y="${yParameter}" stroke="${svgStroke}" width="80" height="40" r="20" stroke-width="4" fill="${svgFill}" />            
       `;
   }
 
@@ -109,6 +127,7 @@
 
   function clearAll() {
     document.getElementById('mySvg').innerHTML = [];
+
   }
 
   function addBackground() {
@@ -130,15 +149,25 @@
     let svgFillColor = document.getElementById('borderSvg').value;
 
     addCircle(xParameter="100", yParameter="200", svgStrokeColor, svgFillColor);
+    addSquere(xParameter="100", yParameter="200", svgStrokeColor, svgFillColor);
   }
   function sbflSvg() {
-    let numberValu = document.getElementById('selectBackgroundSVG');
-    let i = numberValu.selectedIndex;
-    let sBfLSvg = document.getElementById('selectBackgroundSVG').options[i].text;
+    let colorValo = document.getElementById('selectBackgroundSVG');
+    let eko = colorValo.selectedIndex;
+    let sBfLSvg = document.getElementById('selectBackgroundSVG').options[eko].text;
 
-    let dinSvg = document.getElementById('mySvg').innerHTML;
-    din.style.Color = sBfLSvg;
+    let colorValoS = document.getElementById('selectBackgroundSVGS');
+    let ekoi = colorValoS.selectedIndex;
+    let sBfLSvgS = document.getElementById('selectBackgroundSVGS').options[ekoi].text;
+
+    svgStroke = sBfLSvgS;
+    svgFill = sBfLSvg;
+    addCircle(xParameter="200", yParameter="300", svgStroke, svgFill);
+    addSquere(xParameter="200", yParameter="300", svgStroke, svgFill);
+    
   }
+
+ 
 
 
 
