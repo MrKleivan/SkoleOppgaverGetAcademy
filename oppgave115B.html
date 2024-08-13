@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 115B</title>
+
+    <style>
+
+        #numberChange {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: aquamarine;
+            border-radius: 20px;
+        }
+        #number {
+            width: 46%;
+            align-items: center;
+            align-content: center;
+        }
+        #numberButtons {
+            width: 46%;
+            display: grid;
+            align-content: center;
+            align-content: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="numberChange">
+        <div id="number">5</div>
+        <div id="numberButtons">
+            <button onclick="numberUp()">&#11205;</button>
+            <button onclick="numberDown()">&#11206;</button>
+        </div>
+    </div>
+
+    <script>
+
+        let number = document.getElementById('number');
+
+        function numberUp(tagElement) {
+            tagElement = number.innerHTML;
+            tagElement = tagElement ++ +1;
+            number.innerHTML = tagElement;
+        }
+        function numberDown(tagElement) {
+            tagElement = number.innerHTML;
+            tagElement = tagElement ++ -1;
+            number.innerHTML = tagElement;
+        }
+        
+
+    </script>
+    
+</body>
+</html>

@@ -43,10 +43,10 @@ function spillvalg() {
 }
 
 function oppgaver1() {
-    spillh1.innerHTML = 'Oppgave';
+    spillh1.innerHTML = 'oppgave';
     spill1.style.display = 'none';
-    oppgave2.style.display = 'none';
     oppgave.style.display = 'block';
+    oppgave2.style.display = 'none';
 }
 
 function oppgaver2() {
