@@ -113,12 +113,12 @@
 
   function addSquere(xParameter="100", yParameter="200", svgStroke="red", svgFill="blue") {
       document.getElementById('mySvg').innerHTML += /*HTML*/`
-          <rect x="${xParameter}" y="${yParameter}" stroke="${svgStroke}" width="80" height="40" r="20" stroke-width="4" fill="${svgFill}" />            
+          <rect x="${xParameter, 200}" y="${yParameter, 50}" stroke="${svgStroke}" width="80" height="40" r="20" stroke-width="4" fill="${svgFill}" />            
       `;
   }
 
   function addCircleFormInput(){
-    
+    clearAll()
     let circleInputX = document.getElementById('circleInputX').value;
     let circleInputY = document.getElementById('circleInputX').value;
 
