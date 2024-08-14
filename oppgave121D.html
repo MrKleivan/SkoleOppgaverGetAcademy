@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 121D</title>
+    <style>
+        #board, #board1, #board3 {
+            display: grid;
+            grid-template-columns: repeat(5, 100px);
+            grid-template-rows: repeat(5, 100px);
+            gap: 5px;
+        }
+        
+
+        .cell {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .cell-1 {
+            background-color: #8f8;
+        }
+
+        .cell-2 {
+            background-color: #f88;
+        }
+
+        .cell-3 {
+            background-color: #add8e6;
+        }
+
+        .start {
+            background-color: #fc0;
+        }
+
+        .finish {
+            color: white;
+            background-color: rgb(0, 116, 146);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="board">
+
+    </div>
+    <div id="board1">
+
+    </div>
+    <div id="board3">
+
+    </div>
+
+
+    <script>
+
+        spillBrett();
+        function spillBrett() {
+            spillBrettRad1();
+            spillBrettRad2();
+            spillBrettRad3();
+            spillBrettRad4();
+            spillBrettRad5();
+        }
+
+        function spillBrettRad1() {
+            document.getElementById('board').innerHTML += /*HTML*/`
+            <div class="cell cell-3">6</div>
+            <div class="cell cell-1">7</div>
+            <div class="cell cell-2">8</div>
+            <div class="cell cell-3">9</div>
+            <div class="cell cell-1">10</div>
+            `;
+        }
+        function spillBrettRad2() {
+            document.getElementById('board').innerHTML += /*HTML*/`
+            <div class="cell cell-2">5</div>
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+            <div class="cell cell-2">11</div>
+            `;
+        }
+        function spillBrettRad3() {
+            document.getElementById('board').innerHTML += /*HTML*/`
+            <div class="cell cell-1">4</div>
+            <div class="cell cell-3">3</div>
+            <div class=""></div>
+            <div class="cell cell-1">13</div>
+            <div class="cell cell-3">12</div>
+            `;
+        }
+        function spillBrettRad4() {
+            document.getElementById('board').innerHTML += /*HTML*/`
+            <div class=""></div>
+            <div class="cell cell-2">2</div>
+            <div class=""></div>
+            <div class="cell cell-2">14</div>
+            <div class=""></div>
+            `;
+        }
+        function spillBrettRad5() {
+            document.getElementById('board').innerHTML += /*HTML*/`
+            <div class="cell start">Start</div>
+            <div class="cell cell-1">1</div>        
+            <div class=""></div>
+            <div class="cell cell-3">15</div>
+            <div class="cell finish">Mål</div>
+            `;
+        }
+
+
+        function cellStart() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div class="cell start">Start</div>`;
+        }
+        function cellFinish() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div class="cell finish">Mål</div>`;
+        }
+        function cellBlank() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div>${number}</div>`;
+        }
+        function cellCellGreen() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div class="cell cell-1">${number}</div>`;
+        }
+        function cellCellPink() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div class="cell cell-2">${number}</div>`;
+        }
+        function cellCellBlue() {
+            document.getElementById('board1').innerHTML += /*HTML*/`
+            <div class="cell cell-3">${number}</div>`;
+        }
+
+        function addCell() {
+            
+            cellCellBlue(number="6");
+            cellCellGreen(number="7");
+            cellCellPink(number="8");
+            cellCellBlue(number="9");
+            cellCellGreen(number="10");
+            
+            cellCellPink(number="5");
+            cellBlank(number="");
+            cellBlank(number="");
+            cellBlank(number="");
+            cellCellGreen(number="11");
+            
+            cellCellGreen(number="4");
+            cellCellBlue(number="3");
+            cellBlank(number="");
+            cellCellGreen(number="13");
+            cellCellBlue(number="12");
+            
+            cellBlank(number="");
+            cellCellPink(number="2");
+            cellBlank(number="");
+            cellCellPink(number="14");
+            cellBlank(number="");
+
+            cellStart();
+            cellCellGreen(number="");
+            cellBlank(number="");
+            cellCellBlue(number="15");
+            cellFinish();
+
+        }
+
+        showBoard();
+        function showBoard() {
+            addCell();
+        }
+
+        
+        showBoardThird();
+        function showBoardThird() {
+				addCellTo("cell cell-3",6,);
+				addCellTo("cell cell-1",7);
+				addCellTo("cell cell-2",8);
+				addCellTo("cell cell-3",9);
+				addCellTo("cell cell-1",10);
+				
+				addCellTo("cell cell-2", 5);
+				addCellTo("", "");
+				addCellTo("", "");
+				addCellTo("", ""); 
+				addCellTo("cell cell-2", 11);
+
+				addCellTo("cell cell-1", 4);
+				addCellTo("cell cell-3", 3);
+				addCellTo("", "");
+				addCellTo("cell cell-1", 13);
+				addCellTo("cell cell-3", 12);
+
+				addCellTo("", "");
+				addCellTo("cell cell-2", 2);
+				addCellTo("", "");
+				addCellTo("cell cell-2", 14);
+				addCellTo("", "");
+
+				addCellTo("cell start", "Start");
+				addCellTo("cell cell-1", 1);
+				addCellTo("", "");
+				addCellTo("cell cell-3", 15); 
+				addCellTo("cell finish", "Mål");
+			}
+
+
+			function addCellTo(cssClass, contentSquare) {
+    		    document.getElementById("board3").innerHTML += /*HTML*/`
+       	        <div class="${cssClass}">${contentSquare}</div>`;
+            }
+
+
+    </script>
+
+</body>
+</html>
