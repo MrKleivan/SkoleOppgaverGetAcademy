@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave fra samtale</title>
+
+    <style>
+
+        #page2 {
+            display: grid;
+            width: 300px;
+            height: auto;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        #col {
+            float: left;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 30px);
+            height: 110px;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div id="page">
+
+
+</div>
+
+<div id="page2">
+
+</div>
+
+
+
+<!-- Per ▼
+Pål ▼▲
+Espen ▲ -->
+
+<script>
+
+
+perOppPålmittEspenNed();
+function perOppPålmittEspenNed() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Per <button onclick="perMittPålOppEspenNed()">▼</button></div>
+        <div>Pål <button onclick="perOppPålNedEspenMitt()">▼</button><button onclick="perMittPålOppEspenNed()">▲</button></div>
+        <div>Espen <button onclick="perOppPålNedEspenMitt()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+function perOppPålNedEspenMitt() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Per <button onclick="perMittPålNedEspenOpp()">▼</button></div>
+        <div>Espen <button onclick="perOppPålmittEspenNed()">▼</button><button onclick="perMittPålNedEspenOpp()">▲</button></div>
+        <div>Pål <button onclick="perOppPålmittEspenNed()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+function perMittPålOppEspenNed() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Pål <button onclick="perOppPålmittEspenNed()">▼</button></div>
+        <div>Per <button onclick="perNedPålOppEspenMitt()">▼</button><button onclick="perOppPålmittEspenNed()">▲</button></div>
+        <div>Espen <button onclick="perNedPålOppEspenMitt()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+
+function perNedPålOppEspenMitt() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Pål <button onclick="perNedPålMittEspenOpp()">▼</button></div>
+        <div>Espen <button onclick="perMittPålOppEspenNed()">▼</button><button onclick="perNedPålMittEspenOpp()">▲</button></div>
+        <div>Per <button onclick="perMittPålOppEspenNed()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+function perNedPålMittEspenOpp() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Espen <button onclick="perNedPålOppEspenMitt()">▼</button></div>
+        <div>Pål <button onclick="perMittPålNedEspenOpp()">▼</button><button onclick="perNedPålOppEspenMitt()">▲</button></div>
+        <div>Per <button onclick="perMittPålNedEspenOpp()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+function perMittPålNedEspenOpp() {
+    document.getElementById('page').innerHTML = /*HTML*/ `
+    <div id="spill">
+        <div>Espen <button onclick="perOppPålNedEspenMitt()">▼</button></div>
+        <div>Per <button onclick="perNedPålMittEspenOpp()">▼</button><button onclick="perOppPålNedEspenMitt()">▲</button></div>
+        <div>Pål <button onclick="perNedPålMittEspenOpp()">▲</button></div>
+    </div>
+    
+
+    `;
+}
+
+
+let up = document.getElementById('up');
+let center = document.getElementById('center');
+let down = document.getElementById('down');
+
+
+spill();
+function spill(classStyle="width:100px;height30px;", classStyle2="width:30px;height30px;border-radius: 50%;", name="Per", name2="Pål", name3="Espen") {
+   document.getElementById('page2').innerHTML = /*HTML*/ `
+    <div id="spill1">
+        <div id="col">
+            <div id="up" style="${classStyle}">${name}</div>
+            <div id="center" style="${classStyle}">${name2}</div>
+            <div id="down" style="${classStyle}">${name3}</div>
+        </div>
+        <div id="col">
+            <div><button onclick="buttonUp()" style="${classStyle2}">▼</button></div>
+            <div><button onclick="buttonCenterDown()"style="${classStyle2}">▼</button><button onclick="buttonCenterUp()" style="${classStyle2}">▲</button></div>
+            <div><button onclick="buttonDown()" style="${classStyle2}">▲</button></div>
+        </div>
+    </div>
+    
+
+
+    `;
+}
+
+
+function buttonUp() {
+    spill(undefined, undefined, 'Pål', 'Per', 'Espen');
+}
+function buttonCenterDown() {
+    spill(undefined, undefined, 'Pål', 'Espen', 'Per');
+}
+function buttonCenterUp() {
+    spill(undefined, undefined, 'Espen', 'Pål', 'Per');
+}
+function buttonDown() {
+    spill(undefined, undefined, 'Espen', 'Per', 'Pål');
+}
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 122D</title>
+</head>
+<body>
+    
+    <select onchange="selectFontFamily(this.value)">
+        <option>Arial</option>
+        <option>Verdana</option>
+        <option>Tahoma</option>
+        <option>Trebuchet MS</option>
+        <option>Times New Roman</option>
+        <option>Georgia</option>
+        <option>Garamond</option>
+        <option>Courier New</option>
+        <option>Brush Script MT</option>
+    </select>
+    <div id="page">
+
+    </div>
+    <div id="info">
+
+    </div>
+
+
+    <script>
+
+        function selectFontFamily(fontFamily) {
+            document.getElementById('info').innerHTML = `Du har valgt ${fontFamily}.`
+        }
+
+        let currentFontSize = 20;
+
+        fontAdjust();
+        function fontAdjust() {
+            document.getElementById('page').innerHTML = /*HTML*/`
+            <div id="font-adjust" style="font-size: ${currentFontSize}px;">
+                <h1>Jeg er en overskrift</h1>
+                <p style="font-size: ${currentFontSize}px;">Og jeg er et avsnitt</p>
+            </div>
+            
+            <button onclick="newFontSizeUpp()">Endre størelse</button>
+            <button onclick="newFontSizeDown()">Endre størelse</button>
+            `;
+        }
+
+        function newFontSizeUpp() {
+            currentFontSize = currentFontSize + 1;
+            fontAdjust();
+        }
+        function newFontSizeDown() {
+            currentFontSize = currentFontSize - 1;
+            fontAdjust();
+        }
+
+    </script>
+
+</body>
+</html>
