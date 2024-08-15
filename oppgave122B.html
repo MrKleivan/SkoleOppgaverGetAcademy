@@ -4,8 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oppgave 122B</title>
+
+    <style>
+
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(8, 100px);
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            justify-content: center;
+        }
+
+        #board>div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid lightgrey;
+        }
+
+        div.selected {
+            background-color: yellow;
+        }
+
+        #buttenmenu {
+            width: 10%;
+            margin: auto;
+            text-align: center;
+            border: 1px solid grey;
+            border-radius: 25px;
+            overflow: hidden;
+        }
+
+        #page {
+            width: 80%;
+            margin: auto;
+        }
+
+        .topBottom {
+            width: 60%;
+            border-radius: 5px;
+            border: none;
+            background-color: aquamarine;
+        }
+
+        .center {
+            width: 45%;
+            border-radius: 5px;
+            border: none;
+            background-color: aquamarine;
+        }
+        .topBottom:hover {
+            width: 62%;
+            background: radial-gradient(aquamarine,aquamarine, aqua);
+        }
+
+        .center:hover {
+            width: 47%;
+            background: radial-gradient(aquamarine,aquamarine, aqua);
+        }
+    </style>
+
 </head>
 <body>
+    <div id="page">
+        <div id="buttenmenu">
+            <button class="topBottom" onclick="upp()">Upp</button><br/>
+            <button class="center" onclick="left()">Left</button>
+            <button class="center" onclick="right()">Right</button><br/>
+            <button class="topBottom" onclick="down()">Down</button>
+        </div>
+        <div id="board">
+
+        </div>
+    </div>
+
+<script>
+
+    let selectedSquareIndex = 14;
+    const size = 64;
+
+    showBoard();
+    function showBoard(pattern="<div></div>") {
+        const lengthPart1 = selectedSquareIndex;
+        const part1 = ''.padEnd(pattern.length * lengthPart1, pattern);
+        const part2 = '<div class="selected"></div>';
+        const lengthPart3 = size - (selectedSquareIndex + 1)
+        const part3 = ''.padEnd(pattern.length * lengthPart3, pattern)
+
+        document.getElementById('board').innerHTML = part1 + part2 + part3;
     
+    }
+
+    function upp() {
+        selectedSquareIndex -= 8;
+        if (selectedSquareIndex <= -1) {
+            selectedSquareIndex = selectedSquareIndex + 72 - 8;
+        }
+        showBoard();
+    }
+    function left(fix) {
+        selectedSquareIndex -= 1;
+        if (selectedSquareIndex <= -1) {
+            selectedSquareIndex += 64;
+        }
+        
+        showBoard();
+    }
+    function right() {
+        selectedSquareIndex += 1;
+        if (selectedSquareIndex >= 64) {
+            selectedSquareIndex = selectedSquareIndex - 64;
+        }
+        showBoard();
+    }
+    function down() {
+        selectedSquareIndex += 8;
+        if (selectedSquareIndex >= 64) {
+            selectedSquareIndex = selectedSquareIndex - 72 + 8;
+        }
+        showBoard();
+    }
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 122C</title>
+</head>
+<body>
+    
+    <div id="page">
+    
+    </div>
+
+
+    <script>
+
+        let currentFontSize = 20;
+
+        fontAdjust();
+        function fontAdjust() {
+            document.getElementById('page').innerHTML = /*HTML*/`
+            <div id="font-adjust" style="font-size: ${currentFontSize}px;">
+                <h1>Jeg er en overskrift</h1>
+                <p style="font-size: ${currentFontSize}px;">Og jeg er et avsnitt</p>
+            </div>
+            
+            <button onclick="newFontSizeUpp()">Endre størelse</button>
+            <button onclick="newFontSizeDown()">Endre størelse</button>
+            `;
+        }
+
+        function newFontSizeUpp() {
+            currentFontSize = currentFontSize + 1;
+            fontAdjust();
+        }
+        function newFontSizeDown() {
+            currentFontSize = currentFontSize - 1;
+            fontAdjust();
+        }
+
+    </script>
+
+</body>
+</html>
