@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 122E</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="pagecontent()">Start</button>
+    <div id="page">
+
+        
+    </div>
+
+
+<script>
+
+
+        let redValue = 125;  
+        let greenValue = 125;
+        let blueValue = 125;
+
+        pagecontent();
+    function pagecontent() {
+        document.getElementById('page').innerHTML = /*HTML*/`
+            <div id="color" style="width:200px;height:100px;background-color:rgba(${redValue}, ${greenValue}, ${blueValue});">
+                Hei på deg
+            </div>
+            <input id="red" type="text" value="${redValue}" min="0" max="255">
+            <input id="green" type="text" value="${greenValue}" min="0" max="255">
+            <input id="blue" type="text" value="${blueValue}" min="0" max="255"><br/>
+            <button onclick="changeBackgroundColor()">Bytt bakgrunsfarge fra tabell</button><br/><br/>
+            <button onclick="changeBackgroundColorRedUp()">Øk rødt</button>
+            <button onclick="changeBackgroundColorRedDown()">Senk rødt</button>
+            <button onclick="changeBackgroundColorGreenUp()">Øk grønn</button>
+            <button onclick="changeBackgroundColorGreenDown()">Senk grønn</button>
+            <button onclick="changeBackgroundColorBlueUp()">Øk blå</button>
+            <button onclick="changeBackgroundColorBlueDown()">Senk blå</button><br/><br/>
+            
+            <input id="red2" type="range" value="${redValue}" min="0" max="255">
+            <input id="green2" type="range" value="${greenValue}" min="0" max="255">
+            <input id="blue2" type="range" value="${blueValue}" min="0" max="255"><br/>
+            
+        `;
+        
+    }
+
+    function changeBackgroundColor() {
+        let redColor = document.getElementById('red').value;
+        let greenColor = document.getElementById('green').value;
+        let blueColor = document.getElementById('blue').value;
+
+        redValue = redColor;
+        greenValue = greenColor;
+        blueValue = blueColor;
+
+        pagecontent();
+    }
+
+    function changeBackgroundColorRedUp() {
+        redValue = redValue + 5;
+        pagecontent();
+    }
+    function changeBackgroundColorRedDown() {
+        redValue = redValue - 5;
+        pagecontent();
+    }
+    function changeBackgroundColorGreenUp() {
+        greenValue = greenValue + 5;
+        pagecontent();
+    }
+    function changeBackgroundColorGreenDown() {
+        greenValue = greenValue - 5;
+        pagecontent();
+    }
+    function changeBackgroundColorBlueUp() {
+        blueValue = blueValue + 5;
+        pagecontent();
+    }
+    function changeBackgroundColorBlueDown() {
+        blueValue = blueValue - 5;
+        pagecontent();
+    }
+
+</script>
+    
+</body>
+</html>
