@@ -52,6 +52,9 @@ div.meny {
 div.meny::-webkit-scrollbar {
     visibility: hidden;
 }
+div.meny::-webkit-scrollbar-corner {
+    visibility: hidden;
+}
 
 .knapp {
     width: 70%;
