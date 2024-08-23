@@ -49,9 +49,12 @@ div.meny {
     overflow: scroll;
 }
 
+div.meny::-webkit-scrollbar {
+    visibility: hidden;
+}
 
 .knapp {
-    width: 60%;
+    width: 70%;
     height: 40px;
     background-color: darkcyan;
     border-radius: 25px;
