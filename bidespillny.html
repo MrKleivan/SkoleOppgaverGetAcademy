@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilde Spill</title>
+
+    <style>
+
+        #imageGame {
+            display: grid;
+            width: 400px;
+            height: 400px;
+            align-items: center;
+            align-content: center;
+            margin: auto;
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: repeat(2, 200px);
+            background-color: gray;
+        }
+
+        #imageCorner {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: auto;
+            background-size: cover;
+        }
+
+
+        div.hest {
+            background-image: url(bilder/hest.jpg);
+        }
+        div.ku {
+            background-image: url(bilder/ku.jpg);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="imageGame">
+
+    </div>
+    
+
+    <script>
+
+        gameBoard();
+        function gameBoard() {
+            document.getElementById('imageGame').innerHTML += /*HTML*/`
+                ${gameCards('imageCorner', 'hest', 'card1')}
+                ${gameCards('imageCorner', 'ku', 'card2')}
+                ${gameCards('imageCorner', 'ku', 'card3')}
+                ${gameCards('imageCorner', 'hest', 'card4')}
+            `;
+
+        }
+
+        function gameCards(id, classE, valueE) {
+            return /*HTML*/`
+                <div id="${id}" class="${classE}" value="${valueE}"></div>
+            `;
+        }
+
+        function showCard() {
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 124I</title>
+    <style>
+
+        #app, #app1 {
+            display: flex;
+        }
+
+        #DayMain, #MonthMain, #YearMain{
+            margin-left: 10px;
+        }
+
+        
+    </style>
+</head>
+<body">
+
+    <div id="app"></div>
+    <div id="app1"></div>
+
+    <script>
+
+        
+        let MyDaynumber = 1;
+        let MyMonthNumber = 1;
+        let MyYearNumber = 2024;
+
+        
+
+
+        addContentToApp();
+        function addContentToApp() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                ${createNumberSelector('Day', 1, 31)}
+                ${createNumberSelector('Month', 1, 12)}
+                ${createNumberSelector('Year', 1900, 2100)}
+            `;
+        }
+
+
+        
+
+        function createNumberSelector(id, min, max){
+            number = MyDaynumber;
+            buttonAcsess1 = '';
+            buttonAcsess2 = '';
+            getDateToDiv();
+            if (id === 'Day') {
+                if (number === max) {buttonAcsess1 = 'disabled'};
+                if (number === min) {buttonAcsess2 = 'disabled'};
+            return /*HTML*/`
+                <div id="${id}Main" style="display: flex;align-items: center;">${id}
+                    <div id="${id}" style="font-size: 300%;">${number}</div>
+                    <div style="display: flex; flex-direction: column;">
+                        <button id="DayUpp" onclick="selectDay(2)" ${buttonAcsess1}>▲</button>
+                        <button id="DayDown" onclick="selectDay(0)" ${buttonAcsess2}>▼</button>
+                    </div>
+                </div>
+            `;
+            }
+            if (id === 'Month') {
+                number = MyMonthNumber;
+                if (number === max) {buttonAcsess1 = 'disabled'};
+                if (number === min) {buttonAcsess2 = 'disabled'};
+            return /*HTML*/`
+                <div id="${id}Main" style="display: flex;align-items: center;">${id}
+                    <div id="${id}" style="font-size: 300%;">${number}</div>
+                    <div style="display: flex; flex-direction: column;">
+                        <button onclick="selectMonth(2)"${buttonAcsess1}>▲</button>
+                        <button onclick="selectMonth(0)"${buttonAcsess2}>▼</button>
+                    </div>
+                </div>
+            `;
+            }
+            if (id === 'Year') {
+                number = MyYearNumber;
+                if (number === max) {buttonAcsess1 = 'disabled'};
+                if (number === min) {buttonAcsess2 = 'disabled'};
+            return /*HTML*/`
+                <div id="${id}Main" style="display: flex;align-items: center;">${id}
+                    <div id="${id}" style="font-size: 300%;">${number}</div>
+                    <div style="display: flex; flex-direction: column;">
+                        <button onclick="selectYear(2)"${buttonAcsess1}>▲</button>
+                        <button onclick="selectYear(0)"${buttonAcsess2}>▼</button>
+                    </div>
+                </div>
+            `;
+            }
+            
+        }
+
+        function selectDay(element) {
+            if (element === 2) {
+                MyDaynumber++;
+                addContentToApp();
+            } else if (element === 0) {
+                MyDaynumber = MyDaynumber - 1;
+                addContentToApp();
+            }
+        }
+        function selectMonth(element) {
+            if (element === 2) {
+                MyMonthNumber++;
+                
+                addContentToApp();
+            } else if (element === 0) {
+                MyMonthNumber = MyMonthNumber - 1;
+                addContentToApp();
+            }
+        }
+        function selectYear(element) {
+            if (element === 2) {
+                MyYearNumber++;
+                
+                addContentToApp();
+            } else if (element === 0) {
+                MyYearNumber = MyYearNumber - 1;
+                addContentToApp();
+            }
+            
+        }
+
+       
+       function getDateToDiv() {
+        
+        document.getElementById('app1').innerHTML = /*HTML*/`
+                <h2>${MyDaynumber}.${MyMonthNumber}.${MyYearNumber}</h2>
+            `;
+       }
+
+       
+
+    </script>
+    
+</body>
+</html>

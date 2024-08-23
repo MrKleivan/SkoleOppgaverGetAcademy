@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory game</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            height: 100%;
+        }
+
+        #board>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid gray;
+            background-color: darkgray;
+            height: 200px;
+            margin: 1px;
+        }
+
+        img {      
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board"></div>
+    <div id="winner"></div>
+    <script>
+        let totalValidClicks = 0;
+        const images = [
+            {
+                fileName: "dog.jpg",
+                found: false
+            },
+            {
+                fileName: "frog.jpg",
+                found: false
+            },
+            {
+                fileName: "horse.jpg",
+                found: false
+            },
+            {
+                fileName: "chicken.jpg",
+                found: false
+            },
+            {
+                fileName: "spider.jpg",
+                found: false
+            },
+            {
+                fileName: "tiger.jpg",
+                found: false
+            },
+            {
+                fileName: "elephant.jpg",
+                found: false
+            },
+            {
+                fileName: "cat.gif",
+                found: false
+            }
+        ];
+
+        let lastClickedImg;
+
+
+        function imageClicked(element) {
+            let img = element.querySelector('img');
+            if(img.style.visibility === 'visible') {
+                return;
+            }
+
+            totalValidClicks++;
+
+            if(!lastClickedImg) {
+                img.style.visibility = 'visible';
+                lastClickedImg = img;
+                return;
+            }
+
+            img.style.visibility = 'visible';
+            if(lastClickedImg.src == img.src) {           
+                images.find(x => x.fileName === element.getAttribute('name')).found = true;                     
+            } else {        
+                let secondImage = lastClickedImg; 
+                setTimeout(() => hideIncorrectImages(img, secondImage), 750);
+            }           
+
+            lastClickedImg = null;            
+      
+            checkForWin();
+        }
+
+        function hideIncorrectImages(firstImage, secondImage) {
+            firstImage.style.visibility = 'hidden';    
+            secondImage.style.visibility = 'hidden';   
+        }
+
+ 
+        function checkForWin() {
+            if (images.filter(x => !x.found).length === 0) {
+                document.getElementById('winner').innerHTML = /*HTML*/`
+                    <span>Gratulerer! Du klarte det på ${totalValidClicks / 2} forsøk</span>
+                    <div><button onclick="reset()">Start på nytt</button>
+                `;
+            }
+        }
+
+        function reset() {
+            location.reload();
+        }
+
+        function drawBoard() {            
+            let html = '';
+            let index = 0;
+            randomize(images).forEach(image => {
+                html += createSquareHtml(index, image.fileName);
+                index++;
+            });
+
+     
+            randomize(images).forEach(image => {
+                html += createSquareHtml(index, image.fileName);
+                index++;
+            });
+
+            document.getElementById('board').innerHTML = html;
+        };
+
+        function createSquareHtml(index, fileName) {
+            return `<div onclick="imageClicked(this)" id=${index} name="${fileName}"><img src="img/${fileName}"></div>`;
+        }       
+
+        function randomize(array) {            
+            let currentIndex = array.length;
+            while (currentIndex != 0) {
+                let randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }          
+
+        drawBoard();
+    </script>
+</body>
+
+</html>

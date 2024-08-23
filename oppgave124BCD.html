@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 124B C og D</title>
+
+    <style>
+
+        table {
+            width: auto;
+            max-width: 300px;
+            border: 1px solid gray;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="app">
+
+    </div>
+    <div id="appTwo">
+
+    </div>
+
+
+    <script>
+
+        let celsius = 10;
+
+        addTable();
+        function addTable() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <table id="TmpTable">
+                    <tr>
+                        <th>Temperatur</th>
+                    </tr>
+                    <tr>
+                        <td>Celsius</td>
+                        <td>${celsius}</td>
+                    </tr>
+                </table>
+            `; 
+        }
+        addFahrenheitToTable();
+        function addFahrenheitToTable() {
+            let fahrenheit = celsius * 9/5 + 32;
+            
+            document.getElementById('TmpTable').innerHTML += /*HTML*/`
+                    <tr>
+                        <td>Fahrenheit</td>
+                        <td>${fahrenheit}</td>
+                    </tr>
+            `; 
+        }
+
+        let fahrenheit2 = 50;
+
+        addNewTable();
+        function addNewTable() {
+            document.getElementById('app').innerHTML += /*HTML*/`
+                <table id="TmpTwoTable">
+                    <tr>
+                        <th>Temperatur</th>
+                    </tr>
+                    <tr>
+                        <td>Fahrenheit</td>
+                        <td>${fahrenheit2}</td>
+                    </tr>
+                </table>
+            `; 
+        }
+        addCelsiusToTable();
+        function addCelsiusToTable() {
+            let celsius2 =  (fahrenheit2 - 32) * 5/9;
+            
+            document.getElementById('TmpTwoTable').innerHTML += /*HTML*/`
+                    <tr>
+                        <td>Celsius</td>
+                        <td>${celsius2}</td>
+                    </tr>
+            `; 
+        }
+
+        addTempInfo(10, 'Celsius');
+        addTempInfo(50, 'Fahrenheit')
+        function addTempInfo(degrees, name) {
+            if (name === 'Celsius') {
+                name2 = 'Fahrenheit';
+                document.getElementById('appTwo').innerHTML += /*HTML*/`
+                    <h2>Temperaturen er ${degrees} ${name}.</h2>
+                    <h2>Eller ${degrees * 9/5 + 32} ${name2}</h2>
+                `;
+            } else if (name === 'Fahrenheit') {
+                name2 = 'Celsius';
+                document.getElementById('appTwo').innerHTML += /*HTML*/`
+                    <h2>Temperaturen er ${degrees} ${name}.</h2>
+                    <h2>Eller ${(degrees - 32) * 5/9} ${name2}</h2>
+                `;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

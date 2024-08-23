@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppeoppgave egen løsning</title>
+
+    <style>
+
+
+        #board, #boardTwo {
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(2, 100px);
+            height: auto;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border: 1px solid darkcyan;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            visibility: hidden;
+        }
+
+
+    </style>
+
+</head>
+<body onload="loadBoard(), loadBoardTwo()">
+
+    <div id="board"></div><br/>
+    <div id="boardTwo"></div>
+    
+    <script>
+
+        let firstTag = null;
+        let secondTag = null;
+
+        function loadBoard() {
+            document.getElementById('board').innerHTML = /*HTML*/ `
+                <div onclick="checkDiv(this)" class="imageDiv"><img src="bilder/hest.jpg" alt="horse"></div>
+                <div onclick="checkDiv(this)" class="imageDiv"><img src="bilder/ku.jpg" alt="horse"></div>
+                <div onclick="checkDiv(this)" class="imageDiv"><img src="bilder/ku.jpg" alt="horse"></div>
+                <div onclick="checkDiv(this)" class="imageDiv"><img src="bilder/hest.jpg" alt="horse"></div>
+            `;
+        }
+
+        function checkDiv(element) {
+            const img = element.querySelector('img');
+
+            if (img.style.visibility === 'visible') {
+                return;
+            }
+
+            if (!firstTag) {
+                firstTag = img.src;
+                secondTag = img;
+                img.style.visibility = 'visible';
+            }else {
+                if (firstTag === img.src) {
+                    img.style.visibility = 'visible';
+                }else {
+                    secondTag.style.visibility = 'hidden';
+                }
+            
+                firstTag = null;
+                secondTag = null;
+            
+            }
+
+            
+        }
+
+        loadBoardTwo();
+        function loadBoardTwo() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOne()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowOne()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="horseTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+
+        function horseOne() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOne()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="horseThree()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+        function horseTwo() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseThree()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="horseTwo()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function horseThree() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneOne()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowOneTwo()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="horseThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function cowOne() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="loadBoardTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowOne()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowThree()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+        function cowTwo() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="loadBoardTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowThree()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowTwo()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="loadBoardTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+        function cowThree() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOneOne()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneTwo()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+        function horseOneOne() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOneOne()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneOne()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneOne()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneThree()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+            `;
+        }
+        function horseOneTwo() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOneThree()"><img src="bilder/hest.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="horseOneTwo()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneTwo()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneTwo()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function horseOneThree() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="horseOneThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="horseOneThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function cowOneOne() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="cowOneOne()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneOne()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneThree()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowOneOne()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function cowOneTwo() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="cowOneTwo()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneThree()"><img src="bilder/ku.jpg" style="visibility:hidden;" alt="horse"></div>
+                <div onclick="cowOneTwo()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneTwo()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+        function cowOneThree() {
+            document.getElementById('boardTwo').innerHTML = /*HTML*/ `
+                <div onclick="cowOneThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneThree()"><img src="bilder/ku.jpg" style="visibility:visible;" alt="horse"></div>
+                <div onclick="cowOneThree()"><img src="bilder/hest.jpg" style="visibility:visible;" alt="horse"></div>
+            `;
+        }
+
+
+    </script>
+    
+</body>
+</html>
