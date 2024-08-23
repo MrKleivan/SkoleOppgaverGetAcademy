@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 124B</title>
+</head>
+<body>
+<!-- Lag et enkelt spill hvor brukeren skal gjette et hemmelig tall. Lag en global variabel secretNumber og sett den til getRandomNumber(1,100). 
+ Denne funksjonen henter du herfra:
+
+function getRandomNumber(min, max) {
+  return min + Math.floor(Math.random() * (max - min + 1));
+}
+
+Vi skal forklare tilfeldige tall ordentlig senere, så det er ikke forventet at du skal forstå hvordan denne funksjonen virker, men du kan bruke den likevel.
+
+Brukeren skal kunne skrive inn et tall og trykke på en knapp for å gjette. 
+Så skal brukeren få tilbakemelding om tallet er riktig eller feil - og hvis det er feil, skal brukeren få vite om det er for høyt eller for lavt. -->
+<div id="app"></div>
+
+<script>
+
+
+    let seacretNumber = getRandomNumber(1, 100);
+
+    createGame();
+    function createGame() {
+        document.getElementById('app').innerHTML = /*HTML*/`
+            <input type="number" id="yourNumber">
+            <button onclick="checkResult()">Prøv lykken</button>
+            <div id="Result"></div>
+        `;
+    } 
+
+
+    function getRandomNumber(min, max) {
+        return  min + Math.floor(Math.random() * (max - min + 1));
+    }
+
+    function checkResult() {
+        let MyNumber = document.getElementById('yourNumber').valueAsNumber;
+        if (seacretNumber === MyNumber) {
+            document.getElementById('Result').innerHTML = /*HTML*/`
+                <h2>Grattulerer</h2>
+            `;
+        } else if (seacretNumber > MyNumber)  {
+            document.getElementById('Result').innerHTML = /*HTML*/`
+                <h2>Du valgte for laft tall</h2>
+            `;
+        } else if (seacretNumber < MyNumber)  {
+            document.getElementById('Result').innerHTML = /*HTML*/`
+                <h2>Du valgte for høyt tall</h2>
+            `;
+        }
+    }
+
+</script>
+
+
+</body>
+</html>
