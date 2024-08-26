@@ -6,6 +6,100 @@
     <title>Oppgave 128D</title>
 </head>
 <body>
+
+    <div id="app"></div>
+
+    <script>
+
+        let randomNumberPc = getRandomNumber(1,3);
+        let myNumber = 0;
+        let computerPoints = 0;
+        let playerPoints = 0;
+
+        let myScore = 0;
+        let computerScore = 0;
+        let ties = 0;
+
+        loadGame();
+        function loadGame(myChoice, computerChoice, result) {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <button onclick="MyChoiceRock()" style="width:100px;height:100px;border-radius:50%;background-color:green;font-size:60px;border:1px outset darkgreen;">&#9994;</button>
+                <button onclick="MyChoicePaper()" style="width:100px;height:100px;border-radius:50%;background-color:green;font-size:60px;border:1px outset darkgreen;">&#129330;</button>
+                <button onclick="MyChoiceScissor()" style="width:100px;height:100px;border-radius:50%;background-color:green;font-size:60px;border:1px outset darkgreen;">&#9996;</button>
+                ${createResultDiv(myChoice || 'is waiting', computerChoice || 'is waiting', result || '')}
+                <div>Your score ${myScore}. Computer score ${computerScore}. Ties ${ties} </div> 
+            `;
+            
+        } 
+
+        function createResultDiv(myChoice, computerChoice, result) {
+            return /*HTML*/`
+                <div>You choice ${myChoice} computer choice ${computerChoice} ${result}</div>
+            `;
+        }
+
+        
+        function getRandomNumber(min, max) {
+        return  min + Math.floor(Math.random() * (max - min + 1));
+        }
+
+        function MyChoiceRock() {
+            getRandomNumber(1,3);
+            myNumber = 1;
+            if (randomNumberPc === myNumber) {
+                ties++;
+                loadGame('rock', 'rock', 'its a tie');
+            }
+            if (randomNumberPc === 2) {
+                computerScore++;
+                loadGame('rock', 'paper', 'you lose');
+            }
+            if (randomNumberPc === 3) {
+                myScore++;
+                loadGame('rock', 'scissor', 'you win');
+            }
+            randomNumberPc = getRandomNumber(1,3);
+            
+        }
+        function MyChoicePaper() {
+            getRandomNumber(1,3);
+            myNumber = 2;
+            if (randomNumberPc === myNumber) {
+                ties++;
+                loadGame('paper', 'paper', 'its a tie');
+            }
+            if (randomNumberPc === 1) {
+                myScore++;
+                loadGame('paper', 'rock', 'you win');
+            }
+            if (randomNumberPc === 3) {
+                computerScore++;
+                loadGame('paper', 'scissor', 'you lose');
+            }
+            randomNumberPc = getRandomNumber(1,3);
+            
+        }
+        function MyChoiceScissor() {
+            getRandomNumber(1,3);
+            myNumber = 3;
+            if (randomNumberPc === myNumber) {
+                computerScore++;
+                loadGame('scissor', 'rock', 'you lose');
+            }
+            if (randomNumberPc === 2) {
+                myScore++;
+                loadGame('scissor', 'paper', 'you win');
+            }
+            if (randomNumberPc === 3) {
+                ties++;
+                loadGame('scissor', 'scissor', 'its a tie');
+            }
+            randomNumberPc = getRandomNumber(1,3);
+            
+        }
+
+
+    </script>
     
 </body>
 </html>
