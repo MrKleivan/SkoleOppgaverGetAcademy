@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 128I</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+
+        takeHighesttNumber(12,13,13);
+        function takeHighesttNumber(numberOne, numberTwo, numberThree) {
+            let heighestNumber; 
+            if (numberOne >= numberTwo && numberOne >= numberThree) {heighestNumber = numberOne}
+            if (numberTwo >= numberOne && numberTwo >= numberThree) {heighestNumber = numberTwo}
+            if (numberThree >= numberTwo && numberThree >= numberOne) {heighestNumber = numberThree}
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div>Number one is${numberOne}</div>
+                <div>Number two is${numberTwo}</div>
+                <div>Number three is${numberThree}</div>
+                <div>The highest number is ${heighestNumber}</div>
+            `;
+        }
+
+    </script>
+    
+</body>
+</html>

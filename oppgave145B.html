@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 145B</title>
+    <style>
+        #app {
+            display: grid;
+            grid-template-columns: 50px 230px 50px;
+            grid-template-rows: repeat(3, 150px);
+        }
+
+        img {
+            width: 100%;
+        }
+        button {
+            width: 100%;
+            height: 80%;
+            margin-top: 10px;
+            font-size: 300%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+        let headPicture = 2;
+        let bodyPicture = 3;
+        let legsPicture = 3;
+
+        createPictureGame();
+        function createPictureGame() {
+            
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div><button onclick="left('headPicture')">&#11164;</button></div><div><img src="bilder/head${headPicture}.png" /></div><div><button onclick="right('headPicture')">&#11166;</button></div> 
+                <div><button onclick="left('bodyPicture')">&#11164;</button></div><div><img src="bilder/body${bodyPicture}.png" /></div><div><button onclick="right('bodyPicture')">&#11166;</button></div> 
+                <div><button onclick="left('legsPicture')">&#11164;</button></div><div><img src="bilder/legs${legsPicture}.png" /></div><div><button onclick="right('legsPicture')">&#11166;</button></div> 
+            `;
+        }
+
+        function left(element) {
+            if (element == 'headPicture') {
+                headPicture--;
+              if (headPicture === 0) { 
+                headPicture = 3;
+                } 
+                
+            } if (element === 'bodyPicture') {
+                bodyPicture--;
+             if (bodyPicture === 0)
+                bodyPicture = 3;
+            }
+            if (element === 'legsPicture') {
+                legsPicture--;
+             if (legsPicture === 0)
+                legsPicture = 3;
+            }
+            
+            createPictureGame();
+            
+        }
+        function right(element) {
+            if (element == 'headPicture') {
+                headPicture++;
+              if (headPicture === 4) { 
+                headPicture = 1;
+                } 
+                
+            } if (element === 'bodyPicture') {
+                bodyPicture++;
+             if (bodyPicture === 4)
+                bodyPicture = 1;
+            }
+            if (element === 'legsPicture') {
+                legsPicture++;
+             if (legsPicture === 4)
+                legsPicture = 1;
+            }
+            
+            createPictureGame();
+            
+        }
+
+        // &#11165; up
+        // &#11164; left
+        // &#11166; right
+        // &#11167; down
+    </script>
+    
+    
+</body>
+</html>

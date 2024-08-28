@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 128H</title>
+
+    <style>
+
+        #calcInputField {
+            width: 172px;
+            height: 30px;
+        }
+        #calcInputButtons {
+            display: grid;
+            grid-template-columns: repeat(4, 45px);
+            grid-template-rows: repeat(4, 45px);
+            grid-auto-columns: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+    </div>
+
+
+    <script>
+
+        let myCalcInputValue = 0;
+
+
+        myCalc();
+        function myCalc() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div><input id="calcInputField" type="text" value="${myCalcInputValue}"></div>
+                <div id="calcInputButtons">
+                    <button onclick="calcInput(7)" value="7">7</button>
+                    <button onclick="calcInput(8)" value="8">8</button>
+                    <button onclick="calcInput(9)" value="9">9</button>
+                    <button onclick="calcInput('/')" value="/">/</button>
+                    <button onclick="calcInput(4)" value="4">4</button>
+                    <button onclick="calcInput(5)" value="5">5</button>
+                    <button onclick="calcInput(6)" value="6">6</button>
+                    <button onclick="calcInput('*')" value="*">*</button>
+                    <button onclick="calcInput(1)" value="1">1</button>
+                    <button onclick="calcInput(2)" value="2">2</button>
+                    <button onclick="calcInput(3)" value="3">3</button>
+                    <button onclick="calcInput('-')" value="-">-</button>
+                    <button onclick="calcInput('Enter')" value="Enter">Enter</button>
+                    <button onclick="calcInput('C')" value="C">C</button>
+                    <button onclick="calcInput()" disabled value=""></button>
+                    <button onclick="calcInput('+')" value="+">+</button>
+                </div>
+            `;
+        }
+
+        function calcInput(myValue) {
+            if (myValue === 'Enter') {
+                myCalcInputValue = eval(myCalcInputValue);
+                myCalc();
+            } else if (myValue === 'C') {
+                myCalcInputValue = '';
+                myCalc();
+            } else {
+            myCalcInputValue += myValue;
+            myCalc();
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
