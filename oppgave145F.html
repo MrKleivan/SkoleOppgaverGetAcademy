@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 145F</title>
+</head>
+<body>
+
+    <div id="app"></div>
+
+    <script>
+
+        let myLetter;
+        let myGuessLetter = '';
+        let myLetterGuesses = '';
+        let currentText = '______________';
+
+        loadHangman();
+        function loadHangman() {
+            currentText = evaluateHangman('TERJE KOLDERUP', currentText, myLetter);
+            document.getElementById('app').innerHTML = 
+            evaluateHangman('TERJE KOLDERUP', currentText, myLetter)
+            +`<br/><input type="text" onchange="myGuessLetter = this.value">
+                <button onclick="pushLetter()">Enter</button>
+                <h2>Du har valgt ${myLetterGuesses}</h2>
+            `;
+            
+            ;
+        }
+
+        function evaluateHangman(secretText, currentText, guessedLetter){
+            const index = secretText.indexOf(guessedLetter);
+            if(index == -1) return currentText;
+            const currentTextBeforeGuessedLetter = currentText.substring(0, index);     
+            const currentTextAfterGuessedLetter = currentText.substring(index + 1);
+            const secretTextAfterGuessedLetter = secretText.substring(index + 1);
+            return currentTextBeforeGuessedLetter + guessedLetter 
+                + evaluateHangman(secretTextAfterGuessedLetter, currentTextAfterGuessedLetter, guessedLetter);
+                
+        }
+
+        function pushLetter() {
+            myLetter = myGuessLetter;
+            myLetterGuesses += ' ' + myGuessLetter; 
+            loadHangman();
+        }
+
+        
+    </script>
+    
+</body>
+</html>

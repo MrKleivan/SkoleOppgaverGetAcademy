@@ -114,11 +114,29 @@
         addPuzzlePiece('buttons', true, true, true, true, 'addNormalPuzzlePieceToBoard()', 1);
         addPuzzlePiece('buttons', false, true, true, true, 'addPuzzlePieceWithoutTopToBoard()', 2);
         addPuzzlePiece('buttons', false, false, true, true, 'addPuzzlePieceWithoutRightAndTopToBoard()', 1);
-
+        addPuzzlePiece('buttons', false, true, true, false, 'addPuzzlePieceWithoutLefthtAndTopToBoard()', 2);
+        addPuzzlePiece('buttons', true, false, false, true, 'addPuzzlePieceWithoutRightAndBottomToBoard()', 1);
+        addPuzzlePiece('buttons', true, true, false, false, 'addPuzzlePieceWithoutLeftAndBottomToBoard()', 2);
+        addPuzzlePiece('buttons', true, true, true, false, 'addPuzzlePieceWithoutLeft()', 1);
+        addPuzzlePiece('buttons', true, false, true, true, 'addPuzzlePieceWithoutRight()', 2);
+        addPuzzlePiece('buttons', true, true, false, true, 'addPuzzlePieceWithoutBottomToBoard()', 2);
 
         let leftPuzz = 24;
         let topPuzz = 0;
         let color = 1;
+        let puzzlePieces = 0;
+
+        function addPuzzlePieceWithoutRightAndTopToBoard() {
+            addPuzzlePiece('board', '', '', true, true, '', color,leftPuzz,topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+        }
 
         function addNormalPuzzlePieceToBoard() {
             addPuzzlePiece('board', true, true, true, true, '', color,leftPuzz,topPuzz);
@@ -133,8 +151,102 @@
             color == 1 ? color = 2: color = 1;
         }
 
+        function addPuzzlePieceWithoutLefthtAndTopToBoard(){
+            addPuzzlePiece('board', false, true, true, false, '',color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+        }
+
+        function addPuzzlePieceWithoutRight(){
+            addPuzzlePiece('board', true, false, true, true, '',color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+        } 
+        
+        function addPuzzlePieceWithoutLeft(){
+            addPuzzlePiece('board', true, true, true, false, '', color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+        }
+
+        function addPuzzlePieceWithoutRightAndBottomToBoard(){
+            addPuzzlePiece('board', true, false, false, true, '',color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+
+        }
+
+
+        function addPuzzlePieceWithoutLeftAndBottomToBoard(){
+            addPuzzlePiece('board', true, true, false, false, '',color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+
+        }     
+        
+        function addPuzzlePieceWithoutBottomToBoard(){
+            addPuzzlePiece('board', true, true, false, true, '',color, leftPuzz, topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+
+        }         
+
+
+
+        function addPuzzlePieceWithoutTopToBoard() {
+            addPuzzlePiece('board', '', true, true, true, '', color,leftPuzz,topPuzz);
+            if (leftPuzz === 0) {
+                topPuzz += 6;
+                leftPuzz = 24;
+            } else {
+            leftPuzz -= 6;
+            
+            }
+            color == 1 ? color = 2: color = 1;
+        }
+
+        
+
+
         function addPuzzlePiece(toId, hasTop, hasRight, hasBottom, hasLeft, onclick, color, leftPosition, topPosition) {
             let style = '';
+         
             if (leftPosition !== undefined) {
                 style = `left: ${leftPosition + 0.5}em; top: ${topPosition + 0.5}em`;
             }
@@ -147,6 +259,13 @@
                     ${hasLeft ? `<span class="l"></span>` : ''}
                 </div>            
             `;
+        }
+    
+
+       function endGame(){
+            if (leftPosition == 0&& topPosition==24){
+                return 
+            }
         }
 
         document.getElementById('exerciseText').innerHTML = /*HTML*/`            

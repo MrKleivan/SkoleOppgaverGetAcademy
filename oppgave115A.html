@@ -46,20 +46,36 @@
 </head>
 <body>
 
-    <div id="page">
-        <div id="header">
+    <div id="app">
 
-        </div>
-        <div id="menu">
-
-        </div>
-        <div id="content">
-
-        </div>
-        <div id="footer">
-
-        </div>
     </div>
+    
+
+    <script>
+        showContent();
+        function showContent() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div id="page">
+                    <div id="header">
+
+                    </div>
+                    <div id="menu">
+
+                    </div>
+                    <div id="content">
+
+                    </div>
+                    <div id="footer">
+
+                    </div>
+                </div>
+            `;
+        } 
+        getOtherHtml();
+        function getOtherHtml() {
+        }
+
+    </script>
 
     
 </body>
