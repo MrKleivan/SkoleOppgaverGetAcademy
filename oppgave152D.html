@@ -8,20 +8,32 @@
 
     <style>
         #wordCountInput {
-            width: 700px;
-            height: 700px;
+            width: 800px;
+            height: 200px;
+            text-align: start;
+            justify-content: start;
+            align-items: flex-start;
         }
     </style>
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        
+    </div>
+
+    <div id="app2"> 
+        <ol id="WordList">
+
+        </ol>`
+    </div>
+
     <script>
         // model
 
-        let word = '';
+        let inputText = '';
         let wordIndex = 0;
-        let listOfWords = '';
+        let listOfWords = [];
         let amountOfWord = 0; 
 
         // view
@@ -29,36 +41,32 @@
         function updateView() {
             document.getElementById('app').innerHTML = 
             createTextInputForeWordCount()
-            +`<table>
-                <tr>
-                    <th>Index</th>
-                    <th>Word</th>
-                    <th>Amount of word</th>
-                </tr>    
-                <tr>
-
-                </tr>    
-             </table>`;
-            
+            +`<br/><button onclick="createList()">Test</button>`
+            ;
+            for(let wordListOne of listOfWords) {
+                document.getElementById('WordList').innerHTML += `<li>${wordListOne}</li>`;
+            }
         }
 
-        // controller
-
+        
         function createTextInputForeWordCount() {
             return /*HTML*/ `
-                <input id="wordCountInput" type="text" oninput="word = this.value"/> 
+            <input id="wordCountInput" type="text" oninput="inputText = this.value"/> 
             `;
         }
+        
+        // controller
 
-        function createTableOfWordCounter() {
-            return `
-                <tr>
-                    <td>${wordIndex}</td>
-                    <td>${word}</td>
-                    <td>${amountOfWord}</td>
-                </tr>
-                `;
+
+        function createList() {
+            let = InputTextNew = inputText;
+            InputTextNew.replaceAll('.', '')
+            listOfWords = InputTextNew.split(' ');
+            updateView();
         }
+             
+
+    
 
 
     </script>
