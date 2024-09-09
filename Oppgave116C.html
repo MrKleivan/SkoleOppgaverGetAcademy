@@ -16,7 +16,7 @@
         }
 
         #hus {
-            width: 100vh;
+            width: 100vw;
             height: 60vh;
             margin: auto;
             border-radius: 45px;
@@ -27,6 +27,9 @@
             font-size: large;
             background-color: cadetblue;
             background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            vertical-align: text-bottom;
         }
 
         button {
@@ -42,6 +45,9 @@
             background-color: rgba(73, 146, 140, 0.61);
             border: inset gray;
         }
+
+        
+
 
     </style>
 
@@ -59,7 +65,7 @@
          
         
         function ute() {
-            document.getElementById('hus').style.background = 'url(bilder/ute.jpg)'; 
+            document.getElementById('hus').style.backgroundImage = 'url(bilder/ute.jpg)'; 
             document.getElementById('hus').innerHTML = /*HTML*/ `
             <h2>Du står utenfor</h2> 
             <button onclick="gang()">Gå inn i gangen</button>
@@ -76,21 +82,21 @@
             `;
         }
         function soverom() { 
-            document.getElementById('hus').style.background = 'url(bilder/soverom.jpg)';
+            document.getElementById('hus').style.backgroundImage = 'url(bilder/soverom.jpg)';
             document.getElementById('hus').innerHTML = /*HTML*/ `
             <h2>Du står i soverommet</h2> 
             <button onclick="gang()">Gå inn i gangen</button>
             `;
         }
         function stue() { 
-            document.getElementById('hus').style.background = 'url(bilder/stue.png)';
+            document.getElementById('hus').style.backgroundImage = 'url(bilder/stue.png)';
             document.getElementById('hus').innerHTML = /*HTML*/ `
             <h2>Du står i stua</h2> 
             <button onclick="gang()">Gå inn i gangen</button>
             `;
         }
         function bad() { 
-            document.getElementById('hus').style.background = 'url(bilder/bad.png)';
+            document.getElementById('hus').style.backgroundImage = 'url(bilder/bad.png)';
             document.getElementById('hus').innerHTML = /*HTML*/ `
             <h2>Du står på badet</h2> 
             <button onclick="gang()">Gå inn i gangen</button>

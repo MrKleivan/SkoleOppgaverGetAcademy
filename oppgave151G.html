@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 151G</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <pre id="output"></pre>
+<script>
+
+    let i = 0;
+    for(i = 0; i < 20; i++){
+            writeHash();
+            if(i == 7 || i == 13 || i == 17){
+                writeLineBreak();
+            }
+            if (i == 7) {
+                writeSpace();
+            }
+            if (i == 13) {
+                writeSpace();
+                +writeSpace();
+            }
+            if (i == 17) {
+                writeSpace();
+                +writeSpace();
+                +writeSpace();
+            }
+
+
+        }
+        writeLineBreak();
+    const runs = 4;
+    for (let index = 0; index < runs; index++) {
+        
+        
+        for (let space = 0; space < index; space++) {
+            writeSpace();
+        }
+         for (let space = 2 * (runs - index); space > 0; space--) {
+             writeHash();
+        }
+
+        writeLineBreak();
+
+    }
+
+    function writeHash() {
+            document.getElementById('output').innerText += '#';
+
+    }
+
+    function writeSpace() {
+        document.getElementById('output').innerText += '0';
+    }
+
+    function writeLineBreak() {
+        document.getElementById('output').innerText += '\n';
+    }
+</script>
+</body>
+
+</html>

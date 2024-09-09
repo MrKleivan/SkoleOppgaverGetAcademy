@@ -17,10 +17,11 @@
     <script>
         let colorSelected = 'green';
         let ColorSelectionGame = /*HTML*/`  <select id="myValue" onchange="colorSelected=this.value" value="${colorSelected}">
-                                                    <option  value="green">Grønn</option>
-                                                    <option  value="red">Rød</option>
-                                                    <option  value="blue">Blå</option>
-                                                    <option  value="yellow">Gul</option>
+                                                    <option></option>
+                                                    <option selected value="green">Grønn</option>
+                                                    <option value="red">Rød</option>
+                                                    <option value="blue">Blå</option>
+                                                    <option value="yellow">Gul</option>
                                             </select>
                                             <button onclick="createDiv(colorSelected)">Legg til div</button>
                                             

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 151A</title>
+</head>
+<body>
+
+    <div id="app">
+    </div>
+
+
+    <script>
+
+        let textLoop = '';
+        let numbeLoop;
+
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <input type="text" id="fName" max="20" onchange="textLoop = this.value"/><br/><br/>
+            <input type="number" id="mNumner" max="45" onchange="numbeLoop = this.value"/><br/><br/>
+            <button onclick="repeateString()">Gjenta</button>
+            <button onclick="repeateNumber()">Gjenta</button>
+            <div>${textLoop}</div>
+            `;
+        }
+
+        function repeateString() {
+            let i = 1;
+            let word = textLoop;
+            while (i  < 10) {
+                i++
+                textLoop += word;
+                console.log(textLoop);
+            }
+            updateView();
+        }
+        function repeateNumber() {
+            
+            while(numbeLoop < 20) {
+                numbeLoop += numbeLoop;
+                console.log(numbeLoop);
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

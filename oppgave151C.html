@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 151C</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let MyWord;
+        let myLetter;
+        let i = 1;
+        let reverstWord = '';
+        
+        // view
+        updateView();
+        function updateView() {
+            ;
+            document.getElementById('app').innerHTML = /*HTML*/`
+            
+            <div> ${MyWord} <br/>${reverstWord}</div>`
+            ;
+            
+            
+        }
+
+        // controller
+        wordBackwords('Per Ivar');
+        function wordBackwords(word) {
+            MyWord = word;
+            for (i = MyWord.length; i >= 0; i--) {
+            
+            myLetter = MyWord.charAt(i);
+            reverstWord += myLetter;
+        }
+        updateView();
+        }
+
+    </script>
+</body>
+
+</html>

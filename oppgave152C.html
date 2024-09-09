@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+        }
+        #board>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 300%;
+            border: 1px solid grey;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let board = '1257 3486';
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createWonDiv()
+            +`<div id="board">`
+            +createSquereHtml(0)
+            +createSquereHtml(1)
+            +createSquereHtml(2)
+            +createSquereHtml(3)
+            +createSquereHtml(4)
+            +createSquereHtml(5)
+            +createSquereHtml(6)
+            +createSquereHtml(7)
+            +createSquereHtml(8)
+            +`</div>`;
+            
+            
+        }
+        
+        function createSquereHtml(index) {
+            return /*HTML*/`
+            <div onclick="swapPuzzlePice(${index})">${board.charAt(index)}</div>
+            `;
+        }
+
+        // controller
+        function createWonDiv() {
+            if (board != '12345678 ') return '';
+            return /*HTML*/`
+                <div>
+                Gratulerer
+                <button onclick="restarteGame()">Spill på nytt</button>    
+                </div>
+            `;
+        }
+
+        function restarteGame() {
+            board = '1257 3486';
+            updateView();
+        }
+
+        function swapPuzzlePice(index) {
+            let blankIndex = board.indexOf(' ');
+            if (!areNeighbours(index, blankIndex)) {return;}
+            let selectedNumber = board.charAt(index);
+            board = board.replace(' ', 'x');
+            board = board.replace(selectedNumber, ' ');
+            board = board.replace('x', selectedNumber);
+            
+            updateView();
+        }
+
+        function areNeighbours(index1, index2) {
+            let rowindex1 = Math.floor(index1 / 3);
+            let colindex1 = index1 % 3;
+            let rowindex2 = Math.floor(index2 / 3);
+            let colindex2 = index2 % 3;
+            return (colindex1 == colindex2 && Math.abs(rowindex2 - rowindex1) == 1) || (rowindex1 == rowindex2 && Math.abs(colindex1 - colindex2) == 1);
+        }
+
+    </script>
+</body>
+
+</html>

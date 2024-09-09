@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <pre id="output"></pre>
+    <script>
+        // model
+
+        // view
+         
+
+        // controller
+
+        const gameSize = 4;
+        for(let i = gameSize; i >= 0; i--){
+            for(let j = gameSize - i; j > 0; j--) {
+                writeSpace();
+            }
+            for(let j = 1 + gameSize - i; j > 0; j--){
+                writeHash();
+            }
+            for(let j = 4 * i; j > 0; j--) {
+                writeSpace();
+            }
+            for(let j = 1 + gameSize - i; j > 0; j--){
+                writeHash();
+            }
+
+            writeLineBreak();
+        }
+        for(let i = 0; i <= gameSize; i++){
+            for(let j = gameSize - i; j > 0; j--) {
+                writeSpace();
+            }
+            for(let j = 1 + gameSize - i; j > 0; j--){
+                writeHash();
+            }
+            for(let j = 4 * i; j > 0; j--) {
+                writeSpace();
+            }
+            for(let j = 1 + gameSize - i; j > 0; j--){
+                writeHash();
+            }
+
+            writeLineBreak();
+        }
+
+        function writeHash() {
+            document.getElementById('output').innerText += '#';
+        }
+
+        function writeSpace() {
+            document.getElementById('output').innerText += ' ';
+        }
+
+        function writeLineBreak() {
+            document.getElementById('output').innerText += '\n';
+        }
+    </script>
+</body>
+
+</html>

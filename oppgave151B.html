@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 151B</title>
+</head>
+<body>
+
+    <div id="app">
+    </div>
+
+
+    <script>
+
+        let numberLoopStart = 0;
+        let numberLoopStopp = 0;
+        let numberLoopChange = 0;
+        let numberDiv;
+        let numbErs = '';
+        let myIndexNumber;
+        
+
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+            <input type="number" id="mNumner" onchange="numberLoopStart = this.valueAsNumber"/><br/><br/>
+            <input type="number" id="mNumner" onchange="numberLoopStopp = this.valueAsNumber"/><br/><br/>
+            <input type="number" id="mNumner" onchange="numberLoopChange = this.valueAsNumber"/><br/><br/>
+            <button onclick="repeateNumber()">Gjenta</button>
+            <div>${numbErs}</div>
+            `;
+        }
+
+       
+        function repeateNumber() {
+            
+         
+
+         for(myIndexNumber = numberLoopStart; myIndexNumber < numberLoopStopp; myIndexNumber += numberLoopChange){
+                console.log(myIndexNumber);
+                numbErs += myIndexNumber;
+            }
+            updateView();
+            
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>

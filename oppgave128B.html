@@ -23,6 +23,8 @@ Så skal brukeren få tilbakemelding om tallet er riktig eller feil - og hvis de
 
 
     let seacretNumber = getRandomNumber(1, 100);
+    let guessNumber = 0;
+    let resultInfo = '';
 
     createGame();
     function createGame() {
@@ -30,6 +32,8 @@ Så skal brukeren få tilbakemelding om tallet er riktig eller feil - og hvis de
             <input type="number" id="yourNumber">
             <button onclick="checkResult()">Prøv lykken</button>
             <div id="Result"></div>
+            <div><h2>${resultInfo}</h2></div>
+            <div>Du har gjettet ${guessNumber}</div>
         `;
     } 
 
@@ -39,20 +43,16 @@ Så skal brukeren få tilbakemelding om tallet er riktig eller feil - og hvis de
     }
 
     function checkResult() {
+        guessNumber++;
         let MyNumber = document.getElementById('yourNumber').valueAsNumber;
         if (seacretNumber === MyNumber) {
-            document.getElementById('Result').innerHTML = /*HTML*/`
-                <h2>Grattulerer</h2>
-            `;
+            resultInfo = 'Grattulerer';
         } else if (seacretNumber > MyNumber)  {
-            document.getElementById('Result').innerHTML = /*HTML*/`
-                <h2>Du valgte for laft tall</h2>
-            `;
+            resultInfo = 'Du valgte for laft tall';
         } else if (seacretNumber < MyNumber)  {
-            document.getElementById('Result').innerHTML = /*HTML*/`
-                <h2>Du valgte for høyt tall</h2>
-            `;
+            resultInfo = 'Du valgte for høyt tall';
         }
+        createGame();
     }
 
 </script>

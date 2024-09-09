@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppeoppgave 3</title>
+    <style>
+        .game-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        .tower-container {
+            position: relative;
+        }
+
+        .tower {
+            width: 100px;
+            height: 120px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            border-bottom: 8px solid darkred;
+        }
+
+        .tower-container::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 120px;
+            z-index: -10;
+            background-color: darkred;
+        }
+
+        .disk {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            border: 4px solid gray;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+
+    <script>
+        // model
+        //   hvor er diskene, 0 = venstre tårn, 1 = midten, 2 = høyre
+        //   alle starter til venstre
+        let smallDiskTowerIndex = 0;
+        let mediumDiskTowerIndex = 0;
+        let largeDiskTowerIndex = 0;
+        let smallDiskDiv = `<div class="disk" style="width: 30px"></div>`; 
+        let mediumDiskDiv = `<div class="disk" style="width: 50px"></div>`;
+        let largeDiskDiv = `<div class="disk" style="width: 70px"></div>`;
+        let endMessage = ''
+  
+
+        // view 
+        newGame();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <div class="game-container">
+                    <div class="tower-container">
+                        <div id="tower-0" class="tower">
+                            ${largeDiskTowerIndex == 0 ? largeDiskDiv : ''}
+                            ${mediumDiskTowerIndex == 0 ? mediumDiskDiv : ''}
+                            ${smallDiskTowerIndex == 0 ? smallDiskDiv : ''}
+                        </div>
+                    </div>
+                    <div class="tower-container">
+                        <div id="tower-1" class="tower">
+                            ${largeDiskTowerIndex == 1 ? largeDiskDiv : ''}
+                            ${mediumDiskTowerIndex == 1 ? mediumDiskDiv : ''}
+                            ${smallDiskTowerIndex == 1 ? smallDiskDiv : ''}
+                        </div>
+                    </div>
+                    <div class="tower-container">
+                        <div id="tower-2" class="tower">
+                            ${largeDiskTowerIndex == 2 ? largeDiskDiv : ''}
+                            ${mediumDiskTowerIndex == 2 ? mediumDiskDiv : ''}
+                            ${smallDiskTowerIndex == 2 ? smallDiskDiv : ''}
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h1>${endMessage}</h1>
+                    <button onclick='newGame()'>Nytt spill</button>
+                </div>
+                Flytt liten disk til 
+                <button ${smallDiskTowerIndex == 0 ? 'disabled' : ''} onclick="moveSmallDisk(0)">venstre tårn</button>
+                <button onclick="moveSmallDisk(1)">midtre tårn</button>
+                <button ${smallDiskTowerIndex == 2 ? 'disabled' : ''} onclick="moveSmallDisk(2)">høyre tårn</button>
+                <br/>
+                Flytt medium disk
+                <button ${smallDiskTowerIndex == 0 || mediumDiskTowerIndex==0 || smallDiskTowerIndex == mediumDiskTowerIndex ? 'disabled' : ''} onclick="moveMediumDisk(0)">venstre tårn</button>
+                <button ${smallDiskTowerIndex == 1 || smallDiskTowerIndex == mediumDiskTowerIndex ? 'disabled' : ''} onclick="moveMediumDisk(1)">midtre tårn</button>
+                <button ${smallDiskTowerIndex == 2 || mediumDiskTowerIndex==2 || smallDiskTowerIndex == mediumDiskTowerIndex ? 'disabled' : ''} onclick="moveMediumDisk(2)">høyre tårn</button>
+                <br/>
+                Flytt stor disk
+                <button ${(smallDiskTowerIndex == 0 || mediumDiskTowerIndex==0 || largeDiskTowerIndex ==0 || (smallDiskTowerIndex == largeDiskTowerIndex||mediumDiskTowerIndex == largeDiskTowerIndex)) ? 'disabled' : ''}  onclick="moveLargeDisk(0)">venstre tårn</button>
+                <button ${(smallDiskTowerIndex == 1 || mediumDiskTowerIndex==1 || (smallDiskTowerIndex==largeDiskTowerIndex||mediumDiskTowerIndex == largeDiskTowerIndex)) ? 'disabled' : ''} onclick="moveLargeDisk(1)">midtre tårn</button>
+                <button ${(smallDiskTowerIndex == 2 || mediumDiskTowerIndex==2 || largeDiskTowerIndex==2 || (smallDiskTowerIndex ==largeDiskTowerIndex||mediumDiskTowerIndex == largeDiskTowerIndex)) ? 'disabled' : ''} onclick="moveLargeDisk(2)">høyre tårn</button>
+                <br/>
+            `;
+            
+        }
+
+        // controller
+        function moveSmallDisk(toTowerIndex) {
+            smallDiskTowerIndex = toTowerIndex;
+            smallDiskDiv = `<div class="disk" style="width: 30px"></div>`;
+            
+            updateView();
+            endGame();
+
+        }
+
+        function moveMediumDisk(toTowerIndex) {
+            //<div class="disk" style="width: 50px"></div>
+            if (toTowerIndex == smallDiskTowerIndex) {
+                return}
+                else{mediumDiskTowerIndex = toTowerIndex;
+                    mediumDiskDiv = `<div class="disk" style="width: 50px"></div>`;
+
+            updateView();
+            }
+         }
+
+        function moveLargeDisk(toTowerIndex) {
+            //<div class="disk" style="width: 70px"></div>
+            if (toTowerIndex == smallDiskTowerIndex  || toTowerIndex == mediumDiskTowerIndex ) {
+                return}
+                else{largeDiskTowerIndex = toTowerIndex;
+                    largeDiskDiv = `<div class="disk" style="width: 70px"></div>`;
+                }
+            updateView();
+        }
+
+        function endGame(){
+            if(smallDiskTowerIndex == 2 && mediumDiskTowerIndex == 2 && largeDiskTowerIndex ==2){
+                endMessage = "Du Vant"
+            }
+            updateView()
+        }
+
+        function newGame(){
+            endMessage='';
+            largeDiskTowerIndex = 0
+            mediumDiskTowerIndex = 0
+            smallDiskTowerIndex = 0
+            updateView()
+        }
+
+        document.body.innerHTML += `
+            <h4>Oppgaver</h4>
+            Disse oppgavene er ment å løses med kun funksjoner, variabler, operatorer, if-setninger og MVC. Man trenger
+            ikke bruke løkker eller lister.
+            <ol>
+                <li>
+                    Studer spillet her: <a href="https://www.mathsisfun.com/games/towerofhanoi.html">mathsisfun.com/games/towerofhanoi.html</a>
+                    og sørg for at dere forstår reglene. 
+                </li>
+                <li>
+                    Sørg for at <tt>updateView()</tt> tegner opp diskene ut fra innholdet av variablene i modellen.
+                    Merk at pga <tt>display: flex</tt> og <tt>flex-direction: column-reverse</tt> må dere legge til 
+                    diskene i motsatt rekkefølge av ellers. Den siste taggen inne i hvert tårn kommer øverst
+                </li>
+                <li>
+                    Implementer aller enkleste versjon av controller-funksjonene, nemlig å flytte hver disk uten å sjekke om det er lov
+                    eller ikke. Sjekk at det virker før dere går videre. 
+                </li>
+                <li>
+                    Implementer så reglene. Du kan ikke flytte en disk til et tårn om det alt ligger en disk der som er mindre.                
+                </li>
+                <li>
+                    Skjul alltid knappene som flytter en disk dit den allerede er. Skjul også knappene som er ulovlige å utføre.
+                </li>
+                <li>
+                    Vis en melding på skjermen hvis spillet er løst, det vil si at alle diskene er på høyre tårn. Vis i det
+                    tilfellet en knapp for å starte spillet på nytt. 
+                </li>
+            </ol>
+        `;
+    </script>
+</body>
+
+</html>

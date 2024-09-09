@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let infoText = ' Det var en gang et troll ';
+        let antalBokstav = 0;
+        let Letter = '';
+        let i = 1;
+        let amountOfUppercaseLetters = 0;
+        let amountOfLowercaseLetters = 0;
+        let myLetter = 'a';
+       
+        // view
+        
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            infoText
+            +`<br/>`
+            +`<div>Antall av bokstaven <strong>${myLetter}</strong>: ${antalBokstav}</div>`   
+            +`<div>Antall av bokstaver med <strong>stor bokstav</strong>: ${amountOfUppercaseLetters}</div>`   
+            +`<div>Antall av bokstaver med <strong>liten bokstav</strong>: ${amountOfLowercaseLetters}</div>`   
+        }
+
+        // controller
+
+        HowMennyLetter();
+        function HowMennyLetter() {
+
+            let infoTextReplace;
+            infoTextReplace = infoText;
+            infoTextReplace = infoTextReplace.replaceAll(' ', '');
+            amountOfLowercaseLetters = 1;
+            
+            for(i = 0; i <= infoTextReplace.length - 1; i++){ 
+                Letter = infoTextReplace.charAt(i);
+                if (Letter === myLetter) {
+                    antalBokstav++;
+                }
+                if (Letter === Letter.toUpperCase()){
+                    amountOfUppercaseLetters++;
+                    console.log(Letter, Letter.toUpperCase());
+                }
+                if (Letter === Letter.toLowerCase()){
+                    amountOfLowercaseLetters++;
+                    console.log(Letter, Letter.toLowerCase());
+                }
+            }
+            updateView();
+        }
+
+
+    </script>
+</body>
+
+</html>

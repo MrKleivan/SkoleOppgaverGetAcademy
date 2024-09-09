@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 152B</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let myNumber = 0;
+        let counter = 0;
+        let counter2 = 0;
+        let counter3 = 0;
+        let myChoisenNumber = 0;
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML += /*HTML*/`
+            <ol id="myUlList">
+            </ol>
+            <div>Totale sum: ${myChoisenNumber}</div>
+            `;
+            
+        }
+
+        // controller
+
+        createNumberTable('1476');
+        function createNumberTable(liste) {
+            
+            for(i = 0; i < liste.length; i++) {
+                counter = liste.charAt(i);
+                counter2 = Number(counter);
+                counter3 += counter2;
+                myChoisenNumber = counter3;
+                myNumber = counter2;
+                getList();
+            }
+        }
+        function getList() {
+            document.getElementById('myUlList').innerHTML += /*HTML*/`
+            <li>
+                ${myNumber} |
+                ${myChoisenNumber}
+            </li>
+            
+            `;
+        }
+
+    </script>
+</body>
+
+</html>

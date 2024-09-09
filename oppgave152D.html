@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #wordCountInput {
+            width: 700px;
+            height: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let word = '';
+        let wordIndex = 0;
+        let listOfWords = '';
+        let amountOfWord = 0; 
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createTextInputForeWordCount()
+            +`<table>
+                <tr>
+                    <th>Index</th>
+                    <th>Word</th>
+                    <th>Amount of word</th>
+                </tr>    
+                <tr>
+
+                </tr>    
+             </table>`;
+            
+        }
+
+        // controller
+
+        function createTextInputForeWordCount() {
+            return /*HTML*/ `
+                <input id="wordCountInput" type="text" oninput="word = this.value"/> 
+            `;
+        }
+
+        function createTableOfWordCounter() {
+            return `
+                <tr>
+                    <td>${wordIndex}</td>
+                    <td>${word}</td>
+                    <td>${amountOfWord}</td>
+                </tr>
+                `;
+        }
+
+
+    </script>
+</body>
+
+</html>

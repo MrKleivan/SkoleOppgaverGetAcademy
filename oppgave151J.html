@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app" onc></div>
+    <script>
+        // model
+
+        let infoText = '';
+        let antalBokstav = 0;
+        let Letter = '';
+        let i = 1;
+        let amountOfUppercaseLetters = 0;
+        let amountOfLowercaseLetters = 0;
+        let myLetter = 'a';
+        let words = 0;
+        let wordsWithVowel = '';
+        let longestWord = '';
+        let counter = 0;
+        let longestWordCounter = 0;
+        let longWord = '';
+        let tempWord = '';
+        // view
+        
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            
+            `<br/>`
+            +`<input onchange="infoText = this.value"/>`
+            +`<button onclick="HowMennyLetter()">Test</button>`
+            +`<div><strong>${infoText}</strong></div>`   
+            +`<div>Antall av bokstaven <strong>${myLetter}</strong>: <strong>${antalBokstav}</strong></div>`   
+            +`<div>Antall av bokstaver med stor bokstav: <strong>${amountOfUppercaseLetters}</strong></div>`   
+            +`<div>Antall av bokstaver med liten bokstav: <strong>${amountOfLowercaseLetters}</strong></div>`   
+            +`<div>Antall ord: <strong>${words}</strong></div>`   
+            +`<div>Antall bokstaver i lengste ord: <strong>${longestWordCounter}</strong></div>`   
+            +`<div>Lengste ord: <strong>${longWord}</strong></div>`   
+        }
+
+        // controller
+
+        
+        function HowMennyLetter() {
+
+            let infoTextReplace;
+            infoTextReplace = infoText;
+            amountOfLowercaseLetters = 0;
+            let length = infoText.length;
+            words = 1;
+            
+            for(i = 0; i < infoTextReplace.length; i++){ 
+                
+                Letter = infoTextReplace.charAt(i);
+                if (Letter === myLetter) {
+                    antalBokstav++;
+                }
+                if (Letter === Letter.toUpperCase()){
+                    if (Letter === ' '){
+                        amountOfUppercaseLetters = amountOfUppercaseLetters;
+                    } else
+                    amountOfUppercaseLetters++;
+                }
+                if (Letter === Letter.toLowerCase()){
+                    if (Letter === ' '){
+                        amountOfLowercaseLetters = amountOfLowercaseLetters;
+                    } else
+                    amountOfLowercaseLetters++;
+                }   
+                if (Letter === ' ') {
+                    words++;
+                }
+                if (Letter !== ' ' || i + 1 == length){
+                    counter++;
+                    tempWord += Letter;
+                }
+                if (Letter === ' ' || i + 1 == length) {
+                    if (counter > longestWordCounter) {
+                        longestWordCounter = counter;
+                        longWord = tempWord;
+                    }
+                    tempWord = '';
+                    counter = 0;
+                }
+
+                
+
+
+            updateView();
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
