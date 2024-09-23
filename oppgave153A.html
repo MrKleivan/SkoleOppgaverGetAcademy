@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let myList = [10,12,50,41,13,20,20,15,14,70,39,9,54,78,15,4,3,18,49,50];
+        let html = ``;
+        let myButtons = `vis førte tall`;
+        let count = 0;
+        
+        // view
+        updateView();
+        function updateView() {
+            
+            document.getElementById('app').innerHTML = html + `<button onclick="nextNumbers()">${myButtons}</button>`;
+            
+        }
+
+        // controller
+
+        function nextNumbers() {
+            for(let i = count; i < count + 10; i++) {
+                html += /*HTML*/`
+                    <li>
+                        ${myList[i]}    
+                    </li>
+                `;
+            }
+            count += 10;
+            myButtons = `Neste 10 nummer`;
+            document.getElementById('app').innerHTML = html + `<button onclick="nextNumbers()">${myButtons}</button>`;
+            html = '';
+        }
+
+    </script>
+</body>
+
+</html>

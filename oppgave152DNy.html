@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td  {
+            background-color: #D6EEEE;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let inputText = '';
+        let listOfWordsOne = [];
+        let listOfWordsTwo = [];
+        let amountOfWord = [];
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createTextInputForeWordCount()
+            +`<br/><button onclick="createList()">Test</button>`
+            + `<p>Din text: ${listOfWordsOne}</p>`
+            + `<p>Ord som er i din tekst: ${listOfWordsTwo}</p>`
+            +   `<table id="tableOutputOne" style="border:1px solid black;">
+                    <tr>
+                        <th>Index</th>
+                        <th>Word</th>
+                        <th>Amount</th>
+                    </tr>
+                    
+                
+                </table>`
+            ;
+            for(i= 0; i < listOfWordsTwo.length; i++) {
+                document.getElementById('tableOutputOne').innerHTML += 
+                `<td>${i}</td>
+                <td>${listOfWordsTwo[i]}</td>
+                <td>${amountOfWord[i]}</td>`
+                ;
+            }
+
+            
+            
+        }
+
+        function createTextInputForeWordCount() {
+            return /*HTML*/ `
+            <input id="wordCountInput" type="text" oninput="inputText = this.value"/> 
+            `;
+        }
+        // controller
+
+        function createList() {
+            inputText = inputText.toLowerCase();
+            inputText = inputText.replaceAll(',', '');
+            inputText = inputText.replaceAll('.', '');
+            listOfWordsOne = inputText.split(' ');
+
+            for(let i = 0; i < listOfWordsOne.length; i++) {
+                const newWord = listOfWordsOne[i];
+                const lastWord = newWord;
+                const currentIndex = listOfWordsOne.indexOf(lastWord);
+                if (listOfWordsTwo.includes(newWord)) {
+                    amountOfWord[currentIndex]++;
+
+                } else { 
+                    listOfWordsTwo.push(newWord);
+                    amountOfWord.push(1);
+
+                }
+            }
+            updateView();
+            listOfWordsTwo = [];
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 153I</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let yatzyDice = [];
+        let yatzyDiceFrequency = [0,0,0,0,0,0,0]
+        let myYatzyDice = [];
+        let diceResult = '';
+        let tempDiceList = []
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <button onclick="trowYatsyDices()">Kast terning</button>
+            `
+            + `<br/>Ditt kast: ${yatzyDice} | dine poeng: ${diceResult}`
+            ;
+            
+        }
+
+        // controller
+
+        function trowYatsyDices() {
+            yatzyDice = [0,0,0,0,0];
+            let myDice = 0;
+            for(let i = 0; i < yatzyDice.length; i++) {
+            myDice = Math.floor(Math.random() * 6 + 1);
+            yatzyDice[i] = myDice;
+            }
+            
+            
+            createyatzyDiceFrequency();
+            getResultFromYatzyDice()
+            updateView();
+        }
+
+        function createyatzyDiceFrequency() {
+            yatzyDiceFrequency = [0,0,0,0,0,0,0];
+            for(i = 0; i < yatzyDice.length; i++) {
+                for(j = 0; j < 7; j++) {
+                    if(yatzyDice[i] == j) {
+                        yatzyDiceFrequency[j]++;
+                    }
+                }
+            }
+            
+        }
+
+        let indexOfHighestNumber = 0;
+        function getResultFromYatzyDice() {
+            let highesthNumber = 0;
+            let tempNumber = 0;
+            for(let i = 0; i < yatzyDiceFrequency.length; i ++) {
+                tempNumber = yatzyDiceFrequency[i];
+                if (highesthNumber <= tempNumber ) {
+                    highesthNumber = tempNumber;
+                    indexOfHighestNumber = yatzyDiceFrequency.lastIndexOf(highesthNumber);
+                    diceResult = indexOfHighestNumber * (yatzyDiceFrequency[indexOfHighestNumber]) + ` Du har fått ${yatzyDiceFrequency[indexOfHighestNumber]} like`;
+                } 
+            }
+            if(yatzyDice.includes(1) && yatzyDice.includes(2) && yatzyDice.includes(3) && yatzyDice.includes(4) && yatzyDice.includes(5)) {
+                diceResult = 15 + ` Du har fått liten stright`;
+            }
+            if(yatzyDice.includes(2) && yatzyDice.includes(3) && yatzyDice.includes(4) && yatzyDice.includes(5) && yatzyDice.includes(6)) {
+                diceResult = 20 + ` Du har fått stor stright`;
+            }
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

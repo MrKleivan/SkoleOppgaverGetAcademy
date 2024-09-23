@@ -8,8 +8,6 @@
 
     <style>
         #wordCountInput {
-            width: 800px;
-            height: 200px;
             text-align: start;
             justify-content: start;
             align-items: flex-start;
@@ -23,9 +21,7 @@
     </div>
 
     <div id="app2"> 
-        <ol id="WordList">
-
-        </ol>`
+        
     </div>
 
     <script>
@@ -34,18 +30,40 @@
         let inputText = '';
         let wordIndex = 0;
         let listOfWords = [];
-        let amountOfWord = 0; 
+        let amountOfWord = []; 
+        let listOfWordsTwo = [];
+        let wordListOne = '';
 
         // view
         updateView();
         function updateView() {
-            document.getElementById('app').innerHTML = 
+            document.getElementById('app').innerHTML =
             createTextInputForeWordCount()
             +`<br/><button onclick="createList()">Test</button>`
+            +`<ul id="WordList"></ul>`
             ;
             for(let wordListOne of listOfWords) {
-                document.getElementById('WordList').innerHTML += `<li>${wordListOne}</li>`;
+                
+                
+                document.getElementById('WordList').innerHTML += 
+                `<li>${wordListOne}</li>
+                <li>${amountOfWord}</li>`
+                ;
             }
+            
+            for(i = 0; i < listOfWords.length; i++) {
+                word = listOfWords [i];
+                
+                if (listOfWordsTwo.includes(word)) {
+                    amountOfWord[listOfWordsTwo.indexOf(listOfWords[i])]++;
+                }
+                else  { 
+                    listOfWordsTwo.push(word);
+                    amountOfWord.push(1);
+                }
+                
+            }
+            
         }
 
         
@@ -60,7 +78,9 @@
 
         function createList() {
             let = InputTextNew = inputText;
-            InputTextNew.replaceAll('.', '')
+            InputTextNew = InputTextNew.replaceAll('.', '');
+            InputTextNew = InputTextNew.replaceAll(',', '');
+
             listOfWords = InputTextNew.split(' ');
             updateView();
         }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 153E</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let inputText = '';
+        let alfabet =     'ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅ';
+        let newSeacretWord = '';
+        let kryptText = '';
+        let tempText = '';
+        let generate = 0;
+        let seacretWord = generateRandomSeacretWord();
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createTextInput('myText')
+            +`<br/><button onclick="krypterText(alfabet,newSeacretWord,inputText)">Krypter text</button><br/>`
+            +tempText
+            +`<br/><button onclick="krypterText(newSeacretWord,alfabet,tempText)">Dekrypter</button>`
+            ;
+            
+        }
+        function createTextInput(id) {
+            return /*HTML*/ `
+            <label for="${id}">Din text</label>
+            <input id="${id}" type="text" oninput="inputText=this.value"/> 
+            `;
+        }
+        
+        // controller
+        function generateRandomSeacretWord() {
+            let randomLetterGenerat;
+            for(let i = 0; i < alfabet.length; i++) {
+            generate = 0 + Math.floor(Math.random() * (alfabet.length - 0 + 1));
+            randomLetterGenerat = alfabet.charAt(generate);
+
+            if (newSeacretWord.includes(randomLetterGenerat)) {
+                i--;
+            }  else { newSeacretWord += randomLetterGenerat;} 
+            
+            
+            }
+
+
+        }
+        
+        function krypterText(NumberOne, NumberTwo, chousenWord) {
+            let textToNumber = '';
+            
+            
+            for(let i = 0; i < chousenWord.length; i++) {
+                textToNumber = chousenWord.charAt(i);
+                textToNumber = NumberOne.indexOf(`${textToNumber}`);
+                textToNumber = NumberTwo.charAt(textToNumber);
+                kryptText += textToNumber;
+            }
+            tempText = kryptText;
+            kryptText = '';
+            
+            updateView();
+        }
+
+        
+
+    </script>
+</body>
+
+</html>

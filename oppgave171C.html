@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 171C</title>
+    <style>
+        #app>div {
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let currentColer = {red: 100, green: 200, blue: 50};
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createDiv(currentColer, invertedColor(currentColer), getAverageColor(currentColer, invertedColor(currentColer)))
+            ;
+            
+        }
+
+        // controller
+
+        function createDiv(color, color2, color3) {
+            return /*HTML*/`<div 
+                                style="width:50vw;height:50vw;border:4vw solid rgb(${color.red}, ${color.green}, ${color.blue});background-color: rgb(${color2.red}, ${color2.green}, ${color2.blue});"
+                            ><h1 style="font-size: 10vw; color:rgb(${color3.red}, ${color3.green}, ${color3.blue}">Test</h1></div>`;
+        }
+
+        function invertedColor(color) {
+            let invertedColor = color;
+            invertedColor = {red: 255 - color.red, green: 255 - color.green, blue: 255 - color.blue};
+            return invertedColor;
+            
+        }
+
+        function getAverageColor(color1, color2) {
+            let averageColor = {red: color1.red + color2.red / 2, green: color1.green + color2.green / 2, blue: color1.blue + color2.blue / 2,};
+            return averageColor;
+        }
+
+    </script>
+</body>
+
+</html>

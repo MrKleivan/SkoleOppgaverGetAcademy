@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+    <script src="oppgave161B.js"></script>
+    <script>
+        QUnit.test("is emale adress hsbchjcajhs@'", function (assert) {
+            const actual = checkIfEmaleAddress('hsbchjcajhs@');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+        QUnit.test("is emale adress hsbchjcajhs'", function (assert) {
+            const actual = checkIfEmaleAddress('hsbchjcajhs');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+        QUnit.test("is emale adress banan.hei@ kalle.'", function (assert) {
+            const actual = checkIfEmaleAddress('banan.hei@ kalle.');
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+        QUnit.test("is emale adress banan.hei@ kalle'", function (assert) {
+            const actual = checkIfEmaleAddress('banan.hei@ kalle');
+            const expected = false;
+            assert.equal(actual, expected);
+        });
+
+    </script>
+</body>
+</html>

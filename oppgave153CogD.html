@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 153C og D</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+
+        let inputText = '';
+        let kryptText = '';
+        let deKryptText = '';
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createTextInput('myText')
+            +`<br/><button onclick="krytText()">Krypter text</button>`
+            +kryptText
+            +`<br/><button onclick="deKrytText()">Dekrypter</button><br/>`
+            +deKryptText
+            ;
+            
+        }
+        function createTextInput(id) {
+            return /*HTML*/ `
+            <label for="${id}">Din text</label>
+            <input id="${id}" type="text" oninput="inputText = this.value"/> 
+            `;
+        }
+        
+        // controller
+        
+        function krytText() {
+            let alfabet =     'ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå ';
+            let seacretWord = 'ÅvØfuÆYmUOatIæEøABsc CzgDåFnwbxGHoJKhLyMpPQqRSiTreVWdkXZjl';
+            let textToNumber = '';
+            kryptText = '';
+            for(let i = 0; i < inputText.length; i++) {
+                textToNumber = inputText.charAt(i);
+                textToNumber = alfabet.indexOf(`${textToNumber}`);
+                textToNumber = seacretWord.charAt(textToNumber);
+                kryptText += textToNumber;
+            }
+            updateView();
+        }
+
+        // Dette er oppg153D 
+        function deKrytText() {
+            let alfabet =     'ABCDEFGHIJKLMOPQRSTUVWXYZÆØÅabcdefghijklmnopqrstuvwxyzæøå ';
+            let seacretWord = 'ÅvØfuÆYmUOatIæEøABsc CzgDåFnwbxGHoJKhLyMpPQqRSiTreVWdkXZjl';
+            let textToNumber = '';
+            deKryptText = '';
+            for(let i = 0; i < kryptText.length; i++) {
+                textToNumber = kryptText.charAt(i);
+                textToNumber = seacretWord.indexOf(`${textToNumber}`);
+                textToNumber = alfabet.charAt(textToNumber);
+                deKryptText += textToNumber;
+            }
+            updateView();
+        }
+
+    </script>
+</body>
+
+</html>

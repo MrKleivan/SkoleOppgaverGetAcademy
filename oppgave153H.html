@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 153H</title>
+    <style>
+        td  {
+            background-color: #D6EEEE;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let myNumberListTwo = [1,4,2,3,4,4,1,2,2,3,4,4,4];
+        let myNumberList = [];
+        let amountOfNumbers = [];
+        let higestAmountNumber = 0;
+        let highestNumber = 0;
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            `<br/><button onclick="createList(myNumberListTwo)">Test</button>`
+            + `<p>Dine tall: ${myNumberList}</p>`
+            + `<p>Listet tall: ${myNumberListTwo}</p>`
+            +   `<table id="tableOutputOne" style="border:1px solid black;">
+                    <tr>
+                        <th>Number</th>
+                        <th>Amount</th>
+                    </tr>
+                    
+                
+                </table>`
+            +`<div>${higestAmountNumber}</div>`
+            ;
+            for(let i = 0; i < myNumberList.length; i++) {
+                document.getElementById('tableOutputOne').innerHTML += 
+                `<tr>
+                    <td>${myNumberList[i]}</td>
+                    <td>${amountOfNumbers[i]}</td>
+                </tr>`
+                ;
+            }
+
+            
+            
+        }
+
+        
+        // controller
+
+      
+
+        let myCountNumber;
+        function createList(Liste) {
+            myNumberList = [];
+            amountOfNumbers = [];
+            
+
+            for(let i = 0; i < Liste.length; i++) {
+                const myNumber = Liste[i];
+                const index = myNumberList.indexOf(myNumber);
+                if (index !== -1) {
+                    amountOfNumbers[index]++;
+                } else {
+                    myNumberList.push(myNumber);
+                    amountOfNumbers.push(1);
+                }
+            }
+            for(let j = 0; j < amountOfNumbers.length; j++) {
+                myCountNumber = amountOfNumbers[j];
+                if (myCountNumber > highestNumber) {
+                    highestNumber = myCountNumber;
+                    higestAmountNumber = amountOfNumbers.indexOf(highestNumber);
+                    higestAmountNumber = myNumberList[higestAmountNumber];
+                } 
+            }
+            updateView();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>QUnit</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.22.0.css">
+
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.22.0.js"></script>
+    <script src="logic.js"></script>
+    <script>
+        QUnit.test('A: anna', function (assert) {            
+            assert.true(isPalindrome('anna'));
+        });
+
+        QUnit.test('B: eva', function (assert) {            
+            assert.false(isPalindrome('eva'));
+        });
+
+        QUnit.test('C: mormor ellemeller om rom', function (assert) {            
+            assert.true(isPalindrome('mormor ellemeller om rom'));
+        });
+
+        QUnit.test('D: morfar ellemeller om rom', function (assert) {            
+            assert.false(isPalindrome('morfar ellemeller om rom'));
+        });
+        
+        QUnit.test('E: Agnes i senga', function (assert) {            
+            assert.true(isPalindrome('Agnes i senga'));
+        });
+
+        QUnit.test('F: Agnes i sengen', function (assert) {            
+            assert.false(isPalindrome('Agnes i sengen'));
+        });
+
+        QUnit.test('G: Anna, Durek er udanna!', function (assert) {            
+            assert.true(isPalindrome('Anna, Durek er udanna!'));
+        });
+
+        QUnit.test('H: Anne, Durek er udanna!', function (assert) {            
+            assert.false(isPalindrome('Anne, Durek er udanna!'));
+        });
+
+        QUnit.test('I: En ranet Unni sier: Stas at rom-nissen ga dem et ømt møte med Agnes sin mor. Ta sats, reis inn uten Arne!', function (assert) {            
+            assert.true(isPalindrome('En ranet Unni sier: Stas at rom-nissen ga dem et ømt møte med Agnes sin mor. Ta sats, reis inn uten Arne!'));
+        });
+
+    </script>
+</body>
+
+</html>

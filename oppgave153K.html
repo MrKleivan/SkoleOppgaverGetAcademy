@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 153K</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+    <div id="content">
+        
+    </div>
+    
+    <script>
+        // model
+        let numbers = [7, 3, 1, 5, 8];
+        let chosenBar = ''; // Variabel for hvilken stolpe som er valgt
+        let inputValue; // Variabel for hva som er skrevet i input-feltet
+        let svgInnerHtml = '';
+        let selectedSvg = `stroke="black"`;
+        let notSelectedSvg = `stroke="none"`;
+    
+        // view
+        updateView();
+        function updateView() {
+            for (let i = 0; i < numbers.length; i++) {
+                svgInnerHtml += createBar(numbers[i], i + 1);
+            }
+            document.getElementById('content').innerHTML = /*HTML*/`
+                <svg id="chart" width="500" viewBox="0 0 80 60">
+                    ${svgInnerHtml}
+                </svg><br/>
+                Valgt stolpe: <i>${chosenBar == '' ? 'ingen' : numbers.indexOf(chosenBar) + 1}</i>
+                <br />
+                Verdi:
+                <input type="number" min="1" max="10" oninput="inputValue = this.value" />
+                <button onclick="addBar(inputValue)">Legg til stolpe</button>
+                <button  ${chosenBar == '' ? "disabled" : ""} onclick="editChosenBar()">Endre valgt stolpe</button><br />
+                <button ${chosenBar == '' ? "disabled" : ""} onclick="delitChosenBar()">Fjerne valgt stolpe</button>
+            `;
+            svgInnerHtml = '';
+        }
+    
+        function createBar(number, barNo) {
+            const width = 8;
+            const spacing = 2;
+            let x = (barNo - 1) * (width + spacing);
+            let height = number * 10;
+            let y = 60 - height;
+            let color = calcColor(1, 10, barNo);
+            return /*HTML*/`<rect width="${width}" height="${height}"
+                                x="${x}" y="${y}" fill="${color}" ${chosenBar == height / 10 ? selectedSvg : notSelectedSvg} style="cursor: pointer;" onclick="selectedRect(${number})"></rect>`;
+        }
+    
+        function calcColor(min, max, val) {
+            var minHue = 240, maxHue = 0;
+            var curPercent = (val - min) / (max - min);
+            var colString = "hsl(" + ((curPercent * (maxHue - minHue)) + minHue) + ",100%,50%)";
+            return colString;
+        }
+
+    
+        // controller (ingenting her ennå)
+
+        function addBar(value) {
+            numbers.push(value);
+            updateView();
+        }
+
+        function selectedRect(tagElement) {
+            if(chosenBar == tagElement) {
+                chosenBar = '';
+            } else {
+                chosenBar = tagElement;
+            }            
+            updateView();
+        }
+
+        function editChosenBar() {
+            let tempList = numbers;
+            chosenBar = numbers.indexOf(chosenBar);
+            tempList.splice(chosenBar, 1, inputValue);
+            numbers = tempList;
+            chosenBar = '';
+            updateView();
+        }
+        function delitChosenBar() {
+            let tempList = numbers;
+            chosenBar = numbers.indexOf(chosenBar);
+            tempList.splice(chosenBar, 1);
+            numbers = tempList;
+            chosenBar = '';
+            
+
+            updateView();
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let textInput = {};
+        let wordS = {};
+        let wordCounts = '';
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/`
+                <textarea oninput="textInput=this.value"></textarea> 
+                <br/><button onclick="CountWords()">Enter</button><br/>
+            `
+            +wordCounts
+            ;
+            
+        }
+
+        // controller
+
+        
+        function CountWords() {
+            textInput = textInput.split(' ');
+            for(let word of textInput) {
+                if(wordS[word]) {
+                    wordS[word]++;
+                } else {wordS[word] = 1}
+            }
+            for(let word in wordS) {
+                console.log(wordS);
+                console.log(wordS[word]);
+                
+            }
+            updateView();
+        }
+
+    </script>
+</body>
+
+</html>

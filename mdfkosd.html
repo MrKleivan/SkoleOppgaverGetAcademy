@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td  {
+            background-color: #D6EEEE;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let myNumberList = [];
+        let myNumberListTwo = [1,2,3,4,4,1,4,2,2,3,4,4,4,2,1,3,7,8,7,9,8];
+        let amountOfNumbers = [];
+
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            `<br/><button onclick="createList(myNumberListTwo)">Test</button>`
+            + `<p>Dine tall: ${myNumberList}</p>`
+            + `<p>Listet tall: ${myNumberListTwo}</p>`
+            +   `<table id="tableOutputOne" style="border:1px solid black;">
+                    <tr>
+                        <th>Number</th>
+                        <th>Amount</th>
+                    </tr>
+                    ${myNumberList.map((num, index) => `
+                    <tr>
+                        <td>${num}</td>
+                        <td>${amountOfNumbers[index]}</td>
+                    </tr>
+                    `).join('')}
+                </table>`
+            ;
+        }
+
+        // controller
+        function createList(Liste) {
+            myNumberList = [];
+            amountOfNumbers = [];
+
+            for(let i = 0; i < Liste.length; i++) {
+                const myNumber = Liste[i];
+                const index = myNumberList.indexOf(myNumber);
+                if (index !== -1) {
+                    amountOfNumbers[index]++;
+                } else {
+                    myNumberList.push(myNumber);
+                    amountOfNumbers.push(1);
+                }
+            }
+            updateView();
+        }
+
+    </script>
+</body>
+
+</html>

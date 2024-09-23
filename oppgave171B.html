@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 171B</title>
+    <style>
+        #app>div {
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        let currentColer = {red: 100, green: 0, blue: 50};
+        // view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = 
+            createDiv(currentColer, invertedColor(currentColer))
+            ;
+            
+        }
+
+        // controller
+
+        function createDiv(color, color2) {
+            return /*HTML*/`<div 
+                                style="width:50vw;height:50vw;border:6px solid rgb(${color2.red}, ${color2.green}, ${color2.blue});background-color: rgb(${color.red}, ${color.green}, ${color.blue});"
+                            ><h1 style="font-size: 10vw; color:rgb(${color2.red}, ${color2.green}, ${color2.blue}">Test</h1></div>`;
+        }
+
+        function invertedColor(color) {
+            let invertedColor = color;
+            invertedColor = {red: 255 - color.red, green: 255 - color.green, blue: 255 - color.blue};
+            return invertedColor;
+            
+        }
+
+    </script>
+</body>
+
+</html>
