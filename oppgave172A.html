@@ -5,6 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oppgave 172A</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            align-content: center;
+            background-color: darkslategrey;
+        }
+
+        #app {
+            width: 70vw;
+            height: 80vh;
+            margin: auto;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            border-top: 1px solid #D6EEEE;
+        }
+
+        tr {
+            background-color: #D6EEEE;
+            border-bottom: 1px solid rgb(41, 130, 130);
+        }
+
+        th {
+            background-color: darkcyan;
+            padding: 2px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,51 +48,133 @@
             doneDate: '',
             responsible: 'Per Ivar',
             isDone: false,
+            isNotEditMode: false,
         }];
+        let completedTasks = [];
         let taskInput = '';
         let responsibleInput = '';
+        let searchText = '';
+
+
         // view
         updateView();
 
         function updateView() {
-            let tableTaskHTML = '';
-            
-            for (let i = 0; i < tasks.length; i++) {
-                tableTaskHTML += createTaskHTML(i)
+
+            let tableDoneHTML = '';
+
+            for (let i = 0; i < completedTasks.length; i++) {
+                tableDoneHTML += createDoneTable(i);
             }
 
             document.getElementById('app').innerHTML = /*HTML*/`
-                <input type="text" oninput="taskInput=this.value" value="${taskInput}">
-                <input type="text" oninput="responsibleInput=this.value" value="${responsibleInput}"> <br />
-                <button onclick="addTask()">Click me</button>
-                <br/><table>
+                <div style="width:100%;height:auto;padding-top:3px;padding-bottom:3px;background-color:darkcyan;border-radius:5px 5px 0 0; text-align:center;align-content:center;">
+                    <label for="filterInput"><strong>Søk: </strong></label>
+                    <select id="filterInput" onchange="searchText = this.value" style="border-radius:5px;height:90%;width:15%;">
+                        ${makeSelectOptions()}
+                    </select>
+                    <button onclick="updateView()">Søk</button> 
+                    <label for="TaskInput"><strong>Oppgave: </strong></label>
+                    <input id="TaskInput" type="text" oninput="taskInput=this.value" value="${taskInput}" style="border-radius:5px;height:90%;width:15%;">
+                    <label for="ResponsibleInput"><strong>Ansvarlig: </strong></label>
+                    <select id="ResponsibleInput" oninput="responsibleInput=this.value" style="border-radius:5px;height:90%;width:15%;">
+                        ${makeSelectOptions()}
+                    </select>
+                    <button onclick="addTask()">Sett inn ny oppgave</button>
+                </div><table>
                     <tr>
                         <th>Oppgave</th>    
                         <th>Dato</th>    
                         <th>Ansvarlig</th>    
                         <th>Knapper</th>    
                     </tr>
-                ${tableTaskHTML}
+                ${sortResponsible()}
+                </table><br/>
+                <table>
+                    <tr>
+                        <th>Oppgave</th>    
+                        <th>Dato</th>    
+                        <th>Ansvarlig</th>    
+                    </tr>
+                    ${tableDoneHTML}
                 </table>
             `;
 
 
+
         }
 
-        function createTaskHTML(index) {
-            let task = tasks[index];
+        function sortResponsible() {
+            let tasksToShow = [];
+            if (searchText == '') {
+                tasksToShow = tasks;
+            }
+            else {
+                for (let person of tasks) {
+                    if (person.responsible.includes(searchText)) {
+                        tasksToShow.push(person);
+                    }
+                }
+                searchText = '';
+            }
+
+            let tableTaskHTML = '';
+            for (let i = 0; i < tasksToShow.length; i++) {
+                tableTaskHTML += createTaskHTML(i, tasksToShow);
+            }
+            
+            return tableTaskHTML;
+        }
+
+        function makeSelectOptions() {
+            return `
+                <option></option>
+                <option>Per Ivar</option>
+                <option>Tommy</option>
+                <option>Emilie</option>
+                <option>Asia</option>
+            `
+        }
+
+        function makeDropDownBar(index) {
+            let html = `
+            <select oninput="tasks[${index}].responsible=this.value" style="border-radius:5px;height:90%;width:50%;">
+                ${makeSelectOptions()}
+            </select>
+         `
+            return html;
+
+        }
+
+        function createDoneTable(index) {
+            task = completedTasks[index];
+
+            return `
+                <tr>
+                    <td>${task.text}</td>    
+                    <td>${task.doneDate}</td>    
+                    <td>${task.responsible}</td> 
+                </tr>
+            `
+        }
+
+        function createTaskHTML(index, inputList) {
+            let task = inputList[index];
             task.doneDate = task.isDone ? new Date().toLocaleDateString() : '';
-            let check = task.isDone ? 'CHECKED' : ''
+            let taskInfoHTML = task.isNotEditMode ? `<input type="text" oninput="tasks[${index}].text=this.value">` : task.text;
+            let editButtonLabel = task.isNotEditMode ? 'Bruk' : 'Rediger oppgave';
+            let responsibleInfo = task.isNotEditMode ? makeDropDownBar(index) : task.responsible;
+            let check = task.isDone ? 'CHECKED' : '';
 
             return  /*HTML*/ `
             <tr>
-                <td>${task.text}</td>    
+                <td>${taskInfoHTML}</td>    
                 <td>${task.doneDate}</td>    
-                <td>${task.responsible}</td>    
+                <td>${responsibleInfo}</td>    
                 <td>
                     <button onclick="deleteTask(${index})">Slett oppgave</button>
-                    <button onclick="editTask(${index})">Rediger oppgave</button>
-                    <input type="checkbox" onchange="setTaskDone(${index}, this.checked)" ${check}>
+                    <button onclick="editTask(${index})">${editButtonLabel}</button>
+                    <input type="checkbox" onchange="setTaskDone(${index}, this.checked)" ${check}><button onclick="moveTask(${index})" ${task.isDone == false ? 'disabled' : ''} >Flytt</button>
                 </td> 
             </tr>
             `;
@@ -68,20 +182,28 @@
 
         // controller
 
+        function moveTask(index) {
+            //Korteste versjonen
+            // completedTasks.push(tasks.splice(index, 1).pop());
+            completedTasks.push(tasks[index]);
+            tasks.splice(index, 1)
+            updateView();
+
+        }
+
         function setTaskDone(index, isChecked) {
-            console.log(isChecked);
             tasks[index].isDone = isChecked;
 
             updateView();
         }
 
-        function resetInputValues(){
+        function resetInputValues() {
             taskInput = '';
             responsibleInput = '';
         }
 
         function addTask() {
-            if(taskInput == '' || responsibleInput == '') {
+            if (taskInput == '' || responsibleInput == '') {
                 resetInputValues();
                 updateView();
                 return;
@@ -91,15 +213,21 @@
                 doneDate: '',
                 responsible: responsibleInput,
                 isDone: false,
+                isNotEditMode: false,
             };
-            
+
             resetInputValues();
             tasks.push(task);
-            updateView();   
+            updateView();
         }
-        function editTask() {
-            
+
+        function editTask(index) {
+            let task = tasks[index];
+            if (task.isNotEditMode == false) { task.isNotEditMode = true; }
+            else { task.isNotEditMode = false; }
+            updateView();
         }
+
 
     </script>
 </body>
