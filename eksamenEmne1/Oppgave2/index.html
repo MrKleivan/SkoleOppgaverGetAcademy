@@ -16,47 +16,58 @@
         
         
         let randomIndex = '';
-        let FirstRandomWord = '';
-        let SecondRandomWord = '';
+        let FirstPuzzelWord = '';
+        let SecondPuzzelWord = '';
        
-        
-        function getFirstRandomWordFromList() {
-            randomIndex = Math.floor(Math.random() * words.length);
-            FirstRandomWord = words[randomIndex].trim();
-            html = FirstRandomWord;
-
-        }
-        function getSecondRandomWordFromList() {
-            getFirstRandomWordFromList();
-            randomIndex = Math.floor(Math.random() * words.length);
-            if(randomIndex !== words.indexOf(`${FirstRandomWord}`)) {
-                return SecondRandomWord = words[randomIndex].trim();
-            } else {getSecondRandomWordFromList();}
-            
-        }
-
-        function createPuzzelwords() {
-            firstPartOfWord1 = FirstRandomWord.substr(0, FirstRandomWord.length - 3);
-            lastPartOfOtherWord = SecondRandomWord.substr(3);
-        }
-
         function generateWordPuzzles() {
             
             let lineCount = 0;
             while (lineCount < 10) {
                 
-                getSecondRandomWordFromList();
+                
                 createPuzzelwords();
                 document.getElementById('app').innerHTML += /*HTML*/`
                 <div>
-                    ${firstPartOfWord1}___ ___${lastPartOfOtherWord}
-                    <button onclick="this.innerHTML = '${FirstRandomWord} ${SecondRandomWord}'">?</button>
+                    ${firstPartOfWord1}___ ___${lastPartOfSecondWord}
+                    <button onclick="this.innerHTML = '${FirstPuzzelWord} ${SecondPuzzelWord}'">?</button>
                 </div>
                 `;
                 lineCount++;
             }
             
         }
+        
+        function getFirstRandomWordFromList() {
+            for(let i = 0; i < words.length; i++) {
+                randomIndex = Math.floor(Math.random() * words.length);
+                if (words[randomIndex].length > 6) {
+                    FirstPuzzelWord = words[randomIndex].trim();
+                    return FirstPuzzelWord;
+                }
+                
+            }
+            
+
+        }
+        
+        function getSecondRandomWordFromList() {
+            for(let i = 0; i < words.length; i++) { 
+                randomIndex = Math.floor(Math.random() * words.length);
+                SecondPuzzelWord = words[randomIndex].trim();
+                if(SecondPuzzelWord !== FirstPuzzelWord && SecondPuzzelWord.substr(0,3) == FirstPuzzelWord.substr(FirstPuzzelWord.length - 3) && SecondPuzzelWord.length > 6) {
+                    return SecondPuzzelWord;
+                } else getFirstRandomWordFromList();
+            }
+        }
+
+        function createPuzzelwords() {
+            getFirstRandomWordFromList();
+            getSecondRandomWordFromList();
+            firstPartOfWord1 = FirstPuzzelWord.substr(0, FirstPuzzelWord.length - 3);
+            lastPartOfSecondWord = SecondPuzzelWord.substr(3);
+        }
+
+        
 
         
         // function generateWordPuzzles() {
@@ -85,44 +96,7 @@
         // }
 
 
-        // function generateWordPuzzles() {
-        //     // forteller hvilken setning vi er på starter på 0 og teller oppover på hver while loop
-        //     let wordCount = 0;
-        //     // while loopen gjentar utfører koden inni og legger til 1 på wordCount hver gang som da stopper når worCount har nåd tallet 10 
-        //     while (wordCount < 10) {
-        //         // randomIndex bruker en først en innebygt js funksjon Math.floor som runder av et tall ned til heltall og inne i denne funkjsjonen kalles det en annen js innebygget
-        //         // funksjon som tar et tall mellom 0 og 1 og derretter ganger dette opp mot lengden på words for å få en liste med tall som er like mye som antall ord i words 
-        //         let randomIndex = Math.floor(Math.random() * words.length);
-        //         // en variabel som er lik det aktuelle ordet som randomIndex har valgt ut og .trim() for å fjerne mellomromm som er på sidene
-        //         let word1 = words[randomIndex].trim();
-        //         // en if statement i loopen som sier at vis word1 sin lengde er under 6 bokstaver så utfør denne koden
-        //         if (word1.length > 6) {
-        //             // en variabel som er lik word1 men som fjerner di tre siste bokstavene
-        //             let lastPartOfWord1 = word1.substr(word1.length - 3);
-        //             // en for loop som går igjennom hele listen til words.js den looper en gang for hvert ord i listen og legger dette ordet til otherWor for hver gang så første runde er 
-        //             // otherWord førte ordet i words sin liste neste runde er den det andre osv..
-        //             for (let otherWord of words) {
-        //                 // denne if statemen sier at vis otherWord sin lengde er mer en 6 bokstaver og otherWord samt at dette ikke er lik word1 og otherWord starter med hva som er inne i variabelen lastPartOfWord1
-        //                 // så utfør denne koden
-        //                 if (otherWord.length > 6 && otherWord != word1 && otherWord.startsWith(lastPartOfWord1)) {
-        //                     // variabel som heter firstPartOfWord1 er lik de første 3 bokstavene i wor1
-        //                     let firstPartOfWord1 = word1.substr(0, word1.length - 3);
-        //                     // variabel som er lik otherWord fra og med bokstav i index 3 og ut ordets lengde fks kalle = le
-        //                     let lastPartOfOtherWord = otherWord.substr(3);
-        //                     // her legges denne koden til nettsiden i body som da vises på skjermen og ved bruk av += legges det til flere etterhverandre ettersom loopen kjører
-        //                     document.body.innerHTML += /*HTML*/`
-        //                         <div>
-        //                             ${firstPartOfWord1}___ ___${lastPartOfOtherWord}
-        //                             <button onclick="this.innerHTML = '${word1} ${otherWord.trim()}'">?</button>
-        //                         </div>
-        //                         `;
-        //                     wordCount++;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+       
 
 
         

@@ -127,7 +127,6 @@
             isDone: false,
             isNotEditMode: false,
         },];
-        
         let completedTasks = [];
         let taskInput = '';
         let responsibleInput = '';
@@ -135,15 +134,13 @@
         let count = 0;
         let pageingCountStart = 0;
         let pageingCountStopp = 10;
-        let tasksToShow = [];
-        let sortDates = false;
+
 
         // view
         updateView();
 
         function updateView() {
             count = 0;
-            console.log(sortDates);
             let tableDoneHTML = '';
 
             for (let i = 0; i < completedTasks.length; i++) {
@@ -157,7 +154,7 @@
                         ${makeSelectOptions()}
                     </select>
                     <button onclick="updateView()">Søk</button> 
-                    <button onclick="setSortDate()">Sorter på dato</button> 
+                    <button onclick="sortOnDate()">Sorter på dato</button> 
                     <label for="TaskInput"><strong>Oppgave: </strong></label>
                     <input id="TaskInput" type="text" oninput="taskInput=this.value" value="${taskInput}" style="border-radius:5px;height:90%;width:15%;">
                     <label for="ResponsibleInput"><strong>Ansvarlig: </strong></label>
@@ -172,12 +169,12 @@
                         <th>Ansvarlig</th>    
                         <th>Knapper</th>    
                     </tr>
-                ${sortDates ? sortOnDate() : sortResponsible()}
+                ${sortResponsible()}
                     <tr>
                         <td style="text-align:left;"><button onclick="lastPage()" style="width: 100px;background-color: lightgray;" ${pageingCountStart == 0 ?  'disabled' : ''}>&#8678;</button></td>
                         <td></td>
                         <td></td>
-                        <td style="text-align:right;"><button onclick="nextPage()" style="width: 100px;background-color: lightgray;"${pageingCountStopp  > tasksToShow.length ?  'disabled' : ''}>&#8680;</button></td>
+                        <td style="text-align:right;"><button onclick="nextPage()" style="width: 100px;background-color: lightgray;"${pageingCountStopp  > sortResponsible().length ?  'disabled' : ''}>&#8680;</button></td>
                     </tr>
                 </table><br/>
                 <div style="width:100%;text-align:center;background-color: darkcyan;font-weight:bold;border-radius: 10px 10px 0 0;">Ferdigstilte oppgaver</div>
@@ -198,20 +195,14 @@
             pageingCountStopp -= 10;
             updateView();    
         }
-        
         function nextPage() {
             pageingCountStart += 10;
             pageingCountStopp += 10;
             updateView();
         }
 
-        function setSortDate(){
-            sortDates = sortDates ? false : true;
-            updateView();
-        }
-
         function sortResponsible() {
-            tasksToShow = [];
+            let tasksToShow = [];
             if (searchText == '') {
                 tasksToShow = tasks;
             }
@@ -231,28 +222,28 @@
             
             return tableTaskHTML;
         }
-
         function sortOnDate() {
-            tasksToShow = [];
+            let tasksToShow = [];
             let tableTaskHTML = '';
 
             for (let task of tasks) {
-                if (task.isDone != '') {
-                    tasksToShow.push(task);
+                    if (task.doneDateAsString != '') {
+                        tasksToShow.push(task);
+                    }
                 }
-            }
+            console.log(tasksToShow)
             
             tasksToShow.sort(function(a,b){
-                return a.doneDate - b.doneDate;
+                return b.doneDate - a.doneDate;
             });
             console.log(tasksToShow)
-
-
+            
             for (let i = 0; i < tasksToShow.length; i++) {
                 tableTaskHTML += createTaskHTML(i, tasksToShow);
-            } 
-
+            }
+            
             return tableTaskHTML;
+
         }
 
         // function sortDateArray(arrayIn){
@@ -297,7 +288,7 @@
         
         function createTaskHTML(index, inputList) {
             let task = inputList[index];
-            task.doneDateAsString = task.isDone ? new Date(+ new Date() - 83000000 * index - 83000000).toLocaleDateString() : '';
+            task.doneDateAsString = task.isDone ? new Date(+new Date() -(1000 * 60 * 60 *24)*(count)).toLocaleDateString() : '';
             // task.doneDate = task.isDone ? new Date(+new Date() -(1000 * 60 * 60 *24)*(count)) : '';
             let taskInfoHTML = task.isNotEditMode ? `<input type="text" oninput="tasks[${index}].text=this.value">` : task.text;
             let editButtonLabel = task.isNotEditMode ? 'Bruk' : 'Rediger oppgave';
@@ -331,13 +322,12 @@
 
         function setTaskDone(index, isChecked) {
             tasks[index].isDone = isChecked;
-            tasks[index].doneDate = new Date(+ new Date() - 83000000 * index - 83000000);
+            tasks[0].doneDate = new Date('09/23/2024');
+            tasks[1].doneDate = new Date('06/19/2024');
+            tasks[2].doneDate = new Date('03/25/2024');
+            tasks[3].doneDate = new Date('08/17/2024');
             count++;
             updateView();
-        }
-
-        function randomDay(max){
-            return Math.floor(Math.random() * max);
         }
 
         function resetInputValues() {
