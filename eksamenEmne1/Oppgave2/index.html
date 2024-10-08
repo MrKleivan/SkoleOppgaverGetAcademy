@@ -42,11 +42,11 @@
                 randomIndex = Math.floor(Math.random() * words.length);
                 if (words[randomIndex].length > 6) {
                     FirstPuzzelWord = words[randomIndex].trim();
-                    return FirstPuzzelWord;
+                    break;
                 }
                 
             }
-            
+            return FirstPuzzelWord;
 
         }
         
@@ -55,9 +55,10 @@
                 randomIndex = Math.floor(Math.random() * words.length);
                 SecondPuzzelWord = words[randomIndex].trim();
                 if(SecondPuzzelWord !== FirstPuzzelWord && SecondPuzzelWord.substr(0,3) == FirstPuzzelWord.substr(FirstPuzzelWord.length - 3) && SecondPuzzelWord.length > 6) {
-                    return SecondPuzzelWord;
+                    break;
                 } else getFirstRandomWordFromList();
             }
+            return SecondPuzzelWord;
         }
 
         function createPuzzelwords() {

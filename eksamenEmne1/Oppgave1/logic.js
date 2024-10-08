@@ -8,23 +8,20 @@ function isLetter(c) {
 function reverseText(str) {
     return str.split('').reverse().join('');
 }
-function cleanText(hei) {
-    let heiaHeia = '';
-    for(i = 0; i < hei.length; i++) {
-        if (isLetter(hei.charAt(i)) == true) {
-            heiaHeia += hei.charAt(i);
+function cleanText(text) {
+    let word = '';
+    for(i = 0; i < text.length; i++) {
+        if (isLetter(text.charAt(i)) == true) {
+            word += text.charAt(i);
         }
     }
-    heiaHeia = heiaHeia.toLowerCase();
-    return hei = heiaHeia.replaceAll(' ', '');
+    word = word.toLowerCase();
+    return word;
 }
-
 function isPalindrome(text){
     text = cleanText(text);
-    let textOne = text;
-    textOne = cleanText(textOne);
-    textOne = reverseText(textOne);
-    if (textOne == text){
+    let reversText = reverseText(text);
+    if (reversText == text){
     return true;
-    } else {return false;}
+    } return false;
 }
