@@ -1,0 +1,5 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Hello World\Hello World\obj\Debug\net8.0\Hello World.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Hello World\Hello World\obj\Debug\net8.0\Hello World.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Hello World\Hello World\obj\Debug\net8.0\Hello World.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Hello World\Hello World\obj\Debug\net8.0\Hello World.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Hello World\Hello World\obj\Debug\net8.0\Hello World.sourcelink.json

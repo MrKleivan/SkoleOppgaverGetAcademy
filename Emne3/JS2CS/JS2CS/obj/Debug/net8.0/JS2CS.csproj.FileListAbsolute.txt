@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\bin\Debug\net8.0\JS2CS.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\bin\Debug\net8.0\JS2CS.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\bin\Debug\net8.0\JS2CS.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\bin\Debug\net8.0\JS2CS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\bin\Debug\net8.0\JS2CS.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\refint\JS2CS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\JS2CS.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\JS2CS\JS2CS\obj\Debug\net8.0\ref\JS2CS.dll

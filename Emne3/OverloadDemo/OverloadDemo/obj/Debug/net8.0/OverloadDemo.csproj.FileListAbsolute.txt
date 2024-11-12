@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\bin\Debug\net8.0\OverloadDemo.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\bin\Debug\net8.0\OverloadDemo.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\bin\Debug\net8.0\OverloadDemo.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\bin\Debug\net8.0\OverloadDemo.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\bin\Debug\net8.0\OverloadDemo.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\refint\OverloadDemo.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\OverloadDemo.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\OverloadDemo\OverloadDemo\obj\Debug\net8.0\ref\OverloadDemo.dll
