@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\JS2CS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\js2cs\\js2cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|solutionrelative:js2cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\js2cs\\js2cs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|solutionrelative:js2cs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\js2cs\\js2cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E986B1-A765-4D84-8CFD-0C99F73FE052}|JS2CS\\JS2CS.csproj|solutionrelative:js2cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,13 +22,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MyConsole.cs",
               "DocumentMoniker": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\JS2CS\\JS2CS\\MyConsole.cs",
               "RelativeDocumentMoniker": "JS2CS\\MyConsole.cs",
               "ToolTip": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\JS2CS\\JS2CS\\MyConsole.cs",
               "RelativeToolTip": "JS2CS\\MyConsole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T12:47:46.536Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\JS2CS\\JS2CS\\Program.cs",
               "RelativeDocumentMoniker": "JS2CS\\Program.cs",

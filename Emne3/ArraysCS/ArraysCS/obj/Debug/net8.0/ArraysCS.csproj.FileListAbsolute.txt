@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\bin\Debug\net8.0\ArraysCS.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\bin\Debug\net8.0\ArraysCS.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\bin\Debug\net8.0\ArraysCS.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\bin\Debug\net8.0\ArraysCS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\bin\Debug\net8.0\ArraysCS.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\refint\ArraysCS.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ArraysCS.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ArraysCS\ArraysCS\obj\Debug\net8.0\ref\ArraysCS.dll

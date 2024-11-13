@@ -1,0 +1,3 @@
+﻿using ArraysCS;
+
+NumberCollection.Run();
