@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\bin\Debug\net8.0\ConsoleApp1Oppgave315C.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\bin\Debug\net8.0\ConsoleApp1Oppgave315C.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\bin\Debug\net8.0\ConsoleApp1Oppgave315C.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\bin\Debug\net8.0\ConsoleApp1Oppgave315C.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\bin\Debug\net8.0\ConsoleApp1Oppgave315C.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\refint\ConsoleApp1Oppgave315C.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ConsoleApp1Oppgave315C.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\ConsoleApp1Oppgave315C\ConsoleApp1Oppgave315C\obj\Debug\net8.0\ref\ConsoleApp1Oppgave315C.dll
