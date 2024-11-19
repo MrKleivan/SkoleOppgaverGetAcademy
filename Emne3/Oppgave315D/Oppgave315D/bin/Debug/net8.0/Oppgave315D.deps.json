@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Oppgave315D/1.0.0": {
+        "runtime": {
+          "Oppgave315D.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Oppgave315D/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

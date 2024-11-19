@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9L//fQLpD3o=",
+  "dgSpecHash": "PjXUkItNVQ8=",
   "success": true,
   "projectFilePath": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\Oppgave315A\\Oppgave315A\\Oppgave315A.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\periv\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\periv\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\periv\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\periv\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.11\\microsoft.netcore.app.host.win-x64.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

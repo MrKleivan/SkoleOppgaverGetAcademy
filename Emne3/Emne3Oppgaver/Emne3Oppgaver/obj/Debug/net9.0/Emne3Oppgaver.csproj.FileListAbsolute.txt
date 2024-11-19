@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\bin\Debug\net9.0\Emne3Oppgaver.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\bin\Debug\net9.0\Emne3Oppgaver.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\bin\Debug\net9.0\Emne3Oppgaver.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\bin\Debug\net9.0\Emne3Oppgaver.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\bin\Debug\net9.0\Emne3Oppgaver.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\refint\Emne3Oppgaver.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\Emne3Oppgaver.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Emne3Oppgaver\Emne3Oppgaver\obj\Debug\net9.0\ref\Emne3Oppgaver.dll

@@ -1,0 +1,15 @@
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.AssemblyInfoInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.AssemblyInfo.cs
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.csproj.CoreCompileInputs.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.sourcelink.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\bin\Debug\net8.0\Oppgave315D.exe
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\bin\Debug\net8.0\Oppgave315D.deps.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\bin\Debug\net8.0\Oppgave315D.runtimeconfig.json
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\bin\Debug\net8.0\Oppgave315D.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\bin\Debug\net8.0\Oppgave315D.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\refint\Oppgave315D.dll
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.pdb
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\Oppgave315D.genruntimeconfig.cache
+C:\Users\periv\OneDrive\Skrivebord\Skole\Get-Academy\webpage-github\Emne3\Oppgave315D\Oppgave315D\obj\Debug\net8.0\ref\Oppgave315D.dll

@@ -14,7 +14,7 @@ static string ReverseName(string InputName)
         ReverstName += Letter;
     }
 
-    return ReverstName;
+    return ReverstName.ToLower();
 }
 
 

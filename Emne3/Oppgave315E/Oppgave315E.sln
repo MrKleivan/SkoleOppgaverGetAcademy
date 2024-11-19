@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oppgave315E", "Oppgave315E\Oppgave315E.csproj", "{50DFA364-9C56-49F7-9280-96769131DC29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50DFA364-9C56-49F7-9280-96769131DC29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DFA364-9C56-49F7-9280-96769131DC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DFA364-9C56-49F7-9280-96769131DC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DFA364-9C56-49F7-9280-96769131DC29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
