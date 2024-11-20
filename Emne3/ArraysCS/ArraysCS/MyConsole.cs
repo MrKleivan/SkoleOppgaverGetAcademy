@@ -1,9 +1,16 @@
-﻿namespace ArraysCS
+﻿using System.Security.Principal;
+
+namespace ArraysCS
 {
     internal class MyConsole
     {
         public static string Ask(string question)
         {
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("Press any key to continue");
+            Console.ReadKey();
             Console.Write(question + " ");
             return Console.ReadLine();
         }

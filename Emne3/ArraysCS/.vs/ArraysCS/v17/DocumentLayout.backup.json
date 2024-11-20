@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\arrayscs\\arrayscs\\numbercollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|solutionrelative:arrayscs\\numbercollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\arrayscs\\arrayscs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|solutionrelative:arrayscs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\arrayscs\\arrayscs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|solutionrelative:arrayscs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\arrayscs\\arrayscs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|solutionrelative:arrayscs\\myconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|c:\\users\\periv\\onedrive\\skrivebord\\skole\\get-academy\\webpage-github\\emne3\\arrayscs\\arrayscs\\numbercollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4CC5CE8-B376-4B30-997B-15D4A16097DC}|ArraysCS\\ArraysCS.csproj|solutionrelative:arrayscs\\numbercollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,18 +21,18 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 98,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 194,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MyConsole.cs",
               "DocumentMoniker": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\ArraysCS\\MyConsole.cs",
               "RelativeDocumentMoniker": "ArraysCS\\MyConsole.cs",
-              "ToolTip": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\ArraysCS\\MyConsole.cs",
-              "RelativeToolTip": "ArraysCS\\MyConsole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\ArraysCS\\MyConsole.cs*",
+              "RelativeToolTip": "ArraysCS\\MyConsole.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T20:32:42.583Z",
               "EditorCaption": ""
@@ -47,24 +47,23 @@
               "RelativeToolTip": "ArraysCS\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T20:06:50.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T20:06:50.767Z"
             }
           ]
         },
         {
-          "DockedWidth": 228,
+          "DockedWidth": 132,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NumberCollection.cs",
               "DocumentMoniker": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\ArraysCS\\NumberCollection.cs",
               "RelativeDocumentMoniker": "ArraysCS\\NumberCollection.cs",
               "ToolTip": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\ArraysCS\\ArraysCS\\NumberCollection.cs",
               "RelativeToolTip": "ArraysCS\\NumberCollection.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBkAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T20:21:23.329Z",
               "EditorCaption": ""

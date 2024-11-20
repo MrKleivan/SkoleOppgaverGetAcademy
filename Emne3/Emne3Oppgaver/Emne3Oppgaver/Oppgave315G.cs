@@ -4,7 +4,8 @@ public class Oppgave315G
 {
     public void Run()
     { 
-    
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.BackgroundColor = ConsoleColor.DarkGray;
     const int range = 250;
     var counts = new int[range];
     var text = "Something";
