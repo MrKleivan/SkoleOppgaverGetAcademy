@@ -1,0 +1,1 @@
+﻿var assigment321A = new AssigmentsOfTopicThree.Assigment321A.run();

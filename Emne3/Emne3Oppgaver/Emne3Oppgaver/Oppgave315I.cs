@@ -5,14 +5,13 @@ public class Oppgave315I
     static readonly Random Random = new Random();
     public void Run()
     {
-        Console.ForegroundColor = ConsoleColor.Blue;
         string[] userInput = Console.ReadLine()!.Split(" ");
         
         PasswordGenerator(userInput);
         
     }
 
-    static void PasswordGenerator(string[] args)
+    void PasswordGenerator(string[] args)
     {
         string password = "";
         if (!IsValid(args))
@@ -59,7 +58,7 @@ public class Oppgave315I
         Console.WriteLine($"Ditt passord: {password}");
     }
 
-    static bool IsValid(string[] args)
+    bool IsValid(string[] args)
     {
         string s = args[0];
         foreach (var c in s)
@@ -76,7 +75,7 @@ public class Oppgave315I
         return true;
     }
 
-    static void ShowHelpText()
+    void ShowHelpText()
     {
         Console.WriteLine("PasswordGenerator  \n" +
                           "Options:\n" +
@@ -92,30 +91,30 @@ public class Oppgave315I
                           "        Lengde på passordet skal være 14");
     }
 
-    static string WriteRandomLowerCaseLetter()
+    string WriteRandomLowerCaseLetter()
     {
         string s = GetRandomLetter('a', 'z').ToString();
         return s;
     }
-    static string WriteRandomUpperCaseLetter()
+    string WriteRandomUpperCaseLetter()
     {
         string s = GetRandomLetter('A', 'Z').ToString();
         return s;
     }
-    static string WriteRandomDigit()
+    string WriteRandomDigit()
     {
         string s = Random.Next(0, 9).ToString();
         return s;
     }
     
-    static string WriteRandomSpecialCharacter()
+    string WriteRandomSpecialCharacter()
     {
         string specialeLetter = "((!"+ '"' + "#¤%&/(){}[]";
         int index = Random.Next(0, 9);
         return specialeLetter[index].ToString();
     }
     
-    static char GetRandomLetter(char min, char max)
+    char GetRandomLetter(char min, char max)
     {
         return (char)Random.Next(min, max);
     }

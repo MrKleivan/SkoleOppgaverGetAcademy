@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssigmentsOfTopicThree", "AssigmentsOfTopicThree\AssigmentsOfTopicThree.csproj", "{08415A0D-0403-480C-AC8C-50C49C87FED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assigment321A", "Assigment321A\Assigment321A.csproj", "{0328AD7C-96EC-4540-A114-04B2A5D42D7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08415A0D-0403-480C-AC8C-50C49C87FED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08415A0D-0403-480C-AC8C-50C49C87FED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08415A0D-0403-480C-AC8C-50C49C87FED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08415A0D-0403-480C-AC8C-50C49C87FED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0328AD7C-96EC-4540-A114-04B2A5D42D7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0328AD7C-96EC-4540-A114-04B2A5D42D7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0328AD7C-96EC-4540-A114-04B2A5D42D7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0328AD7C-96EC-4540-A114-04B2A5D42D7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

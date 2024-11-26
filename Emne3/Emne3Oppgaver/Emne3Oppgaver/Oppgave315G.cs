@@ -15,7 +15,7 @@ public class Oppgave315G
     
     }
 
-    private void CreateLetterCountArray(int range,int[] counts,string? text)
+    void CreateLetterCountArray(int range,int[] counts,string? text)
     {
         while (!string.IsNullOrWhiteSpace(text))
         {
@@ -31,7 +31,7 @@ public class Oppgave315G
         
     }
 
-    private void CreateAmountOfLetterTable(int range, int[] counts,string? text)
+    void CreateAmountOfLetterTable(int range, int[] counts,string? text)
     {
         for (var i = 0; i < range; i++)
         {

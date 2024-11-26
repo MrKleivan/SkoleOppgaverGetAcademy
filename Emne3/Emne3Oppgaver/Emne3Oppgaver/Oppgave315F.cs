@@ -10,7 +10,7 @@ public class Oppgave315F
         DrawBoard();
     }
 
-    private void DrawBoard()
+    void DrawBoard()
     {
         Console.Clear();
         Console.WriteLine($"|{_board[0]}||{_board[1]}||{_board[2]}|");
@@ -24,7 +24,7 @@ public class Oppgave315F
 
     }
 
-    private void CreateMoves(int indexOfEmptySquare)
+    void CreateMoves(int indexOfEmptySquare)
     {
         
         if(indexOfEmptySquare == 0)
@@ -186,7 +186,7 @@ public class Oppgave315F
     
     }
 
-    private int GetIndexOfUserInput(string myChoise)
+    int GetIndexOfUserInput(string myChoise)
     {
         int indexOfUserMove = 0;
         for (int i = 0; i < _board.Length; i++)
@@ -201,7 +201,7 @@ public class Oppgave315F
         return indexOfUserMove;
     }
 
-    private int GetIndexOfEmtySquere()
+    int GetIndexOfEmtySquere()
     {
         int index = 0;
         for (int i = 0; i < _board.Length; i++)
@@ -217,8 +217,7 @@ public class Oppgave315F
             
         return index;
     }
-
-    private void MakeMove(int currentIndex, int newIndex)
+    void MakeMove(int currentIndex, int newIndex)
     {
         
             _board[currentIndex] = _board[newIndex];
