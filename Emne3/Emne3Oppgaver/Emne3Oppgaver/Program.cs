@@ -5,6 +5,7 @@ using Emne3Oppgaver.Oppgave323B1;
 using Emne3Oppgaver.Oppgave323B;
 using Emne3Oppgaver.Oppgave323C;
 using Emne3Oppgaver.Oppgave324A;
+using Emne3Oppgaver.Oppgave328A;
 
 
 var oppgave315F = new Oppgave315F(); 
@@ -19,6 +20,7 @@ var oppgave323B = new Oppgave323B();
 var oppgave323B1 = new Oppgave323B1();
 var oppgave323C = new Oppgave323C();
 var oppgave324A = new Oppgave324A();
+var oppgave328A = new Oppgave328A();
 // oppgave315F.Run();
 // oppgave315G.Run();
 // oppgave315I.Run();
@@ -30,4 +32,5 @@ var oppgave324A = new Oppgave324A();
 // oppgave323B.Run();
 // oppgave323B1.Run();
 // oppgave323C.Run();
-Oppgave324A.Run();
+// Oppgave324A.Run();
+Oppgave328A.Run();

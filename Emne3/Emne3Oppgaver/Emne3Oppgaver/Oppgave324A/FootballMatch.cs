@@ -5,7 +5,7 @@ public class FootballMatch(string bet)
     private string _bet = bet;
     private int _awayGoals;
     private int _homeGoals;
-    private bool _isActive;
+    public bool _isActive {get; set;}
     public string Score => !_isActive ? "" : _awayGoals == _homeGoals ? "U" : _awayGoals > _homeGoals ? "B" : "H";
 
     public void AddGoal(string team)
