@@ -113,4 +113,51 @@ public class WaterStateControllerTest
         Assert.That(water.State, Is.EqualTo(WaterState.IceAndFluid));
         Assert.That(water.ProportionFirstState, Is.EqualTo(0.6));
     }
+    
+    [Test]
+    public void Test11AddEnergy4()
+    {
+        var water = new Water(4, -10);
+        water.AddEnergy(360);
+        Assert.That(water.Temperature, Is.EqualTo(0));
+        Assert.That(water.State, Is.EqualTo(WaterState.Fluid));
+    }
+    
+    [Test]
+// Tester at overflødig energi etter smelting går til oppvarming med riktig antall grader.
+    public void Test12AddEnergy5()
+    {
+        var water = new Water(4, -10);
+        water.AddEnergy(400);
+        Assert.That(water.Temperature, Is.EqualTo(10));
+        Assert.That(water.State, Is.EqualTo(WaterState.Fluid));
+    }
+    
+    [Test]
+    public void Test13FluidToGasA()
+    {
+        var water = new Water(10, 70);
+        water.AddEnergy(900);
+        Assert.That(water.Temperature, Is.EqualTo(100));
+        Assert.That(water.State, Is.EqualTo(WaterState.FluidAndGas));
+        Assert.That(water.ProportionFirstState, Is.EqualTo(0.9));
+    }
+    
+    [Test]
+    public void Test14FluidToGasB()
+    {
+        var water = new Water(10, 70);
+        water.AddEnergy(6300);
+        Assert.That(water.Temperature, Is.EqualTo(100));
+        Assert.That(water.State, Is.EqualTo(WaterState.Gas));
+    }
+    
+    [Test]
+    public void Test14FluidToGasC()
+    {
+        var water = new Water(10, 70);
+        water.AddEnergy(6400);
+        Assert.That(water.Temperature, Is.EqualTo(110));
+        Assert.That(water.State, Is.EqualTo(WaterState.Gas));
+    }  
 }
