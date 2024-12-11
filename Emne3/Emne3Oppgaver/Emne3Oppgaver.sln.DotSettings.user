@@ -1,7 +1,9 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AArrayPool_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F5259d3b492565eee74334a7de8f55cbaac1fe860ecd250567891931a1ab5b7e_003FArrayPool_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F53539022a55f40bd95b3200c33b231c074e00_003Fe3_003F77869a0b_003FAssert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F98514e314f1feddb3082dbe8507ecec1a81b6491c0db7dc53c2e8c13949e4360_003FAssert_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AAssert_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F98514e314f1feddb3082dbe8507ecec1a81b6491c0db7dc53c2e8c13949e4360_003FAssert_002Ecs_002Fz_003A2_002D1/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ACastHelpers_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F3c92637ae2e83da0a63791071c41eae291d594156062866d8621b7ed7245c_003FCastHelpers_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ANullReferenceException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003F99614b3e285a2a04903b8468e786bb72d429ae852db105725272970af8a23_003FNullReferenceException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ANumber_002EParsing_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fde8a243f75215d958afa80cf80a41b4981a44efea7db93bffcdaf7bd6ba378c0_003FNumber_002EParsing_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AString_002EManipulation_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E3_003Fresharper_002Dhost_003FSourcesCache_003Fe75a5575ba872c8ea754c015cb363850e6c661f39569712d5b74aaca67263c_003FString_002EManipulation_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
@@ -13,11 +15,7 @@
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=154c99f0_002D6c24_002D434d_002Dacdc_002D48dfa28cf079/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test13FluidToGasA #8" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest.Test13FluidToGasA&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
+	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1618d16b_002D2ce7_002D4909_002Db9dc_002Dd9203fa7a1a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test13FluidToGasA #9" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest.Test13FluidToGasA&lt;/TestId&gt;&#xD;
@@ -29,9 +27,28 @@
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest.Test13FluidToGasA&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1928afa0_002D1b23_002D4226_002Db38a_002D53fd59c2c165/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.Test&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestAllFields&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestNoFields&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0B83E8C8-0174-4CE0-9787-5DF4F983CD3C::net9.0::Emne3Oppgaver.Oppgave329B.Oppgave329BTest.Test1CharCharacter&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=25279801_002D1cf4_002D4ce1_002D880d_002D6eb7eb59e2b3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.Test&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0B83E8C8-0174-4CE0-9787-5DF4F983CD3C::net9.0::Emne3Oppgaver.Oppgave329B.Oppgave329BTest.Test1CharCharacter&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestAllFields&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=40d6f751_002D2f53_002D412d_002D8640_002Dfc82e1d833dd/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test14FluidToGasB #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest.Test14FluidToGasB&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestAllFields&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0B83E8C8-0174-4CE0-9787-5DF4F983CD3C::net9.0::Emne3Oppgaver.Oppgave329B.Oppgave329BTest.Test1CharCharacter&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6bacbb8a_002D575b_002D4042_002D8cc6_002D132e4e5f40eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test13FluidToGasA #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
@@ -59,11 +76,14 @@
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest.Test10AddEnergy3&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6f297f3_002D973f_002D488d_002D944a_002De66802c1792b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test14FluidToGasB #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d6f297f3_002D973f_002D488d_002D944a_002De66802c1792b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test14FluidToGasB #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::E63D2668-6E6D-4B88-8C78-0D91246E2ADC::net9.0::Emne3Oppgaver.Oppgave328A.WaterStateControllerTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestAllFields&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.TestNoFields&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest.Test&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::E871A229-8F89-4402-ADCF-25650ED4624C::net9.0::Emne3Oppgaver.Oppgave328B.GetDescriptionTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::0B83E8C8-0174-4CE0-9787-5DF4F983CD3C::net9.0::Emne3Oppgaver.Oppgave329B.Oppgave329BTest.Test1CharCharacter&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e7b9b9a5_002D7c65_002D4a41_002Db5ab_002D16543372dd73/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test13FluidToGasA #7" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
