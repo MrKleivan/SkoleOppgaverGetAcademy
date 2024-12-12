@@ -24,6 +24,9 @@ public class VirtualScreenCell
                         : !Up && Down && Left && !Right ? '\u2510' //  ┐
                         : !Up && Down && !Left && Right ? '\u250c' //  ┌
                         : !Up && !Down && Left && Right ? '\u2500' //  ─
+                        : Up && Down && Left && Right ? '\u253c'  //   ┼
+                        : Up && !Down && Left && Right ? '\u2534' //   ┴
+                        : !Up && Down && Left && Right ? '\u252c' //   ┬
                         :  ' ';
         
         return letter;

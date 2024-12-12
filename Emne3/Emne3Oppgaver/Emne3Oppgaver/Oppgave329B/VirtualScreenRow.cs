@@ -6,8 +6,8 @@ public class VirtualScreenRow
 
     public VirtualScreenRow(int screenWidth)
     {
-        _cells = new VirtualScreenCell[screenWidth];
-        for (int i = 0; i < screenWidth; i++)
+        _cells = new VirtualScreenCell[screenWidth + 1];
+        for (int i = 0; i < screenWidth + 1; i++)
         {
             _cells[i] = new VirtualScreenCell();
         }
@@ -16,11 +16,11 @@ public class VirtualScreenRow
     public void AddBoxTopRow(int boxX, int boxWidth)
     {
         _cells[boxX].AddUpperLeftCorner();
-        _cells[boxX + boxWidth - 1].AddUpperRightCorner();
         for (int i = boxX + 1; i < boxX + boxWidth - 1; i++)
         {
             _cells[i].AddHorizontal();
         }
+        _cells[boxX + boxWidth - 1].AddUpperRightCorner();
     }
 
     public void AddBoxMiddleRow(int boxX, int boxWidth)
@@ -31,11 +31,11 @@ public class VirtualScreenRow
     public void AddBoxBottomRow(int boxX, int boxWidth)
     {
         _cells[boxX].AddLowerLeftCorner();
-        for (int i = boxX + 1; i < boxX + boxWidth; i++)
+        for (int i = boxX + 1; i < boxX + boxWidth - 1; i++)
         {
             _cells[i].AddHorizontal();
         }
-        _cells[boxX + boxWidth].AddLowerRightCorner();
+        _cells[boxX + boxWidth - 1].AddLowerRightCorner();
     }
 
 
@@ -44,7 +44,7 @@ public class VirtualScreenRow
         string boxes = null;
         for (int i = 0; i < _cells.Length; i++)
         {
-            boxes += _cells[i].GetCharacter().ToString();
+            boxes += _cells[i].GetCharacter();
         }
         Console.WriteLine(boxes);
     }

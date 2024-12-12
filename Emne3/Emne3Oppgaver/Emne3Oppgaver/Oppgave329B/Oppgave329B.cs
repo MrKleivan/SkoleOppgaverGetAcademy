@@ -1,4 +1,3 @@
-using Emne3Oppgaver.Oppgave329B;
 
 namespace Emne3Oppgaver.Oppgave329B;
 
@@ -8,20 +7,20 @@ public class Oppgave329B
     private static int _height = 20;
     public static void Run()
     {
-        var cell = new VirtualScreenCell();
-        cell.AddLowerLeftCorner();
-        cell.AddVertical();
-        Console.WriteLine(cell.GetCharacter());
-        
-        var row1 = new VirtualScreenRow(20);
-        var row2 = new VirtualScreenRow(20);
-        var row3 = new VirtualScreenRow(20);
-        row1.AddBoxTopRow(5, 3);
-        row2.AddBoxMiddleRow(4, 5);
-        row3.AddBoxBottomRow(3, 7);
-        row1.Show();
-        row2.Show();
-        row3.Show();
+        // var cell = new VirtualScreenCell();
+        // cell.AddLowerLeftCorner();
+        // cell.AddVertical();
+        // Console.WriteLine(cell.GetCharacter());
+        //
+        // var row1 = new VirtualScreenRow(20);
+        // var row2 = new VirtualScreenRow(20);
+        // var row3 = new VirtualScreenRow(20);
+        // row1.AddBoxTopRow(5, 3);
+        // row2.AddBoxMiddleRow(4, 5);
+        // row3.AddBoxBottomRow(3, 7);
+        // row1.Show();
+        // row2.Show();
+        // row3.Show();
         
         while (true)
         {
@@ -29,7 +28,7 @@ public class Oppgave329B
             Show(boxes);
             Console.WriteLine("(press enter for new. ctrl+c=exit)");
             var text = Console.ReadLine();
-            if(text == "ctrl+c") break;
+            if(text == "c") break;
         }
     }
     private static Box[] CreateBoxes()
