@@ -10,6 +10,7 @@ using Emne3Oppgaver.Oppgave328B;
 using Emne3Oppgaver.Oppgave329A;
 using Emne3Oppgaver.Oppgave329B;
 using Emne3Oppgaver.Oppgave329C;
+using Emne3Oppgaver.OppgaveMedKodeLerer;
 
 
 var oppgave315F = new Oppgave315F(); 
@@ -29,6 +30,8 @@ var oppgave328B = new Oppgave328B();
 var oppgave329A = new Oppgave329A();
 var oppgave329B = new Oppgave329B();
 var oppgave329C = new Oppgave329C();
+var oppgaveMedLerer = new OppgaveMedLerer();
+
 // oppgave315F.Run();
 // oppgave315G.Run();
 // oppgave315I.Run();
@@ -45,4 +48,5 @@ var oppgave329C = new Oppgave329C();
 // Oppgave328B.Run();
 // Oppgave329A.Run();
 // Oppgave329B.Run();
-Oppgave329C.Run();
+// Oppgave329C.Run();
+oppgaveMedLerer.Run();

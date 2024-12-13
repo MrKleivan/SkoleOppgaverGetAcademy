@@ -5,29 +5,34 @@ public class Oppgave329C
     public static void Run()
     {
         var bottles = new Bottle[2];
-        bottles[0] = new Bottle(3);
-        bottles[1] = new Bottle(5);
 
-        // bottles[0].FillBottleFromSink();
-        // bottles[1].FillBottleFromSink();
-        // bottles[0].FillThisBottleFromOtherBottle(bottles[1]);
-        // bottles[1].EmptyThisBottleInOtherBottle(bottles[0]);
 
-        for (int i = 0; i < 2; i++)
+        while (true)
         {
-            bottles[0] = new Bottle(3);
-            bottles[1] = new Bottle(5);
-            
-            bottles[i].FillBottleFromSink(bottles[i]);
-            bottles[i == 1 ? 0 : 1].FillBottleFromSink(bottles[i == 1 ? 0 : 1]);
-            bottles[i].EmptyThisBottleInOtherBottle(bottles[i == 1 ? 0 : 1]);
-            bottles[i].EmptyThisBottleInOtherBottle(bottles[i == 1 ? 0 : 1]);
-            
+            var operations = new Operations();
+        
+            Console.WriteLine("1: Fylle flaske 1 fra springen\n" +
+                              "2: Fylle flaske 2 fra springen\n" +
+                              "3: Tømme flaske 1 i flaske 2\n" +
+                              "4: Tømme flaske 2 i flaske 1\n" +
+                              "5: Fylle opp flaske 2 med flaske 1\n" +
+                              "6: Fylle opp flaske 1 med flaske 2\n" +
+                              "7: Tømme flaske 1 (kaste vannet)\n" +
+                              "8: Tømme flaske 2 (kaste vannet)");
+            Console.WriteLine("Skriv inn hvor mange liter flaske 1 skal romme:");
+            var volumCommandForBottleOne = Console.ReadLine().ToUpper();
+            Console.WriteLine("Skriv inn hvor mange liter flaske 2 skal romme:");
+            var volumCommandForBottleTwo = Console.ReadLine().ToUpper();
+            Console.WriteLine("Skriv inn hvor mange antall kombinasjoner som skal utføres:");
+            var combinationCommand = Console.ReadLine().ToUpper();
+        
+            operations.FindSolutionOpperation(bottles);
+            Console.WriteLine("Trykk enter for å fortsette eller trykk inn c også enter for å avslutte");
+            var command = Console.ReadLine();
         }
         
-        Console.WriteLine(bottles[0].Volume + ", " + bottles[0].VolumeTaken);
-        Console.WriteLine(bottles[1].Volume + ", " + bottles[1].VolumeTaken);
-
     }
+
+    
     
 }

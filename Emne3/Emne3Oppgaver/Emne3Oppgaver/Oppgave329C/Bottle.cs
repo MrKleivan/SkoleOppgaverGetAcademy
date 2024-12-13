@@ -8,22 +8,22 @@ public class Bottle
     public Bottle(int capacity)
     {
         Volume = capacity;
-        // VolumeTaken = capacity < VolumeTaken ? capacity : VolumeTaken;
+        VolumeTaken = 0;
     }
 
-    public void FillBottleFromSink(Bottle bottle)
+    public void FillBottleFromSink()
     {
-        bottle.VolumeTaken = bottle.Volume;
+        VolumeTaken = Volume;
     }
 
     public void EmptyThisBottleInOtherBottle(Bottle otherBottle)
     {
-        otherBottle.VolumeTaken += VolumeTaken;
-        VolumeTaken = 0;
+        otherBottle.VolumeTaken = otherBottle.VolumeTaken + VolumeTaken;
         if (otherBottle.VolumeTaken > otherBottle.Volume)
         {
             otherBottle.VolumeTaken = otherBottle.Volume;
         }
+        VolumeTaken = 0;
     }
     
     public void EmptyOtherBottleInThisBottle(Bottle otherBottle)
@@ -48,7 +48,8 @@ public class Bottle
 
     public void FillOtherBottleWithThisBottle(Bottle otherBottle)
     {
-        otherBottle.VolumeTaken += VolumeTaken;
+        otherBottle.VolumeTaken = otherBottle.VolumeTaken + VolumeTaken;
+        VolumeTaken = 0;
         if (otherBottle.VolumeTaken > otherBottle.Volume)
         {
             VolumeTaken = otherBottle.VolumeTaken - otherBottle.Volume;
@@ -61,9 +62,5 @@ public class Bottle
         VolumeTaken = 0;
     }
     
-    public void EmptyOtherBottle(Bottle otherBottle)
-    {
-        otherBottle.VolumeTaken = 0;
-    }
 }
 
