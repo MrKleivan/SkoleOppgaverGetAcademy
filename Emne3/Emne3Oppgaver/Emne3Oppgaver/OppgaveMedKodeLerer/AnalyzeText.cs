@@ -49,7 +49,6 @@ public class AnalyzeText
         for (int i = 0; i < CleanedText.Length; i++)
         {
             if (CleanedText[i] == ' '){
-                continue;    
             }
             else amount++;
         }
@@ -59,10 +58,11 @@ public class AnalyzeText
     public int GetAmountOfWords()
     {
         var amount = 0;
-        foreach (var word in SplitText)
+        for (var index = 0; index < SplitText.Length; index++)
         {
             amount++;
         }
+
         return amount;
     }
 

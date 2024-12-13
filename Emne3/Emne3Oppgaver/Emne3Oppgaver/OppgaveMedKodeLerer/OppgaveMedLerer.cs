@@ -8,7 +8,7 @@ public class OppgaveMedLerer
     public void Run()
     {
         Console.WriteLine("Skriv inn en text du vil analysere");
-        string textToAnalyze = Console.ReadLine();
+        string? textToAnalyze = Console.ReadLine();
         AnalyzeText analyzeText = new AnalyzeText(textToAnalyze);   
         
         
