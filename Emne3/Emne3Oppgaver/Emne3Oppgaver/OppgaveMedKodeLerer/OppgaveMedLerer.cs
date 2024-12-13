@@ -2,49 +2,24 @@ namespace Emne3Oppgaver.OppgaveMedKodeLerer;
 
 public class OppgaveMedLerer
 {
-    private string text = "Den lille kattepus sov søtt på den gamle, slitte sofaen...";
+    // Den lille kattepus so søtt på de på gamle, slitterr sofaen kattepus...
 
     
     public void Run()
     {
-        var tempText = CleanText(text);
-        string[] newText = tempText.Split(" ");
-
-        int count = 0;
-        int wordCount = 0;
-        string longestWord = "";
-        int longestWordLength = 0;
-        foreach (var word in newText)
-        {
-            wordCount++;
-            for (int i = 0; i < word.Length; i++)
-            {
-                count++;
-                if (longestWordLength < word.Length)
-                {
-                    longestWordLength = word.Length;
-                    longestWord = word;
-                }
-            }
-        }
+        Console.WriteLine("Skriv inn en text du vil analysere");
+        string textToAnalyze = Console.ReadLine();
+        AnalyzeText analyzeText = new AnalyzeText(textToAnalyze);   
         
-        Console.WriteLine(wordCount + " " + count);
-        Console.WriteLine(longestWord + " " + longestWordLength);
         
-    }
-
-    public string CleanText(string text)
-    {
-        string tempText = "";
-        for (int i = 0; i < text.Length; i++)
-        {
-            if (char.IsLetter(text[i]) || text[i] == ' ')
-            {
-                tempText += text[i];
-            }
-        }
-
-        return tempText;
+        
+        Console.WriteLine(analyzeText.CleanedText);
+        Console.WriteLine("Antall bokstaver:" + analyzeText.AmountOfLetters);
+        Console.WriteLine("Antall ord:" + analyzeText.AmountOfWords);
+        Console.WriteLine("Antall bokstaver i lengste ord:" + analyzeText.AmountOfLettersInLongestWord);
+        Console.WriteLine(analyzeText.LongestWord);
+        Console.WriteLine("Antall bokstaver i korteste ord:" + analyzeText.AmountOfLettersInShortestWord);
+        Console.WriteLine(analyzeText.ShortestWord);
     }
     
 }
