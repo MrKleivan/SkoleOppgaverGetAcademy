@@ -17,9 +17,9 @@ public class OppgaveMedLerer
         Console.WriteLine("Antall bokstaver:" + analyzeText.AmountOfLetters);
         Console.WriteLine("Antall ord:" + analyzeText.AmountOfWords);
         Console.WriteLine("Antall bokstaver i lengste ord:" + analyzeText.AmountOfLettersInLongestWord);
-        Console.WriteLine(analyzeText.LongestWord);
+        Console.WriteLine("Lengste ord: " + analyzeText.LongestWord);
         Console.WriteLine("Antall bokstaver i korteste ord:" + analyzeText.AmountOfLettersInShortestWord);
-        Console.WriteLine(analyzeText.ShortestWord);
+        Console.WriteLine("Korteste ord: " + analyzeText.ShortestWord);
     }
     
 }

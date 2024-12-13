@@ -48,9 +48,9 @@ public class AnalyzeText
         var amount = 0;
         for (int i = 0; i < CleanedText.Length; i++)
         {
-            if (CleanedText[i] == ' '){
+            if (CleanedText[i] != ' '){
+                amount++;
             }
-            else amount++;
         }
         return amount;
     }
