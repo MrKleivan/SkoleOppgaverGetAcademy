@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Emne3Oppgaver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d593b04d6999cabd72157da6c7be01415a51810")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df51bb1100b505aea98ebf38d6385516976be499")]
 [assembly: System.Reflection.AssemblyProductAttribute("Emne3Oppgaver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Emne3Oppgaver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

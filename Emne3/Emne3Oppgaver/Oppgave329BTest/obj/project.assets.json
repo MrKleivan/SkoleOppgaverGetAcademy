@@ -856,7 +856,6 @@
       "packagesPath": "C:\\Users\\periv\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\periv\\OneDrive\\Skrivebord\\Skole\\Get-Academy\\webpage-github\\Emne3\\Emne3Oppgaver\\Oppgave329BTest\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -891,7 +890,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "all"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {

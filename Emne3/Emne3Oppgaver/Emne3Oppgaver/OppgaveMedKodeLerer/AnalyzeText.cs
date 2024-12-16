@@ -25,7 +25,7 @@ public class AnalyzeText
         ShortestWord = GetShortestWord();
     }
     
-    public string CleanText()
+    string CleanText()
     {
         string cleanedText = "";
         for (int i = 0; i < Text?.Length; i++)
@@ -38,12 +38,12 @@ public class AnalyzeText
         return cleanedText;
     }
 
-    public string[] SplitTextToArray()
+    string[] SplitTextToArray()
     {
         return CleanedText.Split(' ');
     }
 
-    public int GetAmountOfLetters()
+    int GetAmountOfLetters()
     {
         var amount = 0;
         for (int i = 0; i < CleanedText.Length; i++)
@@ -55,7 +55,7 @@ public class AnalyzeText
         return amount;
     }
 
-    public int GetAmountOfWords()
+    int GetAmountOfWords()
     {
         var amount = 0;
         for (var index = 0; index < SplitText.Length; index++)
@@ -66,7 +66,7 @@ public class AnalyzeText
         return amount;
     }
 
-    public int GetAmountOfLettersInLongestWord()
+    int GetAmountOfLettersInLongestWord()
     {
         int longestWordLength = 0;
         foreach (var word in SplitText)
@@ -79,7 +79,7 @@ public class AnalyzeText
         return longestWordLength;        
     }
 
-    public string GetLongestWord()
+    string GetLongestWord()
     {
         string longestWords = "";
         string longestWord = "";
@@ -104,7 +104,7 @@ public class AnalyzeText
         return longestWords;
     }
     
-    public int GetAmountOfLettersInShortestWord()
+    int GetAmountOfLettersInShortestWord()
     {
         string shortestWord = GetLongestWord();
 
@@ -118,7 +118,7 @@ public class AnalyzeText
         return shortestWord.Length;
     }
 
-    public string GetShortestWord()
+    string GetShortestWord()
     {
         string shortestWord = GetLongestWord();
         var shortestWords = "";
