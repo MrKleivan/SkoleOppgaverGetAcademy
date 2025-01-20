@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "MMsCFU5VjobD9OlDzHLul26lGX2EMbeLlzGF+GY4AOQ=",
+  "Source": "CarDealer2.Api",
+  "BasePath": "_content/CarDealer2.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
