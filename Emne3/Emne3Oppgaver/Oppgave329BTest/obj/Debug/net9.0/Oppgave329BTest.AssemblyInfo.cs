@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Oppgave329BTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+475951e420e7b46e99cd176707374a5719247ba1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2309fc3662ac5a4746ebd7c8d3a560ecc5adc3a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Oppgave329BTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Oppgave329BTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
