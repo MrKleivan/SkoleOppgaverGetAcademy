@@ -1,4 +1,4 @@
-namespace RentalCars.Console;
+namespace RentalCars.ConsoleApp;
 
 public class Car
 {
@@ -10,7 +10,6 @@ public class Car
     public string WheelDrive {get; set;}
     public string Fuel {get; set;}
     
-    
     public Car(int id, string brand, int modelYear, int seats, string wheelDrive, string fuel)
     {
         Id = id;
@@ -19,5 +18,6 @@ public class Car
         Seats = seats;
         WheelDrive = wheelDrive;
         Fuel = fuel;
-    }   
+    }
+    
 }
