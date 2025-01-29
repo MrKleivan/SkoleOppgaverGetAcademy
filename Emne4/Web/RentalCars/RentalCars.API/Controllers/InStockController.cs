@@ -8,7 +8,7 @@ namespace RentalCars.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class RentalCarsInStockController : ControllerBase
+public class InStockController : ControllerBase
 {
     private readonly string connectionString = "Server=KLEIVAN\\SQLEXPRESS;Database=RentalCars;Trusted_Connection=True;TrustServerCertificate=True";
     
@@ -20,7 +20,7 @@ public class RentalCarsInStockController : ControllerBase
         using (var conn = new SqlConnection(connectionString))
         {
             conn.Open();
-            var cars = conn.Query<Car>(sql);
+            var cars = conn.Query(sql);
             return Ok(cars);
         }
         
@@ -32,7 +32,7 @@ public class RentalCarsInStockController : ControllerBase
         using (var conn = new SqlConnection(connectionString))
         {
             conn.Open();
-            var cars = conn.Query<Car>(sql);
+            var cars = conn.Query(sql);
             return Ok(cars);
         }
         
@@ -41,11 +41,11 @@ public class RentalCarsInStockController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddCarToInStock()
     {
-        const string sql = "INSERT INTO InStock (Id, CarId, Price, Available) VALUES ('4', '23', '450', 'Yes');";
+        const string sql = "INSERT INTO InStock (Id, CarId, Price, Available) VALUES ('4', '26', '450', 'Yes');";
         using (var conn = new SqlConnection(connectionString))
         {
             conn.Open();
-            var cars = conn.Query<Car>(sql);
+            var cars = conn.Query<InStock>(sql);
             return Ok(cars);
         }
     }

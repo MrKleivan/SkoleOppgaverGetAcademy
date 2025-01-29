@@ -9,7 +9,7 @@ namespace RentalCars.API.Controllers;
 [ApiController]
 [Route("[controller]")]
 
-public class RentalCarsCarsController : ControllerBase
+public class CarsController : ControllerBase
 {
     
     
@@ -17,14 +17,15 @@ public class RentalCarsCarsController : ControllerBase
     
     // GET
     [HttpGet]
-    public async Task<IActionResult> GetAllCars()
+    public async Task<IEnumerable<Car>> GetAllCars()
     {
         const string sql = "SELECT * FROM Cars";
         using (var conn = new SqlConnection(connectionString))
         {
             conn.Open();
             var cars = conn.Query<Car>(sql);
-            return Ok(cars);
+            Ok(cars);
+            return cars;
         }
         
     }
@@ -42,7 +43,7 @@ public class RentalCarsCarsController : ControllerBase
         
     }
     
-    [HttpPost (Name = "AddCarToCars")]
+    [HttpPost]
     public async Task<IActionResult> AddCarToCars()
     {
         const string sql = "INSERT INTO Cars (Brand, ModelYear, Seats, WheelDrive, Fuel) VALUES ('BMW', '1999', '5', 'Back', 'Diesel');";
