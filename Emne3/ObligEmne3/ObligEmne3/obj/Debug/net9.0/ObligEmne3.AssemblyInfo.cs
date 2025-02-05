@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ObligEmne3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ce086ca3f0b5bfc87550bfb5448054296b486c5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+85a4df72f334d0f6bee6bffb4c475826ce0cf62e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ObligEmne3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ObligEmne3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
