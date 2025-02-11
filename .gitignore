@@ -397,3 +397,6 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /GetPrepared
+Emne1/CokeMachineTeamExercise/
+Emne2/Team1/
+HighscoreTracker/
