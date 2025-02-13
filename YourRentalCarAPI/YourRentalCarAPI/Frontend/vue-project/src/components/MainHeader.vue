@@ -3,30 +3,44 @@ import NavBar from './NavBar.vue';
 </script>
 
 <template>
-    <header>
-        <div class="NavBarInHeader">
-            <NavBar />
+    <div class="headerWrapper">
+        <div class="headerLeft">
+            
         </div>
-    </header>
+        <div class="headerRight">
+            <div class="navBarInHeader">
+                <NavBar />
+            </div>
+        </div>
+    </div>
 </template>
 
 
 <style>
 
-header {
+.headerWrapper {
+    display: flex;
     width: 100%;
-    height: 18vh;
-    background-color: aliceblue;
-    text-align: right;
+    height: 10vh;
+    background: linear-gradient(aliceblue, lightBlue);
 }
 
-.NavBarInHeader {
-    position: relative;
-    align-content:end;
-    width: 40%;
+.headerLeft {
+    width: 100%;
     height: 100%;
     margin: auto;
+}
 
+.headerRight {
+    align-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.navBarInHeader {
+    width: 40%;
+    margin: auto;
+    text-align: right;
 }
 
 </style>

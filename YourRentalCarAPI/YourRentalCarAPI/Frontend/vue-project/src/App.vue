@@ -1,15 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import MainHeader from './components/MainHeader.vue';
 </script>
 
 <template>
-  <MainHeader />
-
   <RouterView />
 </template>
 
-<style scoped>
+<style>
 /* header {
   width: 100%;
   line-height: 1.5;

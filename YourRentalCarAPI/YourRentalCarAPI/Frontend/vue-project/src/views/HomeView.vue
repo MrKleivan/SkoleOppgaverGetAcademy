@@ -1,6 +1,7 @@
-<script setup lang="ts">
-
+<script setup>
+import MainHeader from '@/components/MainHeader.vue';
 </script>
 
 <template>
+    <MainHeader />
 </template>

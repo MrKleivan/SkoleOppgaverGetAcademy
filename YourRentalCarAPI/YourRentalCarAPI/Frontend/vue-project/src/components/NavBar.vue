@@ -59,6 +59,7 @@ const isActiveLink = (routePath) => {
 .homeLinkActive {
     background-color: rgba(50, 100, 55, 0.5);
 }
+
 .homeLinkNotActive {
     background-color: none;
 }
@@ -66,8 +67,12 @@ const isActiveLink = (routePath) => {
 .linkButton {
     border-left: 1px solid black;
 }
+
 .linkButton:first-child {
     border-left: none;
 }
+
+
+
 
 </style>

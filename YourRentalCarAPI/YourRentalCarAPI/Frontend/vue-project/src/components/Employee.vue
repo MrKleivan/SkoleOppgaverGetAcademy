@@ -17,7 +17,6 @@ try {
 }
 catch (error) {
     console.log('Feil ved opplasting', error);
-    console.log(response)
 }
 });
 
@@ -49,18 +48,46 @@ catch (error) {
 
 <style>
 
+table {
+    width: 80%;
+    margin: auto;
+    background-color:azure;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table tr:first-child {
+    border-radius: 10px;
+}
 
 th {
     width: 400px;
-    background-color: slategray;
+    height: 4vh;
+    background-color:  white;
+    border-bottom: solid lightgrey;
 }
+
+/* th:first-child {
+    border-radius: 5px 0 0 0;
+}
+
+th:last-child {
+    border-radius: 0 5px 0 0;
+} */
 
 td {
     text-align: center;
+    height: 3vh;
 }
 
 tr:nth-child(even){
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+}
+
+tr:nth-child(odd){
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
 }
 </style>

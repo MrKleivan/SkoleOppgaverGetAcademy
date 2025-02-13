@@ -1,4 +1,5 @@
 <script setup>
+import { errorMessages } from '@vue/compiler-core';
 import axios from 'axios'
 import { ref } from 'vue';
 
@@ -23,17 +24,24 @@ const accessData = (async () => {
         const response = await axios.post("https://localhost:7114/login", {email: Email.value, password: Password.value}).then(
         (response) => {
             access.value = response.data.tokenType + " " + response.data.accessToken;
-            console.log(access.value)
         })
     }
     catch (error) {
-        console.log('Feil ved opplasting', error);
-        console.log(Email.value + "  " + Password.value)
+        alert('Feil ved brukernavn eller passord', errorMessages);
     }
+    Email.value = "";
+    Password.value = "";
+    console.log(Email.value)
 });
 
+const addData = (async () => {
+    try {
 
-    
+    }
+    catch (error) {
+
+    }
+});
 
 
 </script>
