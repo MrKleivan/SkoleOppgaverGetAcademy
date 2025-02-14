@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import NotFoundView from '../views/NotFoundView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -37,11 +36,25 @@ const router = createRouter({
       component: () => import('../views/LogInView.vue'),
     },
     {
+      path: '/intra',
+      name: 'intra',
+      // this generates a separate chunk (About.[hash].js) for this route
+      //@ts-ignore
+      component: () => import('../views/intraView.vue'),
+    },
+    {
+      path: '/intraEmployee',
+      name: 'intraEmployee',
+      // this generates a separate chunk (About.[hash].js) for this route
+      //@ts-ignore
+      component: () => import('../views/intraEmployeeView.vue'),
+    },
+    {
       path: '/:catchAll(.*)',
       name: 'not-found',
       // this generates a separate chunk (About.[hash].js) for this route
       //@ts-ignore
-      component: NotFoundView,
+      component: () => import('../views/NotFoundView.vue'),
     },
   ],
 })

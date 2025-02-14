@@ -1,47 +1,34 @@
 <script setup>
-import { errorMessages } from '@vue/compiler-core';
 import axios from 'axios'
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'
+import form  from './acsess.vue'
 
-
+const router = useRouter();
 
 const Email = ref();
 const Password = ref();
-const access = ref();
 
-
-const changeData = (text, value) => {
-    if(text == "Email"){
-        Email.value = value;
-    } 
-    else if(text == "Password"){
-        Password.value = value;
-    }
-};
 
 const accessData = (async () => {
     try {
-        const response = await axios.post("https://localhost:7114/login", {email: Email.value, password: Password.value}).then(
+        const response = await axios.post("/login", {email: Email.value, password: Password.value}).then(
         (response) => {
-            access.value = response.data.tokenType + " " + response.data.accessToken;
+            form.isLoggedInn = true;
+            form.acsessToken = response.data.tokenType + " " + response.data.accessToken;
         })
+        router.push("/intra")
     }
     catch (error) {
-        alert('Feil ved brukernavn eller passord', errorMessages);
+        alert('Feil ved brukernavn eller passord', error);
+        console.log(form.acsessToken.value);
+
     }
     Email.value = "";
     Password.value = "";
-    console.log(Email.value)
 });
 
-const addData = (async () => {
-    try {
 
-    }
-    catch (error) {
-
-    }
-});
 
 
 </script>
@@ -54,7 +41,6 @@ const addData = (async () => {
     <input id="password" v-model="Password" type="text"/>
     <br />
     <button @click="accessData">Logg Inn</button>
-    <button @click="">Registrer</button>
 </template>
 
 <style>

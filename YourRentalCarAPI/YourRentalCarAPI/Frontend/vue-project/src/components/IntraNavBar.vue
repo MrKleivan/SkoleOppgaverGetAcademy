@@ -12,9 +12,9 @@ const isActiveLink = (routePath) => {
 <template>
     <nav>
         <RouterLink 
-            to="/"
+            to="/intra"
             :class="[
-                isActiveLink('/')
+                isActiveLink('/intra')
                 ? 'homeLinkActive'
                 : 'homeLinkNotActive',
                 'linkButton',
@@ -41,14 +41,14 @@ const isActiveLink = (routePath) => {
             ]">Om oss
         </RouterLink>
         <RouterLink 
-            to="/employee"
+            to="/intraEmployee"
             :class="[
-                isActiveLink('/employee')
+                isActiveLink('/intraEmployee')
                 ? 'homeLinkActive'
                 : 'homeLinkNotActive',
                 'linkButton',
             ]"
-            >Våret personell
+            >Ansatte
         </RouterLink>
         
     </nav>

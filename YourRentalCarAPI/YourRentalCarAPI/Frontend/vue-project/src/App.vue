@@ -4,7 +4,9 @@ import MainHeader from './components/MainHeader.vue';
 </script>
 
 <template>
+  <main>
   <RouterView />
+</main>
 </template>
 
 <style>

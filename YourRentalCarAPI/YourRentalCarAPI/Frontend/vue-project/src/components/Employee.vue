@@ -1,24 +1,37 @@
 <script setup>
 import axios from 'axios';
 import {ref, onMounted } from 'vue';
+import form from './acsess.vue'
 
-// defineProps({
 
-// })
 
 const employees = ref([]);
 
 onMounted(async () => {
 try {
-    const response = await axios.get("https://localhost:7114/api/Employee").then(
+    const response = await axios.get('/api/Employee').then(
     (response) => {
         employees.value = response.data;
     })
 }
 catch (error) {
     console.log('Feil ved opplasting', error);
+    console.log(employees.value)
 }
 });
+
+// const addEmployee = (async () => {
+//     try {
+//         const response = await axios.post("https://localhost:7114/api/Employee", {"action": "dashboard"}, {
+//             headers: {
+//                 Authorization: isAccessor.value,
+//             }
+//         });
+//     }
+//     catch (error) {
+//         alert("Feil", error);
+//     }
+// });
 
 </script>
 
