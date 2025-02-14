@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
 
 const isActiveLink = (routePath) => {
     const route = useRoute();
@@ -7,6 +9,13 @@ const isActiveLink = (routePath) => {
     return route.path === routePath;
 }
 
+const store = useStore();
+const router = useRouter();
+
+const logoutUser = () => {
+  store.dispatch('account/logout'); // Kaller logout-action
+  router.push('/login'); // Omdiriger til login
+};
 </script>
 
 <template>
@@ -50,7 +59,7 @@ const isActiveLink = (routePath) => {
             ]"
             >Ansatte
         </RouterLink>
-        
+        <button @click="logoutUser">Logg ut</button>
     </nav>
 </template>
 

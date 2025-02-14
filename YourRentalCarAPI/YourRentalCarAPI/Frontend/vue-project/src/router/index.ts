@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from '../stores'
 import HomeView from '../views/HomeView.vue'
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -41,6 +44,7 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       //@ts-ignore
       component: () => import('../views/intraView.vue'),
+      meta: { requiresAuth: true },
     },
     {
       path: '/intraEmployee',
@@ -57,6 +61,14 @@ const router = createRouter({
       component: () => import('../views/NotFoundView.vue'),
     },
   ],
-})
+});
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !store.state.account.token) {
+    next('/login'); // Send bruker til login hvis ikke logget inn
+  } else {
+    next();
+  }
+});
 
 export default router

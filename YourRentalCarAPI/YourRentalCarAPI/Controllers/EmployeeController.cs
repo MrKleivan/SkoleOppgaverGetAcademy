@@ -68,7 +68,7 @@ namespace YourRentalCarAPI.Controllers
             return Ok(await _context.Employees.ToListAsync());
         }
 
-        [HttpDelete ("{id}")]
+        [HttpDelete("{id}"), Authorize]
         public async Task<ActionResult<List<Employee>>> DeleteEmployee(int id)
         {
             var dbemployee = await _context.Employees.FindAsync(id);
