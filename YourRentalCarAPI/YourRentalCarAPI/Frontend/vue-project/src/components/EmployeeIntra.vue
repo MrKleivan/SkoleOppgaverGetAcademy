@@ -1,7 +1,7 @@
 <script setup>
 import axios from 'axios';
 import {ref, onMounted } from 'vue';
-import form from './acsess.vue'
+import form from './acsess.vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -15,7 +15,9 @@ const employee = {
     PhoneNumber: ref(),
 };
 
-onMounted(async () => {
+onMounted( () => UpdateEmployeeList());
+
+const UpdateEmployeeList = (async () => {
 try {
     const response = await axios.get('/api/Employee').then(
     (response) => {
@@ -30,48 +32,44 @@ catch (error) {
 
 const addEmployee = (async () => {
     try {
-        const response = await axios.post("https://localhost:7114/api/Employee", {"action" : "dashboard"},
+        const response = await axios.post("https://localhost:7114/api/Employee", {firstName: employee.FirstName.value,
+                lastName: employee.LastName.value,
+                title: employee.Title.value,
+                phoneNumber: employee.PhoneNumber.value,
+                email: employee.Email.value},
         {
-            action: {
-                firstName: employee.FirstName,
-                lastName: employee.LastName,
-                title: employee.Title,
-                phoneNumber: employee.PhoneNumber,
-                email: employee.Email
-            },
             headers: {
-                Authorization: form.acsessToken,
+                Authorization: form.acsessToken, 
             }
         });
         console.log(employee)
-        employee.FirstName = "fvfd";
-        employee.LastName = "vds";
-        employee.Title = "dv";
-        employee.PhoneNumber = 0;
-        employee.Email = "";
-        router.push('/intraEmployee');
+        employee.FirstName.value = "";
+        employee.LastName.value = "";
+        employee.Title.value = "";
+        employee.PhoneNumber.value = 0;
+        employee.Email.value = "";
     }
     catch (error) {
         alert("Feil", error);
         console.log(error)
     }
+    UpdateEmployeeList();
 });
 
 const DeleteEmployee = (async (id) => {
     try {
-        const response = await axios.delete("https://localhost:7114/api/Employee/" + id
+        const response = await axios.delete("https://localhost:7114/api/Employee/" + id, {"action": "dashboard"}
         // {
-        //     // action: theEmployee,
         //     // headers: {
         //     //     Authorization: form.acsessToken,
         //     // }
         // }
     );
-    router.push('/intraEmployee');
     }
     catch (error) {
         console.log("Feil", error);
     }
+    UpdateEmployeeList();
 })
 
 </script>
@@ -111,10 +109,10 @@ const DeleteEmployee = (async (id) => {
                 </tr>
                 <tr>
                     <td><input v-model="employee.FirstName.value"/></td>
-                    <td><input v-model="employee.LastName"/></td>
-                    <td><input v-model="employee.Title"/></td>
-                    <td><input v-model="employee.PhoneNumber"/></td>
-                    <td><input v-model="employee.Email"/></td>
+                    <td><input v-model="employee.LastName.value"/></td>
+                    <td><input v-model="employee.Title.value"/></td>
+                    <td><input v-model="employee.PhoneNumber.value"/></td>
+                    <td><input v-model="employee.Email.value"/></td>
                     <td><button @click="addEmployee">AddWorker</button></td>
                 </tr>
             </tbody>
@@ -162,6 +160,13 @@ tr:nth-child(odd){
 }
 
 input {
-    width: 100%;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+}
+
+input:focus {
+    background-color: rgb(177, 235, 235);
+    border: none;
 }
 </style>

@@ -21,7 +21,7 @@ const accessData = (async () => {
     }
     catch (error) {
         alert('Feil ved brukernavn eller passord', error);
-        console.log(form.acsessToken.value);
+        console.log(form.acsessToken);
 
     }
     Email.value = "";
