@@ -11,7 +11,7 @@ import MainHeader from '@/components/MainHeader.vue';
   </div>
 </template>
 
-<style>
+<style scoped>
 .about {
   width: 70%;
   height: 705vh;

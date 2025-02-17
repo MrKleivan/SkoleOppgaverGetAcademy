@@ -10,8 +10,10 @@ const store = useStore();
 const Email = ref('');
 const Password = ref('');
 
+const loading = ref(false);
 
-const GetAccess = (async () => {
+const GetAccess = async () => {
+    loading.value = true;
     try {
         const response = await apiClient.post("/login", {
             email: Email.value, 
@@ -20,18 +22,21 @@ const GetAccess = (async () => {
 
         const token = response.data.tokenType + " " + response.data.accessToken;
         
-        store.commit('accont/setToken', token);
-        localStorage.setItem('token', token)
+        store.commit('account/setToken', token);
+        localStorage.setItem('token', token);
         
-        router.push("/intra")
+        router.push("/intra");
     }
     catch (error) {
-        alert('Feil ved brukernavn eller passord', error);
+        alert('Feil ved brukernavn eller passord');
+        console.log(error);
     }
-
-    Email.value = '';
-    Password.value = '';
-});
+    finally {
+        loading.value = false;
+        Email.value = '';
+        Password.value = '';
+    }
+};
 
 </script>
 
@@ -40,12 +45,14 @@ const GetAccess = (async () => {
     <input id="email" v-model="Email" type="text"/>
     <br />
     <label for="password">Passord:</label>
-    <input id="password" v-model="Password" type="text"/>
+    <input id="password" v-model="Password" type="password"/>
     <br />
-    <button @click="GetAccess">Logg Inn</button>
+    <button @click="GetAccess" :disabled="loading">
+        {{loading ? 'Logger Inn' : 'Logg Inn'}}
+    </button>
 </template>
 
-<style>
+<style scoped>
 
 input {
     border-radius: 5px;

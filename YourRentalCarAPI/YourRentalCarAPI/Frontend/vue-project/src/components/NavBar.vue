@@ -54,7 +54,7 @@ const isActiveLink = (routePath) => {
     </nav>
 </template>
 
-<style>
+<style scoped>
 
 .homeLinkActive {
     background-color: rgba(50, 100, 55, 0.5);

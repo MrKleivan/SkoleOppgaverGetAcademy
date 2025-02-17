@@ -9,13 +9,9 @@ import LogIn from '@/components/LogIn.vue';
             <LogIn />
         </div>
     </div>
-    <RouterLink
-        to="/login"
-        >
-    </RouterLink>
 </template>
 
-<style>
+<style scoped>
 
 .LogInWrapper {
     position: relative;

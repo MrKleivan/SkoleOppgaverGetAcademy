@@ -44,7 +44,7 @@ catch (error) {
 
 </template>
 
-<style>
+<style scoped>
 
 table {
     width: 80%;

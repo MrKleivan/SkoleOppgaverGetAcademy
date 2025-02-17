@@ -12,7 +12,7 @@ import Employee from '../components/Employee.vue'
     </div>
 </template>
 
-<style>
+<style scoped>
 
 .employeeWrapper {
     width: 60%;

@@ -1,5 +1,4 @@
 <script setup>
-import axios from 'axios';
 import {ref, onMounted, reactive } from 'vue';
 import apiClient from '../axios';
 
@@ -57,7 +56,7 @@ const addEmployee = (async () => {
     }
 });
 
-const DeleteEmployee = (async (id) => {
+const DeleteEmployee = async (id) => {
     try {
         const token = localStorage.getItem('token');
         await apiClient.delete(`https://localhost:7114/api/Employee/${id}`, 
@@ -72,7 +71,7 @@ const DeleteEmployee = (async (id) => {
     catch (error) {
         console.log("Feil", error);
     }
-});
+};
 
 </script>
 
@@ -123,7 +122,7 @@ const DeleteEmployee = (async (id) => {
 
 </template>
 
-<style>
+<style scoped>
 
 table {
     width: 80%;

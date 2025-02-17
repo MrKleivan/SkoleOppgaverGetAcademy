@@ -239,6 +239,10 @@ namespace YourRentalCarAPI.Migrations
                     b.Property<int>("ModelYear")
                         .HasColumnType("int");
 
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Seats")
                         .HasColumnType("int");
 
@@ -259,6 +263,10 @@ namespace YourRentalCarAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -266,6 +274,9 @@ namespace YourRentalCarAPI.Migrations
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()

@@ -8,5 +8,7 @@
         public string WheelDrive { get; set; }
         public int Seats { get; set; }
         public string Fuel { get; set; }
+
+        public string Picture { get; set; }
     }
 }

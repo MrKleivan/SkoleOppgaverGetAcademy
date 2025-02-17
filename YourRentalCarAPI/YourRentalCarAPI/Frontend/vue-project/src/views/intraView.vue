@@ -1,10 +1,7 @@
 <script setup>
-import IntraNavBar from '@/components/IntraNavBar.vue';
+import IntraHeader from '@/components/intraHeader.vue';
 </script>
 
 <template>
-    <main>
-        <IntraNavBar />
-        <h1>Du er i intranettet</h1>
-    </main>
+    <IntraHeader />
 </template>

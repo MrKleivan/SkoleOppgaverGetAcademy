@@ -1,5 +1,5 @@
 <script setup>
-import NavBar from './NavBar.vue';
+import IntraNavBarNavBar from './IntraNavBar.vue';
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import NavBar from './NavBar.vue';
         </div>
         <div class="headerRight">
             <div class="navBarInHeader">
-                <NavBar />
+                <IntraNavBarNavBar />
             </div>
         </div>
     </div>

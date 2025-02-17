@@ -12,9 +12,10 @@ const isActiveLink = (routePath) => {
 const store = useStore();
 const router = useRouter();
 
-const logoutUser = () => {
+const logoutUser = async () => {
   store.dispatch('account/logout'); // Kaller logout-action
   router.push('/login'); // Omdiriger til login
+  
 };
 </script>
 
@@ -31,9 +32,9 @@ const logoutUser = () => {
             >Hjem
         </RouterLink>
         <RouterLink 
-            to="/cars"
+            to="/intra/cars"
             :class="[
-                isActiveLink('/cars')
+                isActiveLink('/intra/cars')
                 ? 'homeLinkActive'
                 : 'homeLinkNotActive',
                 'linkButton',
@@ -41,18 +42,18 @@ const logoutUser = () => {
             >Biler
         </RouterLink>
         <RouterLink 
-            to="/about"
+            to="/intra/about"
             :class="[
-                isActiveLink('/about')
+                isActiveLink('/intra/about')
                 ? 'homeLinkActive'
                 : 'homeLinkNotActive',
                 'linkButton',
             ]">Om oss
         </RouterLink>
         <RouterLink 
-            to="/intraEmployee"
+            to="/intra/Employee"
             :class="[
-                isActiveLink('/intraEmployee')
+                isActiveLink('/intra/Employee')
                 ? 'homeLinkActive'
                 : 'homeLinkNotActive',
                 'linkButton',
@@ -63,7 +64,7 @@ const logoutUser = () => {
     </nav>
 </template>
 
-<style>
+<style scoped>
 
 .homeLinkActive {
     background-color: rgba(50, 100, 55, 0.5);

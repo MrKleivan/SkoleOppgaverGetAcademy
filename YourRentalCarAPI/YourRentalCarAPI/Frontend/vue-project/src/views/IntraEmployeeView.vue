@@ -1,12 +1,10 @@
 <script setup>
-import MainHeader from '@/components/MainHeader.vue';
 import EmployeeIntra from '../components/EmployeeIntra.vue'
-import IntraNavBar from '../components/IntraNavBar.vue'
+import intraHeader from '@/components/intraHeader.vue';
 </script>
 
 <template>
-    <MainHeader />
-    <IntraNavBar />
+    <intraHeader />
     <br />
     <div class="employeeWrapper">
         <h1>Våre ansatte</h1><hr /><br>
@@ -14,7 +12,7 @@ import IntraNavBar from '../components/IntraNavBar.vue'
     </div>
 </template>
 
-<style>
+<style scoped>
 
 .employeeWrapper {
     width: 60%;

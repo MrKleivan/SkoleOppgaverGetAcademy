@@ -63,6 +63,7 @@ namespace YourRentalCarAPI.Controllers
                 dbcarInnStock.WheelDrive = updateCarInnStock.WheelDrive;
                 dbcarInnStock.Seats = updateCarInnStock.Seats;
                 dbcarInnStock.Fuel = updateCarInnStock.Fuel;
+                dbcarInnStock.Picture = updateCarInnStock.Picture;
 
                 await _context.SaveChangesAsync();
             }
