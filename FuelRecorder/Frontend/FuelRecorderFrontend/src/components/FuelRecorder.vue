@@ -36,6 +36,7 @@ const GetRecords = async () =>  {
         
         
         FuelRecords.value = await response.json();
+        await getDifferences();
     }
     catch (err) {
         error.value = err.message;
@@ -108,10 +109,20 @@ const DeleteRecord = async (id) => {
     }
 }
 
+const getDifferences = () => {
+    let liters = [];
+    FuelRecords.value.forEach(record => {
+        liters.push(Number(record.fuelFilled));
+    }); 
+    console.log(liters);
+};
+
 </script>
 
 <template>
-    <div>
+    <div class="diagramWrapper">
+    </div>
+    <div class="tableWrapper">
         <div v-if="loading">Laster data...</div>
         <div v-if="error" class="error">{{ error }}</div>
         <span>
@@ -153,17 +164,17 @@ const DeleteRecord = async (id) => {
         </table>
             <button @click="AddRecord">Legg til</button>
         
-        
     </div>
 
 </template>
 
 <style scoped>
 
-div {
+.tableWrapper {
     width: 70%;
     height: 100%;
     text-align: center;
+    align-content: center;
     margin: auto;
 }
 
@@ -175,7 +186,6 @@ table {
     border-top: 5px double rgba(36, 91, 107, 0.842);
     border-bottom: 5px double rgba(36, 91, 107, 0.842);
     text-align: center;
-    color: rgba(96, 183, 209, 0.842);
 }
 
 span {
@@ -189,28 +199,32 @@ span {
 th {
     width: 30%;
     height: 3vh;
-    background-color: rgba(36, 91, 107, 0.842);
+    background-color: rgb(30, 49, 56);
     border-radius: 5px;
+    color: aliceblue;
 }
 
-
 td {
-    height: 4vh;
-    border-radius: 5px;
+    height: 2em;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: black;
+    transition-duration: 1s;
 }
 td:last-child {
     width: 10%;
 }
 td:nth-child(4):hover {
-    width: 10%;
-    background-color: aliceblue;
+    background-color: rgb(41, 49, 56);
+    color: aliceblue;
     cursor: pointer;
 }
 tr:nth-child(odd) {
-    background-color: rgba(36, 91, 107, 0.7);
+    background-color: rgba(41, 49, 56, 0.5);
 }
 tr:nth-child(even) {
-    background-color: rgba(36, 91, 107, 0.4);
+    background-color: rgba(41, 49, 56, 0.2);
 }
 
 button {
@@ -221,10 +235,11 @@ button {
     background-color: rgb(41, 49, 56);
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
-    transition-duration: 4s;
+    transition-duration: 1s;
 }
 
 button:hover {
+    width: 300px;
     background-color: rgba(41, 49, 56, 0.98);
     cursor:grab;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -238,9 +253,8 @@ button:focus {
 input {
     width: 95%;
     height: 80%;
-    background-color: rgba(36, 91, 107, 0.3);
+    background-color: rgba(41, 49, 56, 0.2);
     border: none;
-    font-family: 'Courier New', Courier, monospace;
     font-size: larger;
     text-align: center;
 }

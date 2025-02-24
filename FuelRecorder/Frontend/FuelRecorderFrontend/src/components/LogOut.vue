@@ -36,9 +36,10 @@ button {
     background-color: rgb(41, 49, 56);
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
-    font-size: 100%;
+    font-size: auto;
     font-weight: bolder;
     text-align: center;
+    overflow: hidden;
 }
 
 button:hover {
