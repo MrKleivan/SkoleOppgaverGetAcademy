@@ -4,26 +4,31 @@ import LogOut from '@/components/LogOut.vue';
 </script>
 
 <template>
-  <main>
+  <div class="main">
     <LogOut />
     <FuelRecorderView />
-  </main>
+  </div>
 </template>
 
 <style scoped>
 
-main {
+.main {
   width: 80%;
   height: 100vh;
   align-content: center;
   margin: auto;
+  padding: 0;
   overflow: scroll;
+  background-color: rgba(41, 49, 56, 0.5);
+  border-left: outset 1px rgba(41, 49, 56, 0.5);
+  border-right: outset 1px rgba(41, 49, 56, 0.5);
+  box-shadow: 0 4px 20px 10px rgba(29, 5, 167, 0.03), 0 4px 20px 10px rgba(29, 5, 167, 0.03);
 }
 
-main::-webkit-scrollbar {
+.main::-webkit-scrollbar {
     visibility: hidden;
 }
-main::-webkit-scrollbar-corner {
+.main::-webkit-scrollbar-corner {
     visibility: hidden;
 }
 

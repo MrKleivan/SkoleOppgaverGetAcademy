@@ -3,7 +3,8 @@ import Login from '../components/Login.vue'
 </script>
 
 <template>
-    <div class="bodd">
+    
+
         <div class="wrapper">
             <div class="wleft">
                 <h1>Logg Inn</h1>
@@ -14,17 +15,13 @@ import Login from '../components/Login.vue'
                 </div>
             </div>
         </div>
-    </div>
+
+    
 </template>
 
 <style scoped>
 
-.bodd {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-}
+
 
 .wrapper {
     display: flex;
@@ -34,7 +31,6 @@ import Login from '../components/Login.vue'
     border-style: inset;
     border-width: 1ex;
     border-color: silver;
-    align-content: center;
     background-color: rgb(41, 49, 56);
     margin: auto;
     margin-top: 20%;

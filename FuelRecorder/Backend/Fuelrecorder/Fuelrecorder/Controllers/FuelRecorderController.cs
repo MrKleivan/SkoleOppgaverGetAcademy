@@ -23,4 +23,7 @@ public class FuelRecorderController : ControllerBase
     public async Task<IResult> AddNewRecord([FromBody] FuelRecorderModel newRecord) =>
         await _db.AddFuelRecord(newRecord);
 
+    [HttpDelete("{id}"), Authorize]
+    public async Task<IResult> DeleteRecord(int id) => 
+        await _db.DeleteFuelRecord(id);
 }

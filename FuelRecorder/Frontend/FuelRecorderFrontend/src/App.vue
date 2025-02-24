@@ -1,5 +1,5 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+<script setup>
+import { RouterView } from 'vue-router'
 
 </script>
 
@@ -11,6 +11,10 @@ import { RouterLink, RouterView } from 'vue-router'
   </body>
 </template>
 
-<style scoped>
+<style>
 
+body {
+  width: 100%;
+  height: 100vh;
+}
 </style>

@@ -58,14 +58,36 @@ const LoginUser = async () => {
 
 </template>
 
-<style>
+<style scoped>
 
 button {
     width: 30%;
     margin-top: 1em;
     border-radius: 4px;
-    border: 1px solid darkcyan;
-    background-color: rgba(0, 139, 139, 0.3);
+    background-color: rgb(41, 49, 56);
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    transition-duration: 4s;
+}
+
+button:hover {
+    background-color: rgba(41, 49, 56, 0.98);
+    cursor:grab;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:focus {
+    border-style: ridge;
+    cursor:grabbing;
+}
+
+input {
+    border-radius: 5px;
+}
+
+input:focus {
+    background-color: rgb(41, 49, 56);
+    color: aliceblue;
 }
 
 </style>

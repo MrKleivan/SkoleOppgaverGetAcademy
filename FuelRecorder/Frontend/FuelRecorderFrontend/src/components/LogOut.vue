@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router';
-
+import { FaRegCircleLeft } from '@kalimahapps/vue-icons';
 const router = useRouter();
 
 const logout = () => {
@@ -14,18 +14,41 @@ const logout = () => {
 
 <template>
     <div>
-        <button @click="logout">Logg ut</button>
+        <button @click="logout"><<</button>
     </div>
 </template>
 
 <style scoped>
 
+
 div {
-    position: relative;
-    top: 10px;
-    left: 90vw;
-    width: 100px;
-    height: 20px;
+    width: 5vh;
+    height: 5vh;
+    align-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+button {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: rgb(41, 49, 56);
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    font-size: 100%;
+    font-weight: bolder;
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgba(41, 49, 56, 0.76);
+    cursor:grab;
+}
+
+button:focus {
+    border-style: ridge;
+    cursor:grabbing;
 }
 
 </style>

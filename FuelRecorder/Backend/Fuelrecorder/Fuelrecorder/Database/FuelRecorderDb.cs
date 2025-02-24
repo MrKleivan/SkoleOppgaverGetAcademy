@@ -68,4 +68,26 @@ public class FuelrecorderDb
             }
         }
     }
+    public async Task<IResult> DeleteFuelRecord(int id)
+    {
+        using (var conn = new SqlConnection(_connectionString))
+        {
+            await conn.OpenAsync();
+            
+            var query = "DELETE FROM FuelRecords WHERE Id = @id";
+            using (var command = new SqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@id", id);
+                int rowsAffected = await command.ExecuteNonQueryAsync();
+                if (rowsAffected > 0)
+                {
+                    return Results.Ok();
+                }
+                else
+                {
+                    return Results.BadRequest("Error ved opplasting av data");
+                }
+            }
+        }
+    }
 }
