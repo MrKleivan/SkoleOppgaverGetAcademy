@@ -3,14 +3,29 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
+
+import Components from 'unplugin-vue-components/vite'
+import {BootstrapVueNextResolver} from 'bootstrap-vue-next'
+
+Components({
+  resolvers: [
+    BootstrapVueNextResolver({
+      aliases: {
+        BInput: 'BFormInput',
+      },
+    }),
+  ],
+})
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    vueDevTools(),
+    Components({
+      resolvers: [BootstrapVueNextResolver(),
+    ],
+    })
   ],
   resolve: {
     alias: {
@@ -20,11 +35,6 @@ export default defineConfig({
   server: {
     proxy: {
       '/FuelRecorder': {
-        target: 'https://localhost:7213',
-        changeOrigin: true,
-        secure: false, // Brukes dersom du har selvsignerte sertifikater i utvikling
-      },
-      '/FuelRecorder/': {
         target: 'https://localhost:7213',
         changeOrigin: true,
         secure: false, // Brukes dersom du har selvsignerte sertifikater i utvikling

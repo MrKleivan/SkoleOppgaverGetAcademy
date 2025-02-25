@@ -1,6 +1,5 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import { FaRegCircleLeft } from '@kalimahapps/vue-icons';
 const router = useRouter();
 
 const logout = () => {

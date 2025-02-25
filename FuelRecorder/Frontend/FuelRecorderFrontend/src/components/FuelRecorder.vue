@@ -36,7 +36,7 @@ const GetRecords = async () =>  {
         
         
         FuelRecords.value = await response.json();
-        await getDifferences();
+        getDifferences();
     }
     catch (err) {
         error.value = err.message;
@@ -110,11 +110,24 @@ const DeleteRecord = async (id) => {
 }
 
 const getDifferences = () => {
-    let liters = [];
+    let differenses = 
+        {
+            kilometer: 0,
+            liters: 0,
+            cost: 0,
+        };
     FuelRecords.value.forEach(record => {
-        liters.push(Number(record.fuelFilled));
+        differenses.kilometer += Number(record.kilometer);
+        differenses.liters += Number(record.fuelFilled);
+        differenses.cost += Number(record.price)
     }); 
-    console.log(liters);
+
+    differenses.cost -= FuelRecords.value[FuelRecords.value.length - 1].price;
+    differenses.kilometer -= FuelRecords.value[0].kilometer;
+
+    console.log(differenses.kilometer + ' ' + differenses.cost);
+
+    return differenses;
 };
 
 </script>
