@@ -6,5 +6,10 @@
   - JavaScript
 
 ## Emne 2
-###Gruppeoppgave
+  Gruppeoppgave
   - JavaScript model view controller
+
+## Emne 3
+  C#
+  - Console applikasjon
+  - Web applikasjon
